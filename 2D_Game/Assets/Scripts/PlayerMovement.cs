@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject interactIcon;
+    private Vector2 boxSize = new Vector2(0.1f, 1f);
+
     private float horizontal;
     public float speed = 6f;
     private float jumpingPower = 9f;
@@ -16,12 +19,17 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        interactIcon.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            CheckInteraction();
+        }
+
         horizontal = Input.GetAxisRaw("Horizontal"); // returns 1, -1 or 0 depending on direction
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
@@ -58,6 +66,34 @@ public class PlayerMovement : MonoBehaviour
             Vector3 localScale = transform.localScale; 
             localScale.x *= -1f; // multiply x component of player's local scale by -1
             transform.localScale = localScale;
+        }
+    }
+
+    public void ArmInteractable()
+    {
+        interactIcon.SetActive(true);
+    }
+
+    public void NoArmInteractable()
+    {
+        interactIcon.SetActive(false);
+    }
+
+    private void CheckInteraction()
+    {
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
+
+        if (hits.Length > 0)
+        {
+            foreach (RaycastHit2D rc in hits)
+            {
+                if (rc.IsInteractable())
+                {
+                    rc.Interact();
+                    return;
+                }
+                    
+            }
         }
     }
 }
