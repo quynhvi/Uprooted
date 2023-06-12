@@ -82,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
     private void CheckInteraction()
     {
         RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
+        Debug.Log("CheckInteraction() called");
 
         if (hits.Length > 0)
         {
@@ -89,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (rc.IsInteractable())
                 {
+                    Debug.Log("interactable");
                     rc.Interact();
                     return;
                 }
