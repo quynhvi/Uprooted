@@ -18,4 +18,9 @@ public class GMScript : MonoBehaviour
             Application.LoadLevel(Application.loadedLevel);
         }
     }
+
+    public void GameOver()
+    {
+        Debug.Log("Game Over");
+    }
 }
