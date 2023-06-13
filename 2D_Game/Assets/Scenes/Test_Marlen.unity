@@ -1827,7 +1827,7 @@ GameObject:
   - component: {fileID: 756678709}
   - component: {fileID: 756678712}
   m_Layer: 0
-  m_Name: Border (3)
+  m_Name: Interaction Zone Ivy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1901,7 +1901,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4459359, g: 0.8396226, b: 0.28251448, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1938,8 +1938,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f918a71c43b34faf8c3dada2af1f957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vine: {fileID: 21300000, guid: 981faa77fe11a4a9491c87811645a59f, type: 3}
-  noVine: {fileID: 21300000, guid: 4b4b454a420b343dc91526450951dd91, type: 3}
+  arm: {fileID: 105690450}
+  noArm: {fileID: 105690450}
 --- !u!1 &777891340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3039,7 +3039,6 @@ MonoBehaviour:
   possibleCharacters:
   - {fileID: 587429933}
   - {fileID: 2032176116}
-  - {fileID: 1895183614}
   whichCharacter: 0
   m_ParticleSystem: {fileID: 1272542945}
   cam: {fileID: 519420033}
@@ -9659,6 +9658,7 @@ GameObject:
   - component: {fileID: 1895183612}
   - component: {fileID: 1895183611}
   - component: {fileID: 1895183615}
+  - component: {fileID: 1895183616}
   m_Layer: 0
   m_Name: Ivy
   m_TagString: Ivy
@@ -9773,7 +9773,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895183610}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.79, y: 2.15, z: 0}
+  m_LocalPosition: {x: -1.85, y: -0.33, z: 0}
   m_LocalScale: {x: 0.35659415, y: 1.0251539, z: 0.8409}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9803,6 +9803,21 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1895183616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895183610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f91f5cd3c8aabc345b631dd4d3187e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ivyRevived: 0
+  _IvyMovementScript: {fileID: 0}
+  _PlayerSwapScript: {fileID: 0}
 --- !u!1 &1918496356
 GameObject:
   m_ObjectHideFlags: 0
