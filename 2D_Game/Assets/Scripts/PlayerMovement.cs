@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    private Vines vine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -91,7 +93,11 @@ public class PlayerMovement : MonoBehaviour
                 if (rc.IsInteractable())
                 {
                     Debug.Log("interactable");
-                    rc.Interact();
+                    // rc.Interact();
+
+                    Collider2D collider = rc.collider;
+                    vine = collider.GetComponent<Vines>();
+                    vine.testInteract();
                     return;
                 }
                     
