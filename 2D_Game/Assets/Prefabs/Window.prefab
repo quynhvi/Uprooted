@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5543424573332286474}
   - component: {fileID: 5543424573332286517}
   - component: {fileID: 5543424573332286519}
-  - component: {fileID: 5543424573332286516}
+  - component: {fileID: 3866705023240294663}
   m_Layer: 0
   m_Name: Window
   m_TagString: light
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5543424573332286516
+--- !u!114 &3866705023240294663
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5543424573332286475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd83e5d6a7eb7844bb2d4d6a0a9a4362, type: 3}
+  m_Script: {fileID: 11500000, guid: b149afbc066864d33835a8bc85a565cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _RessourceManagement: {fileID: 0}

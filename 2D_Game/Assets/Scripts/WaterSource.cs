@@ -22,7 +22,7 @@ public class WaterSource : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collider)
     {
         _chargedWater = 0.0018f;
-        if (_RessourceManagement._lightLevelNumber < 1f && collider.gameObject.CompareTag("VFT") || collider.gameObject.CompareTag("Cactus")) //Ivy erstmal rausgenommen! >>collider.gameObject.CompareTag("Ivy") ||<<
+        if (_RessourceManagement._lightLevelNumber < 1f && collider.gameObject.CompareTag("Cactus")) //Ivy erstmal rausgenommen! >>collider.gameObject.CompareTag("Ivy") || collider.gameObject.CompareTag("VFT") |<<
         {
             Debug.Log("Player charging in water");
             if (_RessourceManagement._waterLevelNumber > 1f)

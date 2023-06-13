@@ -22,7 +22,7 @@ public class LightSource : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collider) //Detecting if player characters pass through light and adding charged Light to the Level.
     {
         _chargedLight = 0.0009f;
-        if (_RessourceManagement._lightLevelNumber < 1f && collider.gameObject.CompareTag("VFT") || collider.gameObject.CompareTag("Cactus")) //Ivy erstmal rausgenommen! >>collider.gameObject.CompareTag("Ivy") ||<<
+        if (_RessourceManagement._lightLevelNumber < 1f && collider.gameObject.CompareTag("Cactus")) //Ivy erstmal rausgenommen! >>collider.gameObject.CompareTag("Ivy") || collider.gameObject.CompareTag("VFT") ||<<
         {
             Debug.Log("Player passed through light");
             if (_RessourceManagement._lightLevelNumber > 1f)
