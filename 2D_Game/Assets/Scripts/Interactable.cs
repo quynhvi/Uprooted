@@ -13,7 +13,7 @@ public abstract class Interactable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("OnTriggerEnter2D called");
+        // Debug.Log("OnTriggerEnter2D called");
         if (collision.CompareTag("Ivy"))
         {
             collision.GetComponent<PlayerMovement>().ArmInteractable();
@@ -22,7 +22,7 @@ public abstract class Interactable : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("OnTriggerExit2D called");
+        // Debug.Log("OnTriggerExit2D called");
         if (collision.CompareTag("Ivy"))
         {
             collision.GetComponent<PlayerMovement>().NoArmInteractable();

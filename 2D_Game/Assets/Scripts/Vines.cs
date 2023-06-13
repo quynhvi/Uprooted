@@ -5,11 +5,11 @@ using UnityEngine;
 public class Vines : Interactable
 {
     private bool isActive;
-    //public GameObject arm;
-    //public GameObject noArm;
+    public GameObject arm;
+    public GameObject noArm;
 
-    public Sprite vine;
-    public Sprite noVine;
+    //public Sprite vine;
+    //public Sprite noVine;
 
     private SpriteRenderer sr;
     //private bool isVine;
@@ -20,20 +20,27 @@ public class Vines : Interactable
     }
     public override void Interact()
     {
+
         Debug.Log("Interact() called");
         if (isActive)
         {
-            //arm.SetActive(false);
+            arm.SetActive(false);
             // sr.renderer for ivy arm
-            sr.sprite = noVine;
-            Debug.Log("isactive");
+            // sr.sprite = noVine;
+           //  Debug.Log("isactive");
         }
         else
         {
-            //noArm.SetActive(true);
-            sr.sprite = vine;
-            Debug.Log("isnotactive");
+            arm.SetActive(true);
+            //sr.sprite = vine;
+            //Debug.Log("isnotactive");
         }
         isActive = !isActive;
+    }
+
+    public void testInteract()
+    {
+        Debug.Log("testInteractive() called");
+        Interact();
     }
 }
