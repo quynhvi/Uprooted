@@ -23,7 +23,7 @@ public class VineLadder : MonoBehaviour
         {
             isPlayerOnLadder = false;
             other.attachedRigidbody.gravityScale = 1f;
-
+            // ignore deactivated
         }
     }
 
