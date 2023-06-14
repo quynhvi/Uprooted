@@ -1,59 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class VineLadder : MonoBehaviour
 {
-    private float vertical;
-    private float speed;
-    private bool isLadder;
-    private bool isClimbing;
+    [SerializeField] private float climbingSpeed = 5f;
 
-    [SerializeField] private Rigidbody2D rb;
-    //[SerializeField] private Rigidbody2D rbVFT;
+    private bool isPlayerOnLadder = false;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        vertical = Input.GetAxis("Vertical");
-
-        if (isLadder && Mathf.Abs(vertical) > 0)
+        if (other.CompareTag("Cactus"))
         {
-            isClimbing = true;
+            Debug.Log("cactus entered");
+            isPlayerOnLadder = true;
+            other.attachedRigidbody.gravityScale = 0f;
+            // player ignores all layers (collision) except iy ladder layer
         }
     }
 
-    private void FixedUpdate()
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if(isClimbing)
+        if (other.CompareTag("Cactus"))
         {
-            rb.gravityScale = 0f;
-            rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
+            isPlayerOnLadder = false;
+            other.attachedRigidbody.gravityScale = 1f;
 
-            //rbVFT.gravityScale = 0f;
-            //rbVFT.velocity = new Vector2(rbVFT.velocity.x, vertical * speed);
-        }
-        else
-        {
-            rb.gravityScale = 0f;
-            //rbVFT.gravityScale = 0f;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (collision.CompareTag("Ladder"))
+        if (isPlayerOnLadder && other.CompareTag("Cactus"))
         {
-            isLadder = true;
-        }
-    }
+            float verticalInput = Input.GetAxis("Vertical");
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Ladder"))
-        {
-            isLadder = false;
-            isClimbing = false;
+            // Apply climbing movement to the player
+            other.attachedRigidbody.velocity = new Vector2(other.attachedRigidbody.velocity.x, verticalInput * climbingSpeed);
         }
     }
 }

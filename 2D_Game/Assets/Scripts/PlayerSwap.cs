@@ -94,7 +94,7 @@ public class PlayerSwap : MonoBehaviour
             if (possibleCharacters[i] !=character)
             {
                 possibleCharacters[i].GetComponent<PlayerMovement>().enabled = false; // if character not chosen -> can't move
-                Debug.Log("Hallo");
+                //Debug.Log("Hallo");
             }
         }
         cam.SetTarget(character);
