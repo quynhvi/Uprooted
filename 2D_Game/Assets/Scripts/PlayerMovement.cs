@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject interactIcon;
-    private Vector2 boxSize = new Vector2(0.1f, 1f);
+    //public GameObject interactIcon;
+    //private Vector2 boxSize = new Vector2(0.1f, 1f);
 
     private float horizontal;
     public float speed = 6f;
@@ -16,21 +16,21 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
-    private Vines vine;
+    //private Vines vine;
 
     // Start is called before the first frame update
     void Start()
     {
-        interactIcon.SetActive(false);
+        //interactIcon.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            CheckInteraction();
-        }
+        //if (Input.GetKeyDown(KeyCode.I))
+        //{
+        //    CheckInteraction();
+        //}
 
         horizontal = Input.GetAxisRaw("Horizontal"); // returns 1, -1 or 0 depending on direction
 
@@ -71,37 +71,36 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void ArmInteractable()
-    {
-        interactIcon.SetActive(true);
-    }
+    //public void ArmInteractable()
+    //{
+    //    interactIcon.SetActive(true);
+    //}
 
-    public void NoArmInteractable()
-    {
-        interactIcon.SetActive(false);
-    }
+    //public void NoArmInteractable()
+    //{
+    //    interactIcon.SetActive(false);
+    //}
 
-    private void CheckInteraction()
-    {
-        RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
-        Debug.Log("CheckInteraction() called");
+    //private void CheckInteraction()
+    //{
+    //    RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
+    //    Debug.Log("CheckInteraction() called");
 
-        if (hits.Length > 0)
-        {
-            foreach (RaycastHit2D rc in hits)
-            {
-                if (rc.IsInteractable())
-                {
-                    Debug.Log("interactable");
-                    // rc.Interact();
+    //    if (hits.Length > 0)
+    //    {
+    //        foreach (RaycastHit2D rc in hits)
+    //        {
+    //            if (rc.IsInteractable())
+    //            {
+    //                // Debug.Log("interactable");
 
-                    Collider2D collider = rc.collider;
-                    vine = collider.GetComponent<Vines>();
-                    vine.testInteract();
-                    return;
-                }
-                    
-            }
-        }
-    }
+    //                Collider2D collider = rc.collider;
+    //                vine = collider.GetComponent<Vines>();
+    //                vine.Interact();
+    //                return;
+    //            }
+
+    //        }
+    //    }
+    //}
 }

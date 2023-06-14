@@ -6,7 +6,9 @@ public class VerticalPlatform : MonoBehaviour
 {
     private PlatformEffector2D effector;
     public float waitTime;
-    public Rigidbody2D player;
+    public Rigidbody2D cactus;
+    public Rigidbody2D vft;
+    public Rigidbody2D ivy;
 
     private void Start()
     {
@@ -17,7 +19,7 @@ public class VerticalPlatform : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
         {
-            waitTime = 0.5f;
+            waitTime = 0.3f;
         }
 
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))

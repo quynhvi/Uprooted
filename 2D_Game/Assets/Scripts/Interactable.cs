@@ -16,7 +16,7 @@ public abstract class Interactable : MonoBehaviour
         // Debug.Log("OnTriggerEnter2D called");
         if (collision.CompareTag("Ivy"))
         {
-            collision.GetComponent<PlayerMovement>().ArmInteractable();
+            collision.GetComponent<IvyInteract>().ArmInteractable();
         }
     }
 
@@ -25,7 +25,7 @@ public abstract class Interactable : MonoBehaviour
         // Debug.Log("OnTriggerExit2D called");
         if (collision.CompareTag("Ivy"))
         {
-            collision.GetComponent<PlayerMovement>().NoArmInteractable();
+            collision.GetComponent<IvyInteract>().NoArmInteractable();
         }
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - VFT
   - Game Manager
   - light
+  - Ladder
   layers:
   - Default
   - TransparentFX
