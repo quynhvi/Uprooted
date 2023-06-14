@@ -10,6 +10,7 @@ TagManager:
   - Game Manager
   - light
   - Ladder
+  - dragable
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - Player
+  - VFT
   - 
   - 
   - 
