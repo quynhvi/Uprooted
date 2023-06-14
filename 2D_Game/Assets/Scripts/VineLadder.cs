@@ -22,7 +22,7 @@ public class VineLadder : MonoBehaviour
         if (other.CompareTag("Cactus"))
         {
             isPlayerOnLadder = false;
-            other.attachedRigidbody.gravityScale = 1f;
+            other.attachedRigidbody.gravityScale = 3f;
             // ignore deactivated
         }
     }
