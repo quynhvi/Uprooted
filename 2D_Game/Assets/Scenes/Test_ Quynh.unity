@@ -1583,7 +1583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429d0c10954ea4a72a6ede94474c7242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactIcon: {fileID: 1017073972}
   speed: 5
   rb: {fileID: 587429930}
   groundCheck: {fileID: 325811387}
@@ -9532,6 +9531,7 @@ GameObject:
   - component: {fileID: 1895183612}
   - component: {fileID: 1895183611}
   - component: {fileID: 1895183615}
+  - component: {fileID: 1895183616}
   m_Layer: 0
   m_Name: Ivy
   m_TagString: Ivy
@@ -9667,13 +9667,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429d0c10954ea4a72a6ede94474c7242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactIcon: {fileID: 1017073972}
   speed: 6
   rb: {fileID: 1895183611}
   groundCheck: {fileID: 329967644}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1895183616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895183610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bddf9d72742d64195b2bfa338c3544cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactIcon: {fileID: 1017073972}
 --- !u!1 &1918496356
 GameObject:
   m_ObjectHideFlags: 0
@@ -10045,7 +10057,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429d0c10954ea4a72a6ede94474c7242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactIcon: {fileID: 1017073972}
   speed: 6
   rb: {fileID: 2032176117}
   groundCheck: {fileID: 1222443893}
