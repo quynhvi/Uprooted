@@ -24,7 +24,7 @@ public class RevivePlant : MonoBehaviour
     private void OnCollisionStay2D(Collision2D contact)
     {
         Debug.Log("Collision detected with Ivy");
-        if(contact.gameObject.CompareTag("Cactus") || contact.gameObject.CompareTag("VFT")) //Input.GetKey(KeyCode.C) && 
+        if(contact.gameObject.CompareTag("dragable")) // Exchange player characters with dragable object// Input.GetKey(KeyCode.C) && 
         {
             if(Input.GetKey(KeyCode.C))
             {
