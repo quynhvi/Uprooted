@@ -32,7 +32,7 @@ public class Drawer : MonoBehaviour
         {
             if (isOpen)
             {
-                CloseDrawer();
+                ClosedDrawer();
                 Drawers.GetComponent<BoxCollider2D>().enabled = false;
 
             }
@@ -45,7 +45,7 @@ public class Drawer : MonoBehaviour
         Debug.Log("Drawer Open");
     }
 
-    private void CloseDrawer()
+    private void ClosedDrawer()
     {
         Drawers.transform.position = Closed.transform.position;
         isOpen = false;
