@@ -5,8 +5,8 @@ using UnityEngine;
 public class RevivePlant : MonoBehaviour
 {
     public bool _ivyJustRevived = false;
-    public PlayerMovement _IvyMovementScript;
-    public PlayerSwap _PlayerSwapScript;
+    private PlayerMovement _IvyMovementScript;
+    private PlayerSwap _PlayerSwapScript;
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,12 +23,12 @@ public class RevivePlant : MonoBehaviour
     
     private void OnCollisionStay2D(Collision2D contact)
     {
-        //Debug.Log("Collision detected with Ivy");
-        if(contact.gameObject.CompareTag("Cactus") || contact.gameObject.CompareTag("VFT")) //Input.GetKey(KeyCode.C) && 
+        // Debug.Log("Collision detected with Ivy");
+        if(contact.gameObject.CompareTag("dragable")) // Exchange player characters with dragable object// Input.GetKey(KeyCode.C) && 
         {
             if(Input.GetKey(KeyCode.C))
             {
-                Debug.Log("Interaction and Collision with Ivy detected");
+                // Debug.Log("Interaction and Collision with Ivy detected");
                 _ivyJustRevived = true;
             }
             
