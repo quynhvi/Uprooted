@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask platformLayer;
 
     //private Vines vine;
 
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal"); // returns 1, -1 or 0 depending on direction
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded() || Input.GetButtonDown("Jump") && IsGroundedOnPlatform())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
@@ -58,6 +59,11 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
         // creates invisible circle at feet of player
         // collide with the ground -> jump
+    }
+
+    private bool IsGroundedOnPlatform()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, platformLayer);
     }
 
     private void Flip()

@@ -56,7 +56,7 @@ public class DraggableObjects : MonoBehaviour
     {
         //measuring distance between player and object
         _distance = Vector3.Distance(_rigidBody.position, _venusFlyTrap.transform.position);
-        Debug.Log(_distance);
+        //Debug.Log(_distance);
         //checking if player is left or right with positive/negative distance
         //raycast left and right 
         if(CheckRight() == true)
