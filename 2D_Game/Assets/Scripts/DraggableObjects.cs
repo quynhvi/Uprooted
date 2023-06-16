@@ -44,7 +44,7 @@ public class DraggableObjects : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log("collision of watering can detected");
+        // Debug.Log("collision of watering can detected");
         //if object colliding with Venus Fly Trap it is draggable
         if (collision.gameObject.CompareTag("VFT") && Input.GetKey(KeyCode.C))
         {
