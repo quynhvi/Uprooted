@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WaterSource : MonoBehaviour
 {
-    public RessourceManagement _RessourceManagement;
+    private RessourceManagement _RessourceManagement;
     public float _chargedWater;
     public Image _waterPuddle;
     // Start is called before the first frame update

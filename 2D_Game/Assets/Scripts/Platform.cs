@@ -24,7 +24,7 @@ public class Platform : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log("Collision with platform detected");
+        //Debug.Log("Collision with platform detected");
         //check if current player character is colliding with the platform
         if (collision.gameObject.CompareTag("Cactus") || collision.gameObject.CompareTag("VFT") || collision.gameObject.CompareTag("Ivy"))
         {
@@ -33,17 +33,17 @@ public class Platform : MonoBehaviour
             {
                 //get the current player characters layer and store it in the "currentPlayerLayer" variable as a number(int)
                 currentPlayerLayer = LayerMask.NameToLayer("Cactus"); //returns the index number of the layermask
-                Debug.Log("Player at Index " + currentPlayerLayer + "is standing on platform" );
+                // Debug.Log("Player at Index " + currentPlayerLayer + "is standing on platform" );
             }
             if (PlayerSwapScript.whichCharacter == 1) //check if vft
             {
                 currentPlayerLayer = LayerMask.NameToLayer("VFT"); //returns the index number of the layermask
-                Debug.Log("Player at Index " + currentPlayerLayer + "is standing on platform");
+                // Debug.Log("Player at Index " + currentPlayerLayer + "is standing on platform");
             }
             if (PlayerSwapScript.whichCharacter == 2) //check if ivy
             {
                 currentPlayerLayer = LayerMask.NameToLayer("Ivy"); //returns the index number of the layermask
-                Debug.Log("Player at Index " + currentPlayerLayer + "is standing on platform");
+                //Debug.Log("Player at Index " + currentPlayerLayer + "is standing on platform");
             }
         }
     }
