@@ -6,9 +6,9 @@ public class Platform : MonoBehaviour
 {
     private PlatformEffector2D effector;
     public float waitTime;
-    public Rigidbody2D cactus;
-    public Rigidbody2D vft;
-    public Rigidbody2D ivy;
+    private Rigidbody2D cactus;
+    private Rigidbody2D vft;
+    private Rigidbody2D ivy;
     private int currentPlayerLayer;
     private int currentPlatformLayer;
     public PlayerSwap PlayerSwapScript;

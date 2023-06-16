@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LightSource : MonoBehaviour
 {
-    public RessourceManagement _RessourceManagement;
+    private RessourceManagement _RessourceManagement;
     public float _chargedLight;
     // Start is called before the first frame update
     void Awake()

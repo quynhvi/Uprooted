@@ -5,8 +5,8 @@ using UnityEngine;
 public class RevivePlant : MonoBehaviour
 {
     public bool _ivyJustRevived = false;
-    public PlayerMovement _IvyMovementScript;
-    public PlayerSwap _PlayerSwapScript;
+    private PlayerMovement _IvyMovementScript;
+    private PlayerSwap _PlayerSwapScript;
     // Start is called before the first frame update
     void Awake()
     {
