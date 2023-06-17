@@ -6,6 +6,7 @@ public class CactusArm : Interactable
 {
     private bool isActive;
     public GameObject armChild;
+    public GameObject noArmChild;
     
 
     // Start is called before the first frame update
@@ -22,14 +23,14 @@ public class CactusArm : Interactable
 
     public override void Interact()
     {
-        if(isActive)
-        {
-            armChild.SetActive(false);
-        }
-        else
+        if(Input.GetKeyDown(KeyCode.I))
         {
             armChild.SetActive(true);
         }
-        isActive = !isActive;
+        else
+        {
+            armChild.SetActive(false);
+        }
+        
     }
 }

@@ -5,8 +5,9 @@ using UnityEngine;
 public class CactusInteract : MonoBehaviour
 {
     
-    public GameObject arm;
-    private Vector2 armSize = new Vector2(1f, 0.1f);
+    
+    public GameObject interactIcon;
+    private Vector2 armSize = new Vector2(5f, 5f);
     private CactusArm armClass;
 
 
@@ -16,23 +17,33 @@ public class CactusInteract : MonoBehaviour
         
     }
 
+    public void ArmInteractable()
+    {
+        interactIcon.SetActive(true);
+    }
+
+    public void NoArmInteractable()
+    {
+        interactIcon.SetActive(false);
+    }
+
+
     // Update is called once per frame
+
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
             Debug.Log("I pressed");
 
-            arm.SetActive(true);
+            
             CheckInteraction();
             
             
 
         }
-        else
-        {
-            arm.SetActive(false);
-        }
+        
         
     }
 
@@ -47,12 +58,13 @@ public class CactusInteract : MonoBehaviour
             {
                 if (rc.IsInteractable())
                 {
-                    
 
+                    Debug.Log("interactable");
                     Collider2D collider = rc.collider;
 
                     armClass = collider.GetComponent<CactusArm>();
                     armClass.Interact();
+                    Debug.Log("Interacted");
                     return;
                 }
 
