@@ -33,7 +33,7 @@ public class CactusInteract : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKey(KeyCode.I))
         {
             Debug.Log("I pressed");
 
