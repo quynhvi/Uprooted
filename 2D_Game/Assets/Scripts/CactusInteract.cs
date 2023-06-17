@@ -9,6 +9,7 @@ public class CactusInteract : MonoBehaviour
     public GameObject interactIcon;
     private Vector2 armSize = new Vector2(5f, 5f);
     private CactusArm armClass;
+    public GameObject arm;
 
 
     // Start is called before the first frame update
@@ -37,11 +38,15 @@ public class CactusInteract : MonoBehaviour
         {
             Debug.Log("I pressed");
 
-            
+            arm.SetActive(true);
             CheckInteraction();
             
             
 
+        }
+        else
+        {
+            arm.SetActive(false);
         }
         
         

@@ -20,9 +20,11 @@ public class DamagingObjects : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("CactusArm"))
+        if (collision.gameObject.CompareTag("CactusArm"))
         {
             gameObject.SetActive(false);
         }
     }
+
+
 }
