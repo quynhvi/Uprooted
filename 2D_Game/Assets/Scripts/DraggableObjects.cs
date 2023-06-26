@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class DraggableObjects : MonoBehaviour
 {
-    public Rigidbody2D _rigidBody;
-    public Vector2 _currentPositionObject;
-    public GameObject _venusFlyTrap;
-    public bool _isDragging = false;
-    public Vector3 _offsetDrag = new Vector3(-1, 0, 0); //Distance from Object to VFT
-    public float _distance;
-    public PlayerMovement _PlayerMovementScript;
+    public Rigidbody2D rb;
+    public Vector2 currentPositionObject;
+    public GameObject vft;
+    public bool isDragging = false;
+    public Vector3 offsetDrag = new Vector3(-1, 0, 0); //Distance from Object to VFT
+    public float distance;
+    public PlayerMovement PlayerMovementScript;
     
 
     // Start is called before the first frame update
     void Awake()
     {
-        _rigidBody = GetComponent<Rigidbody2D>();
-        _PlayerMovementScript = GameObject.FindGameObjectWithTag("VFT").GetComponent<PlayerMovement>();
+        rb = GetComponent<Rigidbody2D>();
+        PlayerMovementScript = GameObject.FindGameObjectWithTag("VFT").GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -30,14 +30,14 @@ public class DraggableObjects : MonoBehaviour
 
     bool CheckRight()
     {
-        if (Physics2D.Raycast(_rigidBody.position, Vector2.right, 0.5f, LayerMask.GetMask("VFT")))
+        if (Physics2D.Raycast(rb.position, Vector2.right, 0.5f, LayerMask.GetMask("VFT")))
             return true;
         else
             return false;
     }
     bool CheckLeft()
     {
-        if (Physics2D.Raycast(_rigidBody.position, Vector2.left, 0.5f, LayerMask.GetMask("VFT")))
+        if (Physics2D.Raycast(rb.position, Vector2.left, 0.5f, LayerMask.GetMask("VFT")))
             return true;
         else
             return false;
@@ -49,20 +49,20 @@ public class DraggableObjects : MonoBehaviour
         if (collision.gameObject.CompareTag("VFT") && Input.GetKey(KeyCode.C))
         {
             Debug.Log("collision with VFT detected");
-            _isDragging = true;
+            isDragging = true;
         }
     }
     private void MeasuringPlayerPosition()
     {
         //measuring distance between player and object
-        _distance = Vector3.Distance(_rigidBody.position, _venusFlyTrap.transform.position);
+        distance = Vector3.Distance(rb.position, vft.transform.position);
         //Debug.Log(_distance);
         //checking if player is left or right with positive/negative distance
         //raycast left and right 
         if(CheckRight() == true)
-            _offsetDrag = new Vector3(1, 0, 0);
+            offsetDrag = new Vector3(1, 0, 0);
         if(CheckLeft() == true)
-            _offsetDrag = new Vector3(-1, 0, 0);
+            offsetDrag = new Vector3(-1, 0, 0);
 
     }
     private void CheckForPlayerFlip()
@@ -74,16 +74,16 @@ public class DraggableObjects : MonoBehaviour
     }
     private void CheckIfDragging()
     {
-        if (_distance > 1.5f || Input.GetKeyDown(KeyCode.C))
+        if (distance > 1.5f || Input.GetKeyDown(KeyCode.C))
         {
-            _isDragging = false;
-            _currentPositionObject = _rigidBody.position;
+            isDragging = false;
+            currentPositionObject = rb.position;
         }
 
-        if (_isDragging == true)
+        if (isDragging == true)
         {
-            _currentPositionObject = _venusFlyTrap.transform.position - _offsetDrag; //Operator needs bugfix
-            _rigidBody.MovePosition(_currentPositionObject);
+            currentPositionObject = vft.transform.position - offsetDrag; //Operator needs bugfix
+            rb.MovePosition(currentPositionObject);
         }
         //if distance too big from draggable object to VFT then _isDragging set to false
         //1. get distance from two objects with 
