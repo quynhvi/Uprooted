@@ -11,19 +11,12 @@ public abstract class Interactable : MonoBehaviour
 
     public abstract void Interact();
 
-    
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Debug.Log("OnTriggerEnter2D called");
         if (collision.CompareTag("Ivy"))
         {
             collision.GetComponent<IvyInteract>().ArmInteractable();
-        }
-
-        if (collision.CompareTag("Cactus"))
-        {
-            collision.GetComponent<CactusInteract>().ArmInteractable();
         }
 
         //if (collision.CompareTag("VFT"))
@@ -40,15 +33,10 @@ public abstract class Interactable : MonoBehaviour
             collision.GetComponent<IvyInteract>().NoArmInteractable();
         }
 
-        if (collision.CompareTag("Cactus"))
+        if (collision.CompareTag("VFT"))
         {
-            collision.GetComponent<CactusInteract>().NoArmInteractable();
+            collision.GetComponent<VFTInteract>().noVFTInteractable();
         }
-
-        //if (collision.CompareTag("VFT"))
-        //{
-        //    collision.GetComponent<VFTInteract>().noVFTInteractable();
-        //}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -66,6 +54,4 @@ public abstract class Interactable : MonoBehaviour
             collision.gameObject.GetComponent<VFTInteract>().noVFTInteractable();
         }
     }
-
-    
 }
