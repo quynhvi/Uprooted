@@ -33,12 +33,48 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "PlayerSwap",
+                    "name": "Swap Left",
                     "type": "Button",
-                    "id": "d850d2fc-e18f-4d07-be78-2650a3ef1de1",
+                    "id": "34be1260-e9fa-430f-9c55-431b1c12dd59",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Swap Right",
+                    "type": "Button",
+                    "id": "d5362d22-4eea-4392-84b7-af786cdb641e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Switch Character 1",
+                    "type": "Button",
+                    "id": "b72b2841-01b0-4384-bbe6-e7ac1d5f25be",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Switch Character 2",
+                    "type": "Button",
+                    "id": "ca2ffd64-972e-4b7b-b651-88aae89f30da",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Switch Character 3",
+                    "type": "Button",
+                    "id": "193dc85c-3eb9-41f8-8ca3-b0fae1ae5de8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -133,56 +169,78 @@
                 },
                 {
                     "name": "",
-                    "id": "f2d7dbd2-5375-4c87-b2c0-c2b1b747c857",
-                    "path": "<Keyboard>/1",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PlayerSwap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b0126cc7-ea06-4801-8813-9e463929b76d",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PlayerSwap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "014ebce7-cecb-402f-b789-7425901e4fbc",
-                    "path": "<Keyboard>/3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PlayerSwap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0dc2062d-908f-4788-aa2a-b9f00a1e213f",
+                    "id": "15bb0409-63f9-470d-9ce0-8a156f2d985e",
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "PlayerSwap",
+                    "action": "Swap Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "66f3453e-1656-4e6c-b59d-7c85c99eedd7",
+                    "id": "38e1f97c-9484-4bb3-acd7-53d87d819edc",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Swap Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8b4830a8-8989-4905-8c44-0f5d516191b2",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "PlayerSwap",
+                    "action": "Swap Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0d12dfd6-59d4-482b-88a8-d5fa8c0d566b",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Swap Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "00205297-409b-4793-9b26-3c1cfee3d165",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch Character 1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "22441c00-91c7-4753-a239-552ca7cda8b9",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch Character 2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e0a615e3-7a9e-4267-b06e-ac7adb02081d",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch Character 3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

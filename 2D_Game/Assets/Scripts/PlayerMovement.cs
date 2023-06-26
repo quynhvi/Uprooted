@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnJump(InputAction.CallbackContext context)
     {
-        if (IsGrounded() || IsGroundedOnPlatform())
+        if (IsGrounded() || IsGroundedOnPlatform() || IsOnCharacter())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
@@ -71,6 +71,21 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGroundedOnPlatform()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, platformLayer);
+    }
+
+    private bool IsOnCharacter()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f);
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Cactus") || collider.CompareTag("VFT") || collider.CompareTag("Ivy"))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private void Flip()

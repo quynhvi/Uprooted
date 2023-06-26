@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerSwap : MonoBehaviour
 {
@@ -9,6 +10,12 @@ public class PlayerSwap : MonoBehaviour
     public int whichCharacter;
     public ParticleSystem m_ParticleSystem;
     public CameraFollow cam;
+
+    public InputActionReference swapLeftAction;
+    public InputActionReference swapRightAction;
+    public InputActionReference switchCharacter1Action;
+    public InputActionReference switchCharacter2Action;
+    public InputActionReference switchCharacter3Action;
 
     void Start()
     {
@@ -31,46 +38,66 @@ public class PlayerSwap : MonoBehaviour
         Swap();
     }
 
-    void Update()
+    private void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (whichCharacter == 0)
-            {
-                whichCharacter = possibleCharacters.Count - 1;
-            }
-            else
-            {
-                whichCharacter -= 1;
-            }
-            Swap();
-        }
+        swapLeftAction.action.Enable();
+        swapLeftAction.action.performed += _ => SwapLeft();
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (whichCharacter == possibleCharacters.Count - 1)
-            {
-                whichCharacter = 0;
-            }
-            else
-            {
-                whichCharacter += 1;
-            }
-            Swap();
-        }
+        swapRightAction.action.Enable();
+        swapRightAction.action.performed += _ => SwapRight();
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        switchCharacter1Action.action.Enable();
+        switchCharacter1Action.action.performed += _ => SwitchToCharacter(0);
+
+        switchCharacter2Action.action.Enable();
+        switchCharacter2Action.action.performed += _ => SwitchToCharacter(1);
+
+        switchCharacter3Action.action.Enable();
+        switchCharacter3Action.action.performed += _ => SwitchToCharacter(2);
+    }
+
+    private void OnDisable()
+    {
+        swapLeftAction.action.Disable();
+        swapLeftAction.action.performed -= _ => SwapLeft();
+
+        swapRightAction.action.Disable();
+        swapRightAction.action.performed -= _ => SwapRight();
+
+        switchCharacter1Action.action.Disable();
+        switchCharacter1Action.action.performed -= _ => SwitchToCharacter(0);
+
+        switchCharacter2Action.action.Disable();
+        switchCharacter2Action.action.performed -= _ => SwitchToCharacter(1);
+
+        switchCharacter3Action.action.Disable();
+        switchCharacter3Action.action.performed -= _ => SwitchToCharacter(2);
+    }
+
+    void SwapLeft()
+    {
+        if (whichCharacter == 0)
         {
-            SwitchToCharacter(0);
+            whichCharacter = possibleCharacters.Count - 1;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else
         {
-            SwitchToCharacter(1);
+            whichCharacter -= 1;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        Swap();
+    }
+
+    void SwapRight()
+    {
+        if (whichCharacter == possibleCharacters.Count - 1)
         {
-            SwitchToCharacter(2);
+            whichCharacter = 0;
         }
+        else
+        {
+            whichCharacter += 1;
+        }
+        Swap();
     }
 
     void SwitchToCharacter(int index)
@@ -81,7 +108,7 @@ public class PlayerSwap : MonoBehaviour
             character = possibleCharacters[index];
             character.GetComponent<PlayerMovement>().enabled = true;
 
-            m_ParticleSystem.transform.position = character.position; // spawn at player
+            m_ParticleSystem.transform.position = character.position;
             m_ParticleSystem.Play();
 
             // Update the currentPlayerLayer in the Platform script
@@ -96,7 +123,7 @@ public class PlayerSwap : MonoBehaviour
         }
     }
 
-    public void Swap()
+    void Swap()
     {
         character.GetComponent<PlayerMovement>().enabled = false;
         character = possibleCharacters[whichCharacter];
