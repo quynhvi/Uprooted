@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerSwap : MonoBehaviour
 {
@@ -9,60 +10,94 @@ public class PlayerSwap : MonoBehaviour
     public int whichCharacter;
     public ParticleSystem m_ParticleSystem;
     public CameraFollow cam;
-    public Vector3 cameraOffset; // Offset between the character and the camera
 
+    public InputActionReference swapLeftAction;
+    public InputActionReference swapRightAction;
+    public InputActionReference switchCharacter1Action;
+    public InputActionReference switchCharacter2Action;
+    public InputActionReference switchCharacter3Action;
 
-    // Start is called before the first frame update
     void Start()
     {
-        if (character == null && possibleCharacters.Count >= 1)
+        if (possibleCharacters.Count > 0)
         {
-            character = possibleCharacters[0];
+            whichCharacter = 0;
+            character = possibleCharacters[whichCharacter];
+            character.GetComponent<PlayerMovement>().enabled = true;
+
+            m_ParticleSystem.transform.position = character.position;
+            m_ParticleSystem.Play();
+
+            for (int i = 1; i < possibleCharacters.Count; i++)
+            {
+                possibleCharacters[i].GetComponent<PlayerMovement>().enabled = false;
+            }
+
+            cam.SetTarget(character);
         }
         Swap();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (whichCharacter == 0)
-            {
-                whichCharacter = possibleCharacters.Count - 1; // switch in the list
-            }
-            else
-            {
-                whichCharacter -= 1;
-            }
-            Swap();
-        }
+        swapLeftAction.action.Enable();
+        swapLeftAction.action.performed += _ => SwapLeft();
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (whichCharacter == possibleCharacters.Count -1)
-            {
-                whichCharacter = 0; 
-            }
-            else
-            {
-                whichCharacter += 1;
-            }
-            Swap();
-        }
+        swapRightAction.action.Enable();
+        swapRightAction.action.performed += _ => SwapRight();
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        switchCharacter1Action.action.Enable();
+        switchCharacter1Action.action.performed += _ => SwitchToCharacter(0);
+
+        switchCharacter2Action.action.Enable();
+        switchCharacter2Action.action.performed += _ => SwitchToCharacter(1);
+
+        switchCharacter3Action.action.Enable();
+        switchCharacter3Action.action.performed += _ => SwitchToCharacter(2);
+    }
+
+    private void OnDisable()
+    {
+        swapLeftAction.action.Disable();
+        swapLeftAction.action.performed -= _ => SwapLeft();
+
+        swapRightAction.action.Disable();
+        swapRightAction.action.performed -= _ => SwapRight();
+
+        switchCharacter1Action.action.Disable();
+        switchCharacter1Action.action.performed -= _ => SwitchToCharacter(0);
+
+        switchCharacter2Action.action.Disable();
+        switchCharacter2Action.action.performed -= _ => SwitchToCharacter(1);
+
+        switchCharacter3Action.action.Disable();
+        switchCharacter3Action.action.performed -= _ => SwitchToCharacter(2);
+    }
+
+    void SwapLeft()
+    {
+        if (whichCharacter == 0)
         {
-            SwitchToCharacter(0);
+            whichCharacter = possibleCharacters.Count - 1;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else
         {
-            SwitchToCharacter(1);
+            whichCharacter -= 1;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        Swap();
+    }
+
+    void SwapRight()
+    {
+        if (whichCharacter == possibleCharacters.Count - 1)
         {
-            SwitchToCharacter(2);
+            whichCharacter = 0;
         }
+        else
+        {
+            whichCharacter += 1;
+        }
+        Swap();
     }
 
     void SwitchToCharacter(int index)
@@ -73,30 +108,38 @@ public class PlayerSwap : MonoBehaviour
             character = possibleCharacters[index];
             character.GetComponent<PlayerMovement>().enabled = true;
 
-            m_ParticleSystem.transform.position = character.position; // spawn at player
+            m_ParticleSystem.transform.position = character.position;
             m_ParticleSystem.Play();
 
+            // Update the currentPlayerLayer in the Platform script
+            var platformObjects = GameObject.FindGameObjectsWithTag("Platform");
+            foreach (var platformObject in platformObjects)
+            {
+                var platformScript = platformObject.GetComponent<Platform>();
+                platformScript.currentPlayerLayer = character.gameObject.layer;
+            }
 
             cam.SetTarget(character); // Update the camera's target to the newly selected character
         }
     }
-  
 
-    public void Swap()
+    void Swap()
     {
+        character.GetComponent<PlayerMovement>().enabled = false;
         character = possibleCharacters[whichCharacter];
         character.GetComponent<PlayerMovement>().enabled = true;
-        m_ParticleSystem.transform.position = character.position; // spawn at player
+
+        m_ParticleSystem.transform.position = character.position;
         m_ParticleSystem.Play();
+
+        cam.SetTarget(character);
 
         for (int i = 0; i < possibleCharacters.Count; i++)
         {
-            if (possibleCharacters[i] !=character)
+            if (i != whichCharacter)
             {
-                possibleCharacters[i].GetComponent<PlayerMovement>().enabled = false; // if character not chosen -> can't move
-                //Debug.Log("Hallo");
+                possibleCharacters[i].GetComponent<PlayerMovement>().enabled = false;
             }
         }
-        cam.SetTarget(character);
     }
 }

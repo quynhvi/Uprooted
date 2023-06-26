@@ -402,6 +402,9 @@ MonoBehaviour:
   platformLayer:
     serializedVersion: 2
     m_Bits: 4096
+  movementAction: {fileID: 3418993102252175132, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
+  inputActions: {fileID: -944628639613478452, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
+  jumpAction: {fileID: 8750983435663049869, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
 --- !u!114 &7958400918612606848
 MonoBehaviour:
   m_ObjectHideFlags: 0

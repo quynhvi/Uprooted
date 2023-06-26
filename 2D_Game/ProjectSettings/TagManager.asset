@@ -11,6 +11,8 @@ TagManager:
   - light
   - Ladder
   - dragable
+  - CactusArm
+  - Platform
   layers:
   - Default
   - TransparentFX
