@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,41 +16,56 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask platformLayer;
 
-    // Start is called before the first frame update
-    void Start()
+    public InputActionReference movementAction;
+    public InputActionAsset inputActions;
+    public InputActionReference jumpAction;
+
+    private void OnEnable()
     {
-       
+        // Enable the player's movement input action
+        movementAction.action.Enable();
+        movementAction.action.performed += OnMovement;
+        movementAction.action.canceled += OnMovement;
+
+        // Enable the player's jump input action
+        jumpAction.action.Enable();
+        jumpAction.action.performed += OnJump;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        horizontal = Input.GetAxisRaw("Horizontal"); // returns 1, -1 or 0 depending on direction
+        // Disable the player's movement input action
+        movementAction.action.Disable();
+        movementAction.action.performed -= OnMovement;
+        movementAction.action.canceled -= OnMovement;
 
-        if (Input.GetButtonDown("Jump") && IsGrounded() || Input.GetButtonDown("Jump") && IsGroundedOnPlatform())
+        // Disable the player's jump input action
+        jumpAction.action.Disable();
+        jumpAction.action.performed -= OnJump;
+    }
+
+    private void OnMovement(InputAction.CallbackContext context)
+    {
+        horizontal = context.ReadValue<Vector2>().x;
+    }
+
+    private void OnJump(InputAction.CallbackContext context)
+    {
+        if (IsGrounded() || IsGroundedOnPlatform())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
-
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-            // jump higher if pressed longer
-        }
-
-        Flip();
     }
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        Flip();
     }
 
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-        // creates invisible circle at feet of player
-        // collide with the ground -> jump
     }
 
     private bool IsGroundedOnPlatform()
@@ -60,9 +77,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
-            isFacingRight = !isFacingRight; // set to its oppisite value
-            Vector3 localScale = transform.localScale; 
-            localScale.x *= -1f; // multiply x component of player's local scale by -1
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
             transform.localScale = localScale;
         }
     }

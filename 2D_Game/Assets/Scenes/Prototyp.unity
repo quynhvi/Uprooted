@@ -2637,7 +2637,6 @@ MonoBehaviour:
   whichCharacter: 0
   m_ParticleSystem: {fileID: 1272542945}
   cam: {fileID: 519420033}
-  cameraOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1131988106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2742,7 +2741,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.8962264, g: 0.2494215, b: 0.2494215, a: 1}
   m_FlipX: 0
@@ -2762,7 +2761,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155346341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: -1.96, z: 0}
+  m_LocalPosition: {x: -0.17, y: -2.55, z: 0}
   m_LocalScale: {x: 0.3376, y: 0.3376, z: 0.3376}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10277,6 +10276,10 @@ PrefabInstance:
     - target: {fileID: 1468719295968932804, guid: 7355a6fa0093e44688c11f1ae3e6f50a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468719295968932806, guid: 7355a6fa0093e44688c11f1ae3e6f50a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1668389894092774729, guid: 7355a6fa0093e44688c11f1ae3e6f50a, type: 3}
       propertyPath: interactIcon

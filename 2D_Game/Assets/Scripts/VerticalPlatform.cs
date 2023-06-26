@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class VerticalPlatform : MonoBehaviour
 {
@@ -17,14 +16,14 @@ public class VerticalPlatform : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
+        if (Keyboard.current.downArrowKey.wasReleasedThisFrame || Keyboard.current.sKey.wasReleasedThisFrame)
         {
             waitTime = 0.3f;
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        if (Keyboard.current.downArrowKey.isPressed || Keyboard.current.sKey.isPressed)
         {
-            if (waitTime <= 0) // hold key for at least half second
+            if (waitTime <= 0)
             {
                 effector.rotationalOffset = 180f;
                 waitTime = 0.5f;
@@ -33,12 +32,10 @@ public class VerticalPlatform : MonoBehaviour
             {
                 waitTime -= Time.deltaTime;
             }
-
-            
         }
-        if (Input.GetKey(KeyCode.Space))
-            {
-                effector.rotationalOffset = 0;
-            }
+        if (Keyboard.current.spaceKey.isPressed)
+        {
+            effector.rotationalOffset = 0;
+        }
     }
 }

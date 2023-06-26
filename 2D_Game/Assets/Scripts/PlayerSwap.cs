@@ -9,27 +9,35 @@ public class PlayerSwap : MonoBehaviour
     public int whichCharacter;
     public ParticleSystem m_ParticleSystem;
     public CameraFollow cam;
-    public Vector3 cameraOffset; // Offset between the character and the camera
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        if (character == null && possibleCharacters.Count >= 1)
+        if (possibleCharacters.Count > 0)
         {
-            character = possibleCharacters[0];
+            whichCharacter = 0;
+            character = possibleCharacters[whichCharacter];
+            character.GetComponent<PlayerMovement>().enabled = true;
+
+            m_ParticleSystem.transform.position = character.position;
+            m_ParticleSystem.Play();
+
+            for (int i = 1; i < possibleCharacters.Count; i++)
+            {
+                possibleCharacters[i].GetComponent<PlayerMovement>().enabled = false;
+            }
+
+            cam.SetTarget(character);
         }
         Swap();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             if (whichCharacter == 0)
             {
-                whichCharacter = possibleCharacters.Count - 1; // switch in the list
+                whichCharacter = possibleCharacters.Count - 1;
             }
             else
             {
@@ -40,9 +48,9 @@ public class PlayerSwap : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (whichCharacter == possibleCharacters.Count -1)
+            if (whichCharacter == possibleCharacters.Count - 1)
             {
-                whichCharacter = 0; 
+                whichCharacter = 0;
             }
             else
             {
@@ -76,27 +84,35 @@ public class PlayerSwap : MonoBehaviour
             m_ParticleSystem.transform.position = character.position; // spawn at player
             m_ParticleSystem.Play();
 
+            // Update the currentPlayerLayer in the Platform script
+            var platformObjects = GameObject.FindGameObjectsWithTag("Platform");
+            foreach (var platformObject in platformObjects)
+            {
+                var platformScript = platformObject.GetComponent<Platform>();
+                platformScript.currentPlayerLayer = character.gameObject.layer;
+            }
 
             cam.SetTarget(character); // Update the camera's target to the newly selected character
         }
     }
-  
 
     public void Swap()
     {
+        character.GetComponent<PlayerMovement>().enabled = false;
         character = possibleCharacters[whichCharacter];
         character.GetComponent<PlayerMovement>().enabled = true;
-        m_ParticleSystem.transform.position = character.position; // spawn at player
+
+        m_ParticleSystem.transform.position = character.position;
         m_ParticleSystem.Play();
+
+        cam.SetTarget(character);
 
         for (int i = 0; i < possibleCharacters.Count; i++)
         {
-            if (possibleCharacters[i] !=character)
+            if (i != whichCharacter)
             {
-                possibleCharacters[i].GetComponent<PlayerMovement>().enabled = false; // if character not chosen -> can't move
-                //Debug.Log("Hallo");
+                possibleCharacters[i].GetComponent<PlayerMovement>().enabled = false;
             }
         }
-        cam.SetTarget(character);
     }
 }
