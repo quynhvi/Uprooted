@@ -14,6 +14,7 @@ public class VFTInteract : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             //Debug.Log("I pressed");
+            
         }
     }
 

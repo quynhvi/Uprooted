@@ -13,6 +13,7 @@ TagManager:
   - dragable
   - CactusArm
   - Platform
+  - Key
   layers:
   - Default
   - TransparentFX

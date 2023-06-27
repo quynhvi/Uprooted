@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 6f;
     public float jumpingPower = 9f;
     private bool isFacingRight = true;
+    private bool isGrounded = true; // Flag indicating if the player is grounded
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -51,9 +52,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnJump(InputAction.CallbackContext context)
     {
-        if (IsGrounded() || IsGroundedOnPlatform() || IsOnCharacter())
+        if (isGrounded) // Check if the player is grounded
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            isGrounded = false; // Set grounded flag to false after jumping
         }
     }
 
@@ -61,11 +63,26 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         Flip();
+
+        // Perform the ground check
+        isGrounded = IsGrounded() || IsGroundedOnPlatform() || IsOnCharacter();
     }
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        // Perform an overlap circle check to detect if the player is grounded
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, groundLayer);
+
+        // Check if any of the colliders (except the player itself) are found
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.gameObject != gameObject)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private bool IsGroundedOnPlatform()

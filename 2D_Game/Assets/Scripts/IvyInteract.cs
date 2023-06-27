@@ -8,6 +8,7 @@ public class IvyInteract : MonoBehaviour
     private Vines vine;
     private Vector2 boxSize = new Vector2(0.1f, 1f);
 
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
