@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class LightSource : MonoBehaviour
 {
-    private RessourceManagement ResourceManagement;
-    public float chargedLight;
+    private ResourceManagement ResourceManagement;
+    public float chargedLight = 0;
     // Start is called before the first frame update
     void Awake()
     {
-        ResourceManagement = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<RessourceManagement>();
+        ResourceManagement = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
     }
 
     // Update is called once per frame

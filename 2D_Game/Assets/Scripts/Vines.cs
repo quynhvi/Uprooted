@@ -8,6 +8,9 @@ public class Vines : Interactable
     public GameObject arm;
     public GameObject noArm;
 
+    private ResourceManagement rm;
+    private LightSource ls;
+
     //public Sprite vine;
     //public Sprite noVine;
 
@@ -17,6 +20,8 @@ public class Vines : Interactable
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
+        rm = FindAnyObjectByType<ResourceManagement>();
+        ls = FindAnyObjectByType<LightSource>();
     }
     public override void Interact()
     {
@@ -31,6 +36,11 @@ public class Vines : Interactable
         }
         else
         {
+            ls.chargedLight = 0.5f;
+            rm.lightLevelNumber -= ls.chargedLight;
+            rm.lightBarFill.fillAmount -= ls.chargedLight;
+            rm.waterLevelNumber -= ls.chargedLight;
+            rm.waterBarFill.fillAmount -= ls.chargedLight;
             arm.SetActive(true);
             //sr.sprite = vine;
             //Debug.Log("isnotactive");
