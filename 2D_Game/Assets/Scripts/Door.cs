@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Door : MonoBehaviour
 {
@@ -14,8 +15,21 @@ public class Door : MonoBehaviour
     public GameObject interactButton;
     private bool interactable;
 
-    // Start is called before the first frame update
-    void Start()
+    public InputActionReference openDoorAction;
+
+    private void OnEnable()
+    {
+        openDoorAction.action.Enable();
+        openDoorAction.action.performed += OnOpenDoor;
+    }
+
+    private void OnDisable()
+    {
+        openDoorAction.action.Disable();
+        openDoorAction.action.performed -= OnOpenDoor;
+    }
+
+    private void Start()
     {
         vft = FindAnyObjectByType<KeyFollowPoint>();
         rm = FindObjectOfType<ResourceManagement>();
@@ -24,20 +38,16 @@ public class Door : MonoBehaviour
         interactable = true;
     }
 
-    private void Update()
+    private void OnOpenDoor(InputAction.CallbackContext context)
     {
-
-        if (Input.GetKeyDown(KeyCode.I))
+        if (vft != null && vft.followingKey != null && vft.followingKey.gameObject.CompareTag("Key") && interactable)
         {
-            if (vft != null && vft.followingKey != null && vft.followingKey.gameObject.CompareTag("Key"))
-            {
-                interactable = false;
-                OpenDoor();
-            }
+            interactable = false;
+            OpenDoor();
         }
     }
 
-    private void OpenDoor()
+    public void OpenDoor()
     {
         if (rm != null && ls != null)
         {
@@ -57,7 +67,6 @@ public class Door : MonoBehaviour
         }
 
         vft.followingKey = null;
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -74,5 +83,15 @@ public class Door : MonoBehaviour
         {
             interactButton.SetActive(false);
         }
+    }
+
+    private T FindAnyObjectByType<T>() where T : MonoBehaviour
+    {
+        T[] objects = FindObjectsOfType<T>();
+        if (objects.Length > 0)
+        {
+            return objects[0];
+        }
+        return null;
     }
 }

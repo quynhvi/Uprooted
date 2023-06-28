@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class RevivePlant : MonoBehaviour
 {
-    public bool _ivyJustRevived = false;
-    private PlayerMovement _IvyMovementScript;
-    private PlayerSwap _PlayerSwapScript;
+    public bool ivyJustRevived = false;
+    private PlayerMovement ivyMovementScript;
+    private PlayerSwap playerSwapScript;
+
     // Start is called before the first frame update
     void Awake()
     {
-        _IvyMovementScript = this.gameObject.GetComponent<PlayerMovement>();
-        _PlayerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
-        _IvyMovementScript.enabled = false;
+        ivyMovementScript = this.gameObject.GetComponent<PlayerMovement>();
+        playerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
+        ivyMovementScript.enabled = false;
     }
 
     // Update is called once per frame
@@ -20,27 +21,27 @@ public class RevivePlant : MonoBehaviour
     {
         CheckforRevival();
     }
-    
+
     private void OnCollisionStay2D(Collision2D contact)
     {
-        // Debug.Log("Collision detected with Ivy");
-        if(contact.gameObject.CompareTag("dragable")) // Exchange player characters with dragable object// Input.GetKey(KeyCode.C) && 
+        if (contact.gameObject.CompareTag("WaterCan") && Input.GetKeyDown(KeyCode.I))
         {
-            if(Input.GetKey(KeyCode.C))
-            {
-                // Debug.Log("Interaction and Collision with Ivy detected");
-                _ivyJustRevived = true;
-            }
-            
+            ivyJustRevived = true;
         }
     }
+
     public void CheckforRevival()
     {
-        //if Ivy got interacted with then Revive Ivy --> Movement possible
-        if (_ivyJustRevived == true && !_PlayerSwapScript.possibleCharacters.Contains(this.gameObject.transform))
+        // If Ivy got interacted with and not already in possibleCharacters, then revive Ivy and enable movement
+        if (ivyJustRevived && !playerSwapScript.possibleCharacters.Contains(this.transform))
         {
-            _PlayerSwapScript.possibleCharacters.Add(this.gameObject.transform);
-            _IvyMovementScript.enabled = true;
+            playerSwapScript.possibleCharacters.Add(this.transform);
+            ivyMovementScript.enabled = true;
+        }
+        else if (!ivyJustRevived && playerSwapScript.possibleCharacters.Contains(this.transform))
+        {
+            playerSwapScript.possibleCharacters.Remove(this.transform);
+            ivyMovementScript.enabled = false;
         }
     }
 }

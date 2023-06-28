@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Key : MonoBehaviour
 {
@@ -14,31 +15,38 @@ public class Key : MonoBehaviour
     public GameObject interactButton;
     private bool interactable;
 
-    // Start is called before the first frame update
-    void Start()
+    public InputActionReference collectKeyAction;
+
+    private void OnEnable()
+    {
+        collectKeyAction.action.Enable();
+        collectKeyAction.action.performed += OnCollectKey;
+    }
+
+    private void OnDisable()
+    {
+        collectKeyAction.action.Disable();
+        collectKeyAction.action.performed -= OnCollectKey;
+    }
+
+    private void Start()
     {
         rm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
         interactable = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (isFollowing)
         {
             transform.position = Vector3.Lerp(transform.position, followTarget.position, followSpeed * Time.deltaTime);
         }
-
-        if (Input.GetKey(KeyCode.I))
-        {
-            CollectKey();
-        }
     }
 
-    private void CollectKey()
+    private void OnCollectKey(InputAction.CallbackContext context)
     {
-        if (!isFollowing)
+        if (!isFollowing && interactable)
         {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
             foreach (Collider2D collider in colliders)
@@ -63,6 +71,7 @@ public class Key : MonoBehaviour
                             rm.waterLevelNumber -= ls.chargedLight;
                             rm.waterBarFill.fillAmount -= ls.chargedLight;
                         }
+
                         interactable = false;
                         break; // Exit the loop after finding the first VFT
                     }
@@ -73,12 +82,24 @@ public class Key : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (interactable)
-        interactButton.SetActive(true);
+        if (interactable && collision.CompareTag("VFT"))
+        {
+            interactButton.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         interactButton.SetActive(false);
+    }
+
+    private T FindAnyObjectByType<T>() where T : MonoBehaviour
+    {
+        T[] objects = FindObjectsOfType<T>();
+        if (objects.Length > 0)
+        {
+            return objects[0];
+        }
+        return null;
     }
 }

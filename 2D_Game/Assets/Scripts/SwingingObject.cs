@@ -5,10 +5,7 @@ using UnityEngine;
 public class SwingingObject : MonoBehaviour
 {
     Rigidbody2D rb;
-
     public Transform player;
-
-
 
     bool isMoving = false;
 
@@ -49,9 +46,7 @@ public class SwingingObject : MonoBehaviour
         {
             moveSpeed = 0f;
             Move();
-        }
-
-        
+        } 
     }
 
     private void Update()
@@ -106,8 +101,4 @@ public class SwingingObject : MonoBehaviour
             rb.angularVelocity = -moveSpeed;
         }
     }
-
-
-
-
 }

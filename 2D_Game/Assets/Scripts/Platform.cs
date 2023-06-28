@@ -13,6 +13,8 @@ public class Platform : MonoBehaviour
     public PlayerSwap PlayerSwapScript;
     public float fallTimer;
     public bool IsFalling = false;
+    private PlayerMovement playerMovement;
+    private float verticalInput;
 
     private void Awake()
     {
@@ -20,7 +22,53 @@ public class Platform : MonoBehaviour
         PlayerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
         currentPlatformLayer = LayerMask.NameToLayer("Platform");
         currentPlayerLayer = 0;
+        playerMovement = GameObject.FindGameObjectWithTag("VFT").GetComponent<PlayerMovement>();
     }
+
+    private void Update()
+    {
+        if (IsFalling)
+            fallTimer += Time.deltaTime;
+
+        if (verticalInput < -0.5f || Keyboard.current.downArrowKey.isPressed) //Hold Key or joystick down
+        {
+            Physics2D.IgnoreLayerCollision(currentPlayerLayer, currentPlatformLayer, true);
+            IsFalling = true;
+        }
+        else
+        {
+            Physics2D.IgnoreLayerCollision(currentPlayerLayer, currentPlatformLayer, false);
+            IsFalling = false;
+            fallTimer = 0f;
+        }
+    }
+
+    private void OnEnable()
+    {
+        playerMovement.movementAction.action.Enable();
+        playerMovement.movementAction.action.performed += OnMovement;
+        playerMovement.movementAction.action.canceled += OnMovementCanceled;
+    }
+
+    private void OnDisable()
+    {
+        playerMovement.movementAction.action.Disable();
+        playerMovement.movementAction.action.performed -= OnMovement;
+        playerMovement.movementAction.action.canceled -= OnMovementCanceled;
+    }
+
+    private void OnMovement(InputAction.CallbackContext context)
+    {
+        Vector2 movementInput = context.ReadValue<Vector2>();
+        if (movementInput.y < 0f)
+            verticalInput = movementInput.y;
+    }
+
+    private void OnMovementCanceled(InputAction.CallbackContext context)
+    {
+        verticalInput = 0f;
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Cactus") || collision.gameObject.CompareTag("VFT") || collision.gameObject.CompareTag("Ivy"))
@@ -37,24 +85,6 @@ public class Platform : MonoBehaviour
             {
                 currentPlayerLayer = LayerMask.NameToLayer("Ivy");
             }
-        }
-    }
-
-    private void Update()
-    {
-        if (IsFalling)
-            fallTimer += Time.deltaTime;
-
-        if (Keyboard.current.downArrowKey.wasPressedThisFrame || Keyboard.current.sKey.wasPressedThisFrame) //Hold Key
-        {
-            Physics2D.IgnoreLayerCollision(currentPlayerLayer, currentPlatformLayer, true);
-            IsFalling = true;
-        }
-        if (fallTimer >= 0.2f)
-        {
-            Physics2D.IgnoreLayerCollision(currentPlayerLayer, currentPlatformLayer, false);
-            IsFalling = false;
-            fallTimer = 0;
         }
     }
 }

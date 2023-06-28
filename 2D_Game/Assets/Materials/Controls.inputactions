@@ -135,6 +135,17 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "up",
+                    "id": "e13489b9-7b3a-4def-9a7c-53857e42909a",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "8ad2c315-9bb2-47c8-8a10-bd06815ac4eb",
                     "path": "<Keyboard>/space",
@@ -159,7 +170,18 @@
                 {
                     "name": "",
                     "id": "ecd8e3c7-3436-4614-af50-51a30a6d9576",
-                    "path": "",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ea90580-3684-400e-bcbf-0266994dba19",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -224,6 +246,17 @@
                 },
                 {
                     "name": "",
+                    "id": "d9309afa-50a1-4961-a652-506034f49690",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch Character 1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "22441c00-91c7-4753-a239-552ca7cda8b9",
                     "path": "<Keyboard>/2",
                     "interactions": "",
@@ -235,8 +268,30 @@
                 },
                 {
                     "name": "",
+                    "id": "d8f65d41-f77a-450c-ba70-14af027fc28f",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch Character 2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e0a615e3-7a9e-4267-b06e-ac7adb02081d",
                     "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch Character 3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d07ec611-fa52-43e6-8a8c-e09fc893a2cf",
+                    "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

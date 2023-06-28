@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 6f;
     public float jumpingPower = 9f;
     private bool isFacingRight = true;
-    private bool isGrounded = true; // Flag indicating if the player is grounded
+    private bool isGrounded; // Flag indicating if the player is grounded
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
