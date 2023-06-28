@@ -55,11 +55,11 @@ public class Key : MonoBehaviour
                 {
                     ls.chargedLight = 0.03f;
 
-                    KeyFollowPoint vft = FindAnyObjectByType<KeyFollowPoint>();
+                    FollowPoint vft = FindAnyObjectByType<FollowPoint>();
                     if (vft != null)
                     {
                         Debug.Log("Colliding with key");
-                        followTarget = vft.keyFollowPoint;
+                        followTarget = vft.followPoint;
                         isFollowing = true;
                         vft.followingKey = this;
 

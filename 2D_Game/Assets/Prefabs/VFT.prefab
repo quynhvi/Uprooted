@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 1468719295968932805}
   - component: {fileID: 1468719295968932808}
   - component: {fileID: 6273420432450562794}
-  - component: {fileID: 1668389894092774729}
+  - component: {fileID: 1013650684259457177}
   m_Layer: 8
   m_Name: VFT
   m_TagString: VFT
@@ -166,6 +166,8 @@ Transform:
   - {fileID: 1468719296774470469}
   - {fileID: 5661780385826795531}
   - {fileID: 7154158551677879614}
+  - {fileID: 5944242346557442667}
+  - {fileID: 7105345552364682056}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -305,9 +307,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32611de22620240f0951c08b6b39d520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyFollowPoint: {fileID: 5661780385826795531}
+  followPoint: {fileID: 0}
   followingKey: {fileID: 0}
---- !u!114 &1668389894092774729
+  followingObject: {fileID: 0}
+--- !u!114 &1013650684259457177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,10 +319,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1468719295968932803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e45d9f1657d724076831a03e81308a44, type: 3}
+  m_Script: {fileID: 11500000, guid: ed6af10a535ac42eabbbbdaa68f80a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactIcon: {fileID: 0}
+  grabDetect: {fileID: 5944242346557442667}
+  grabHolder: {fileID: 7105345552364682056}
+  rayDist: 2
+  interactable: 0
+  grabObject: {fileID: 9103543313068027609, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
 --- !u!1 &1468719296774470468
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +442,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1958952041695005577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7105345552364682056}
+  m_Layer: 8
+  m_Name: GrabPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7105345552364682056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958952041695005577}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.122, y: 0.862, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1468719295968932804}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2392631427856025461
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +977,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4677504446611371032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5944242346557442667}
+  m_Layer: 8
+  m_Name: RayPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5944242346557442667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4677504446611371032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.501, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1468719295968932804}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5584996182018708613
 GameObject:
   m_ObjectHideFlags: 0

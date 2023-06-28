@@ -13,7 +13,7 @@ public class IvyInteract : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            Debug.Log("I pressed");
+            //Debug.Log("I pressed");
             CheckInteraction();
         }
     }
@@ -31,7 +31,7 @@ public class IvyInteract : MonoBehaviour
     private void CheckInteraction()
     {
         RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
-        Debug.Log("CheckInteraction() called");
+        //Debug.Log("CheckInteraction() called");
 
         if (hits.Length > 0)
         {

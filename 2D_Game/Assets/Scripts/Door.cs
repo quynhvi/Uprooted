@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Door : MonoBehaviour
 {
-    private KeyFollowPoint vft;
+    private FollowPoint vft;
     public GameObject door;
     public GameObject ivyInteract;
 
@@ -31,7 +31,7 @@ public class Door : MonoBehaviour
 
     private void Start()
     {
-        vft = FindAnyObjectByType<KeyFollowPoint>();
+        vft = FindAnyObjectByType<FollowPoint>();
         rm = FindObjectOfType<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
 

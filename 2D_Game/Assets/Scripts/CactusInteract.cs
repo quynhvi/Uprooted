@@ -36,26 +36,21 @@ public class CactusInteract : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.I))
         {
-            Debug.Log("I pressed");
+            //Debug.Log("I pressed");
 
             arm.SetActive(true);
             CheckInteraction();
-            
-            
-
         }
         else
         {
             arm.SetActive(false);
         }
-        
-        
     }
 
     private void CheckInteraction()
     {
         RaycastHit2D[] hits = Physics2D.BoxCastAll(armSize, armSize, 0, Vector2.zero);
-        Debug.Log("CheckInteraction() called");
+        //Debug.Log("CheckInteraction() called");
 
         if (hits.Length > 0)
         {
@@ -64,12 +59,12 @@ public class CactusInteract : MonoBehaviour
                 if (rc.IsInteractable())
                 {
 
-                    Debug.Log("interactable");
+                    //Debug.Log("interactable");
                     Collider2D collider = rc.collider;
 
                     armClass = collider.GetComponent<CactusArm>();
                     armClass.Interact();
-                    Debug.Log("Interacted");
+                    //Debug.Log("Interacted");
                     return;
                 }
 

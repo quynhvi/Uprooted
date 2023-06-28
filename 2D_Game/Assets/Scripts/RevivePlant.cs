@@ -24,7 +24,7 @@ public class RevivePlant : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D contact)
     {
-        if (contact.gameObject.CompareTag("WaterCan") && Input.GetKeyDown(KeyCode.I))
+        if (contact.gameObject.CompareTag("dragable") && Input.GetKeyDown(KeyCode.I))
         {
             ivyJustRevived = true;
         }

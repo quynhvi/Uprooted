@@ -14,8 +14,6 @@ TagManager:
   - CactusArm
   - Platform
   - Key
-  - WaterCan
-  - Water Can
   layers:
   - Default
   - TransparentFX
@@ -30,7 +28,7 @@ TagManager:
   - Ivy
   - Cactus
   - Platform
-  - 
+  - DragableObject
   - 
   - 
   - 
