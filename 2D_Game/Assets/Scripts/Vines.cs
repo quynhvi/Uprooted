@@ -8,6 +8,8 @@ public class Vines : Interactable
     public GameObject arm;
     public GameObject noArm;
 
+    public GameObject wall;
+
     private ResourceManagement rm;
     private LightSource ls;
 
@@ -43,6 +45,7 @@ public class Vines : Interactable
             rm.waterBarFill.fillAmount -= ls.chargedLight;
 
             arm.SetActive(true);
+            
             //sr.sprite = vine;
             //Debug.Log("isnotactive");
         }

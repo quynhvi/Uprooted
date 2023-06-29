@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SwingingObject : MonoBehaviour
 {
@@ -23,10 +24,13 @@ public class SwingingObject : MonoBehaviour
     private bool isPlayerOn = false;
     public float waitTimer = 0f;
 
+    private Gamepad gamepad;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        gamepad = Gamepad.current;
     }
 
     // Update is called once per frame
@@ -51,7 +55,7 @@ public class SwingingObject : MonoBehaviour
 
     private void Update()
     {
-        if (playerJoint != null && Input.GetKeyDown(KeyCode.Space))
+        if (playerJoint != null && Input.GetKeyDown(KeyCode.Space) || (gamepad != null && gamepad.buttonSouth.wasPressedThisFrame))
         {
             player.transform.SetParent(null);
             Destroy(playerJoint);

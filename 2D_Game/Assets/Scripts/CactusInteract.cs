@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CactusInteract : MonoBehaviour
 {
@@ -10,12 +11,13 @@ public class CactusInteract : MonoBehaviour
     private Vector2 armSize = new Vector2(5f, 5f);
     private CactusArm armClass;
     public GameObject arm;
+    private Gamepad gamepad;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gamepad = Gamepad.current;
     }
 
     public void ArmInteractable()
@@ -34,7 +36,7 @@ public class CactusInteract : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.I))
+        if (Input.GetKey(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame))
         {
             //Debug.Log("I pressed");
 
