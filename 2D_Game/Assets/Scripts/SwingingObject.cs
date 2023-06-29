@@ -55,7 +55,7 @@ public class SwingingObject : MonoBehaviour
 
     private void Update()
     {
-        if (playerJoint != null && Input.GetKeyDown(KeyCode.Space) || (gamepad != null && gamepad.buttonSouth.wasPressedThisFrame))
+        if (playerJoint != null && Input.GetKeyDown(KeyCode.Space) || playerJoint != null && (gamepad != null && gamepad.buttonSouth.wasPressedThisFrame))
         {
             player.transform.SetParent(null);
             Destroy(playerJoint);
