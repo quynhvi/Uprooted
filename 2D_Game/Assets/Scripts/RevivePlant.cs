@@ -11,7 +11,7 @@ public class RevivePlant : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        ivyMovementScript = this.gameObject.GetComponent<PlayerMovement>();
+        ivyMovementScript = GetComponent<PlayerMovement>();
         playerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
         ivyMovementScript.enabled = false;
     }
@@ -22,26 +22,44 @@ public class RevivePlant : MonoBehaviour
         CheckforRevival();
     }
 
-    private void OnCollisionStay2D(Collision2D contact)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (contact.gameObject.CompareTag("dragable") && Input.GetKeyDown(KeyCode.I))
+        if (collision.gameObject.CompareTag("dragable"))
         {
-            ivyJustRevived = true;
+            if (!ivyJustRevived)
+            {
+                ivyJustRevived = true;
+                ivyMovementScript.enabled = true;
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("dragable"))
+        {
+            //ivyJustRevived = false;
+            ivyMovementScript.enabled = false;
         }
     }
 
     public void CheckforRevival()
     {
-        // If Ivy got interacted with and not already in possibleCharacters, then revive Ivy and enable movement
-        if (ivyJustRevived && !playerSwapScript.possibleCharacters.Contains(this.transform))
+        if (ivyJustRevived && !playerSwapScript.possibleCharacters.Contains(transform))
         {
-            playerSwapScript.possibleCharacters.Add(this.transform);
-            ivyMovementScript.enabled = true;
+            playerSwapScript.possibleCharacters.Add(transform);
+            if (!ivyMovementScript.enabled) // Enable movement only if the script is currently disabled
+            {
+                ivyMovementScript.enabled = true;
+            }
         }
-        else if (!ivyJustRevived && playerSwapScript.possibleCharacters.Contains(this.transform))
+        else if (!ivyJustRevived && playerSwapScript.possibleCharacters.Contains(transform))
         {
-            playerSwapScript.possibleCharacters.Remove(this.transform);
-            ivyMovementScript.enabled = false;
+            playerSwapScript.possibleCharacters.Remove(transform);
+            if (ivyMovementScript.enabled) // Disable movement only if the script is currently enabled
+            {
+                ivyMovementScript.enabled = false;
+            }
         }
     }
 }
