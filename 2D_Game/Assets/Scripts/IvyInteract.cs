@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class IvyInteract : MonoBehaviour
 {
@@ -8,12 +9,17 @@ public class IvyInteract : MonoBehaviour
     private Vines vine;
     private Vector2 boxSize = new Vector2(0.1f, 1f);
 
+    private Gamepad gamepad;
+    private void Start()
+    {
+        gamepad = Gamepad.current;
+    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame))
         {
-            Debug.Log("I pressed");
+            //Debug.Log("I pressed");
             CheckInteraction();
         }
     }
@@ -31,7 +37,7 @@ public class IvyInteract : MonoBehaviour
     private void CheckInteraction()
     {
         RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
-        Debug.Log("CheckInteraction() called");
+        //Debug.Log("CheckInteraction() called");
 
         if (hits.Length > 0)
         {
@@ -46,7 +52,6 @@ public class IvyInteract : MonoBehaviour
                     vine.Interact();
                     return;
                 }
-
             }
         }
     }

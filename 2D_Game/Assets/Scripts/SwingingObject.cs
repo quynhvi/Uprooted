@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SwingingObject : MonoBehaviour
 {
     Rigidbody2D rb;
-
     public Transform player;
-
-
 
     bool isMoving = false;
 
@@ -26,10 +24,13 @@ public class SwingingObject : MonoBehaviour
     private bool isPlayerOn = false;
     public float waitTimer = 0f;
 
+    private Gamepad gamepad;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        gamepad = Gamepad.current;
     }
 
     // Update is called once per frame
@@ -49,14 +50,12 @@ public class SwingingObject : MonoBehaviour
         {
             moveSpeed = 0f;
             Move();
-        }
-
-        
+        } 
     }
 
     private void Update()
     {
-        if (playerJoint != null && Input.GetKeyDown(KeyCode.Space))
+        if (playerJoint != null && Input.GetKeyDown(KeyCode.Space) || playerJoint != null && (gamepad != null && gamepad.buttonSouth.wasPressedThisFrame))
         {
             player.transform.SetParent(null);
             Destroy(playerJoint);
@@ -106,8 +105,4 @@ public class SwingingObject : MonoBehaviour
             rb.angularVelocity = -moveSpeed;
         }
     }
-
-
-
-
 }

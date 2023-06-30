@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CactusInteract : MonoBehaviour
 {
@@ -10,12 +11,13 @@ public class CactusInteract : MonoBehaviour
     private Vector2 armSize = new Vector2(5f, 5f);
     private CactusArm armClass;
     public GameObject arm;
+    private Gamepad gamepad;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gamepad = Gamepad.current;
     }
 
     public void ArmInteractable()
@@ -34,28 +36,23 @@ public class CactusInteract : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.I))
+        if (Input.GetKey(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame))
         {
-            Debug.Log("I pressed");
+            //Debug.Log("I pressed");
 
             arm.SetActive(true);
             CheckInteraction();
-            
-            
-
         }
         else
         {
             arm.SetActive(false);
         }
-        
-        
     }
 
     private void CheckInteraction()
     {
         RaycastHit2D[] hits = Physics2D.BoxCastAll(armSize, armSize, 0, Vector2.zero);
-        Debug.Log("CheckInteraction() called");
+        //Debug.Log("CheckInteraction() called");
 
         if (hits.Length > 0)
         {
@@ -64,12 +61,12 @@ public class CactusInteract : MonoBehaviour
                 if (rc.IsInteractable())
                 {
 
-                    Debug.Log("interactable");
+                    //Debug.Log("interactable");
                     Collider2D collider = rc.collider;
 
                     armClass = collider.GetComponent<CactusArm>();
                     armClass.Interact();
-                    Debug.Log("Interacted");
+                    //Debug.Log("Interacted");
                     return;
                 }
 
