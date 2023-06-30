@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class VineTest : MonoBehaviour
 {
     public GameObject interactButton;
     public GameObject vine;
     private bool interactable;
+    private bool vineOpen = false; // Track whether the vine is open or closed
 
     private ResourceManagement rm;
     private LightSource ls;
+
+    private Gamepad gamepad;
 
     // Start is called before the first frame update
     void Start()
@@ -17,15 +21,26 @@ public class VineTest : MonoBehaviour
         rm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
         interactable = true;
+
+        gamepad = Gamepad.current;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.I))
+        if ((Input.GetKey(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && interactable)
         {
-            VineInteract();
+            if (vineOpen)
+                CloseVine();
+            else
+                VineInteract();
         }
+    }
+
+    private void CloseVine()
+    {
+        vine.SetActive(false);
+        vineOpen = false;
     }
 
     private void VineInteract()
@@ -39,6 +54,7 @@ public class VineTest : MonoBehaviour
                 ls.chargedLight = 0.03f;
 
                 vine.SetActive(true);
+                vineOpen = true;
 
                 if (rm != null && ls != null)
                 {
@@ -59,9 +75,8 @@ public class VineTest : MonoBehaviour
             interactButton.SetActive(true);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-
         interactButton.SetActive(false);
     }
 }

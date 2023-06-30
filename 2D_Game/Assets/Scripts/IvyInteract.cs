@@ -8,11 +8,13 @@ public class IvyInteract : MonoBehaviour
     public GameObject interactIcon;
     private Vines vine;
     private Vector2 boxSize = new Vector2(0.1f, 1f);
+    private bool vineActive;
 
     private Gamepad gamepad;
     private void Start()
     {
         gamepad = Gamepad.current;
+        vineActive = false;
     }
 
     private void Update()
@@ -21,6 +23,11 @@ public class IvyInteract : MonoBehaviour
         {
             //Debug.Log("I pressed");
             CheckInteraction();
+        }
+
+        if (Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame) && !vineActive)
+        {
+            vine.arm.SetActive(false);
         }
     }
 
@@ -48,6 +55,7 @@ public class IvyInteract : MonoBehaviour
                     // Debug.Log("interactable");
 
                     Collider2D collider = rc.collider;
+                    vineActive = true;
                     vine = collider.GetComponent<Vines>();
                     vine.Interact();
                     return;
