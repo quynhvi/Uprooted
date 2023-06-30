@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2970999479072706911}
   - component: {fileID: 2970999479072706908}
   - component: {fileID: 2970999479072706897}
+  - component: {fileID: 3786849761058522299}
+  - component: {fileID: 2151333517983701562}
   m_Layer: 0
   m_Name: Interaction Zone Ivy
   m_TagString: Untagged
@@ -126,3 +128,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arm: {fileID: 0}
   noArm: {fileID: 0}
+  wall: {fileID: 0}
+--- !u!114 &3786849761058522299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2970999479072706909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ac9a060152b4499bc63bfb4d3eb759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2151333517983701562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2970999479072706909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da6d495e44ba403690775dcd5e26079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactButton: {fileID: 0}
+  vine: {fileID: 0}
