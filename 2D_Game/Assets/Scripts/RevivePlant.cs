@@ -16,50 +16,18 @@ public class RevivePlant : MonoBehaviour
         ivyMovementScript.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        CheckforRevival();
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("dragable"))
         {
             if (!ivyJustRevived)
             {
+                playerSwapScript.possibleCharacters.Add(transform);
+                playerSwapScript.SwitchToCharacter(playerSwapScript.possibleCharacters.Count - 1);
                 ivyJustRevived = true;
                 ivyMovementScript.enabled = true;
             }
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("dragable"))
-        {
-            //ivyJustRevived = false;
-            ivyMovementScript.enabled = false;
-        }
-    }
-
-    public void CheckforRevival()
-    {
-        if (ivyJustRevived && !playerSwapScript.possibleCharacters.Contains(transform))
-        {
-            playerSwapScript.possibleCharacters.Add(transform);
-            if (!ivyMovementScript.enabled) // Enable movement only if the script is currently disabled
-            {
-                ivyMovementScript.enabled = true;
-            }
-        }
-        else if (!ivyJustRevived && playerSwapScript.possibleCharacters.Contains(transform))
-        {
-            playerSwapScript.possibleCharacters.Remove(transform);
-            if (ivyMovementScript.enabled) // Disable movement only if the script is currently enabled
-            {
-                ivyMovementScript.enabled = false;
-            }
-        }
-    }
 }
