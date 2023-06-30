@@ -24,6 +24,7 @@ public class RevivePlant : MonoBehaviour
             {
                 playerSwapScript.possibleCharacters.Add(transform);
                 playerSwapScript.SwitchToCharacter(playerSwapScript.possibleCharacters.Count - 1);
+                playerSwapScript.whichCharacter = 2;
                 ivyJustRevived = true;
                 ivyMovementScript.enabled = true;
             }
