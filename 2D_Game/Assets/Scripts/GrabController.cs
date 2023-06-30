@@ -10,6 +10,9 @@ public class GrabController : MonoBehaviour
     public float rayDist;
     public bool interactable;
 
+    public GameObject heldObject;
+    public bool droppedThisFrame;
+
     private ResourceManagement rm;
     private LightSource ls;
 
@@ -25,34 +28,41 @@ public class GrabController : MonoBehaviour
     }
 
     private void Update()
-{
-    RaycastHit2D grabCheck = Physics2D.Raycast(grabDetect.position, Vector2.right * transform.localScale, rayDist);
-
-    if (grabCheck.collider != null && grabCheck.collider.CompareTag("dragable"))
     {
-        if (Input.GetKey(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame))
-        {
-            interactable = false;
-            grabCheck.collider.gameObject.transform.parent = grabHolder;
-            grabCheck.collider.gameObject.transform.position = grabHolder.position;
-            grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        droppedThisFrame = false;
 
-            // Decrease resource levels
-            if (rm != null && ls != null)
+        RaycastHit2D grabCheck = Physics2D.Raycast(grabDetect.position, Vector2.right * transform.localScale, rayDist);
+
+        if (Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame) && heldObject != null)
+        {
+            Debug.Log("Object Released");
+
+            heldObject.transform.parent = null;
+            heldObject.GetComponent<Rigidbody2D>().isKinematic = false;
+            heldObject = null;
+            droppedThisFrame = true;
+        }
+
+
+
+        if (heldObject == null && grabCheck.collider.CompareTag("dragable") && !droppedThisFrame)
+        {
+            if (Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame))
             {
-                rm.lightLevelNumber -= ls.chargedLight;
-                rm.lightBarFill.fillAmount -= ls.chargedLight;
-                rm.waterLevelNumber -= ls.chargedLight;
-                rm.waterBarFill.fillAmount -= ls.chargedLight;
+                grabCheck.collider.gameObject.transform.parent = grabHolder;
+                grabCheck.collider.gameObject.transform.position = grabHolder.position;
+                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                heldObject = grabCheck.transform.gameObject;
+
+                // Decrease resource levels
+                if (rm != null && ls != null)
+                {
+                    rm.lightLevelNumber -= ls.chargedLight;
+                    rm.lightBarFill.fillAmount -= ls.chargedLight;
+                    rm.waterLevelNumber -= ls.chargedLight;
+                    rm.waterBarFill.fillAmount -= ls.chargedLight;
+                }
             }
         }
-        else
-        {
-                Debug.Log("Object Released");
-            grabCheck.collider.gameObject.transform.parent = null;
-            grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
-                interactable = true;
-        }
     }
-}
 }

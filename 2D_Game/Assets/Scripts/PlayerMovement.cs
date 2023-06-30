@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public InputActionAsset inputActions;
     public InputActionReference jumpAction;
 
+
     private void OnEnable()
     {
         // Enable the player's movement input action
