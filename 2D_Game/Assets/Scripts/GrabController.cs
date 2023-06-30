@@ -17,6 +17,7 @@ public class GrabController : MonoBehaviour
     private LightSource ls;
 
     private Gamepad gamepad;
+    private PlayerSwap playerSwap; // Reference to the PlayerSwap script
 
     private void Start()
     {
@@ -25,6 +26,7 @@ public class GrabController : MonoBehaviour
         interactable = true;
 
         gamepad = Gamepad.current;
+        playerSwap = GetComponent<PlayerSwap>(); // Get the PlayerSwap script reference from the player object
     }
 
     private void Update()
@@ -33,21 +35,24 @@ public class GrabController : MonoBehaviour
 
         RaycastHit2D grabCheck = Physics2D.Raycast(grabDetect.position, Vector2.right * transform.localScale, rayDist);
 
-        if (Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame) && heldObject != null)
+        if (heldObject != null && playerSwap.whichCharacter == 1)
         {
-            Debug.Log("Object Released");
-
-            heldObject.transform.parent = null;
-            heldObject.GetComponent<Rigidbody2D>().isKinematic = false;
-            heldObject = null;
-            droppedThisFrame = true;
-        }
-
-
-
-        if (heldObject == null && grabCheck.collider.CompareTag("dragable") && !droppedThisFrame)
-        {
+            // Release the object if it is held and the grab input is pressed
             if (Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame))
+            {
+                Debug.Log("Object Released");
+
+                heldObject.transform.parent = null;
+                heldObject.GetComponent<Rigidbody2D>().isKinematic = false;
+                heldObject = null;
+                droppedThisFrame = true;
+            }
+        }
+        else if (heldObject == null && grabCheck.collider.CompareTag("dragable") && !droppedThisFrame && playerSwap.whichCharacter == 1)
+        {
+            Debug.Log("grabbed");
+            // Grab the object if it is interactable and the grab input is pressed, and the second character is the current one
+            if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && playerSwap.whichCharacter == 1)
             {
                 grabCheck.collider.gameObject.transform.parent = grabHolder;
                 grabCheck.collider.gameObject.transform.position = grabHolder.position;
