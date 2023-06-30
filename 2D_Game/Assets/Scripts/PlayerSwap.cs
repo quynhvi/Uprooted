@@ -17,20 +17,21 @@ public class PlayerSwap : MonoBehaviour
     public InputActionReference switchCharacter2Action;
     public InputActionReference switchCharacter3Action;
 
+
     void Start()
     {
         if (possibleCharacters.Count > 0)
         {
             whichCharacter = 0;
             character = possibleCharacters[whichCharacter];
-            character.GetComponent<PlayerMovement>().enabled = true;
+            EnableCharacterMovement(character);
 
             m_ParticleSystem.transform.position = character.position;
             m_ParticleSystem.Play();
 
             for (int i = 1; i < possibleCharacters.Count; i++)
             {
-                possibleCharacters[i].GetComponent<PlayerMovement>().enabled = false;
+                DisableCharacterMovement(possibleCharacters[i]);
             }
 
             cam.SetTarget(character);
@@ -89,24 +90,22 @@ public class PlayerSwap : MonoBehaviour
 
     void SwapRight()
     {
-        if (whichCharacter == possibleCharacters.Count - 1)
+        if (possibleCharacters.Count > 0)
         {
-            whichCharacter = 0;
+            whichCharacter = (whichCharacter + 1) % possibleCharacters.Count;
+            Swap();
         }
-        else
-        {
-            whichCharacter += 1;
-        }
-        Swap();
     }
 
     void SwitchToCharacter(int index)
     {
         if (index >= 0 && index < possibleCharacters.Count)
         {
-            character.GetComponent<PlayerMovement>().enabled = false;
+            DisableCharacterMovement(character);
+
             character = possibleCharacters[index];
-            character.GetComponent<PlayerMovement>().enabled = true;
+
+            EnableCharacterMovement(character);
 
             m_ParticleSystem.transform.position = character.position;
             m_ParticleSystem.Play();
@@ -116,7 +115,10 @@ public class PlayerSwap : MonoBehaviour
             foreach (var platformObject in platformObjects)
             {
                 var platformScript = platformObject.GetComponent<Platform>();
-                platformScript.currentPlayerLayer = character.gameObject.layer;
+                if (platformScript != null)
+                {
+                    platformScript.currentPlayerLayer = character.gameObject.layer;
+                }
             }
 
             cam.SetTarget(character); // Update the camera's target to the newly selected character
@@ -125,21 +127,48 @@ public class PlayerSwap : MonoBehaviour
 
     void Swap()
     {
-        character.GetComponent<PlayerMovement>().enabled = false;
-        character = possibleCharacters[whichCharacter];
-        character.GetComponent<PlayerMovement>().enabled = true;
+        DisableCharacterMovement(character);
 
-        m_ParticleSystem.transform.position = character.position;
-        m_ParticleSystem.Play();
-
-        cam.SetTarget(character);
-
-        for (int i = 0; i < possibleCharacters.Count; i++)
+        if (possibleCharacters.Count > 0)
         {
-            if (i != whichCharacter)
+            whichCharacter = Mathf.Clamp(whichCharacter, 0, possibleCharacters.Count - 1);
+            character = possibleCharacters[whichCharacter];
+
+            if (character != null)
             {
-                possibleCharacters[i].GetComponent<PlayerMovement>().enabled = false;
+                EnableCharacterMovement(character);
+
+                m_ParticleSystem.transform.position = character.position;
+                m_ParticleSystem.Play();
+
+                cam.SetTarget(character);
+
+                for (int i = 0; i < possibleCharacters.Count; i++)
+                {
+                    if (i != whichCharacter)
+                    {
+                        DisableCharacterMovement(possibleCharacters[i]);
+                    }
+                }
             }
+        }
+    }
+
+    void EnableCharacterMovement(Transform characterTransform)
+    {
+        var playerMovement = characterTransform.GetComponent<PlayerMovement>();
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = true;
+        }
+    }
+
+    void DisableCharacterMovement(Transform characterTransform)
+    {
+        var playerMovement = characterTransform.GetComponent<PlayerMovement>();
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = false;
         }
     }
 }
