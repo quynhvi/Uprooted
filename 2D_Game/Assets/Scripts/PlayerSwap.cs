@@ -75,7 +75,7 @@ public class PlayerSwap : MonoBehaviour
         switchCharacter3Action.action.performed -= _ => SwitchToCharacter(2);
     }
 
-    void SwapLeft()
+    public void SwapLeft()
     {
         if (whichCharacter == 0)
         {
@@ -88,7 +88,7 @@ public class PlayerSwap : MonoBehaviour
         Swap();
     }
 
-    void SwapRight()
+    public void SwapRight()
     {
         if (possibleCharacters.Count > 0)
         {
@@ -97,7 +97,7 @@ public class PlayerSwap : MonoBehaviour
         }
     }
 
-    void SwitchToCharacter(int index)
+    public void SwitchToCharacter(int index)
     {
         if (index >= 0 && index < possibleCharacters.Count)
         {
@@ -125,7 +125,7 @@ public class PlayerSwap : MonoBehaviour
         }
     }
 
-    void Swap()
+    public void Swap()
     {
         DisableCharacterMovement(character);
 
