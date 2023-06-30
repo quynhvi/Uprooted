@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -32,8 +30,9 @@ public class GrabController : MonoBehaviour
         droppedThisFrame = false;
 
         RaycastHit2D grabCheck = Physics2D.Raycast(grabDetect.position, Vector2.right * transform.localScale, rayDist);
+        GameObject objectToGrab = (grabCheck.collider != null && grabCheck.collider.CompareTag("dragable")) ? grabCheck.collider.gameObject : null;
 
-        if (Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame) && heldObject != null)
+        if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && heldObject != null)
         {
             Debug.Log("Object Released");
 
@@ -43,16 +42,14 @@ public class GrabController : MonoBehaviour
             droppedThisFrame = true;
         }
 
-
-
-        if (heldObject == null && grabCheck.collider.CompareTag("dragable") && !droppedThisFrame)
+        if (heldObject == null && objectToGrab != null && !droppedThisFrame)
         {
             if (Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame))
             {
-                grabCheck.collider.gameObject.transform.parent = grabHolder;
-                grabCheck.collider.gameObject.transform.position = grabHolder.position;
-                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-                heldObject = grabCheck.transform.gameObject;
+                objectToGrab.transform.parent = grabHolder;
+                objectToGrab.transform.position = grabHolder.position;
+                objectToGrab.GetComponent<Rigidbody2D>().isKinematic = true;
+                heldObject = objectToGrab;
 
                 // Decrease resource levels
                 if (rm != null && ls != null)
