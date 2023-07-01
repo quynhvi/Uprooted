@@ -21,17 +21,18 @@ public class Platform : MonoBehaviour
         effector = GetComponent<PlatformEffector2D>();
         PlayerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
         currentPlatformLayer = LayerMask.NameToLayer("Platform");
-        currentPlayerLayer = 0;
         playerMovement = GameObject.FindGameObjectWithTag("VFT").GetComponent<PlayerMovement>();
     }
 
     private void Update()
     {
+        currentPlayerLayer = PlayerSwapScript.possibleCharacters[PlayerSwapScript.whichCharacter].gameObject.layer;
         if (IsFalling)
             fallTimer += Time.deltaTime;
 
         if (verticalInput < -0.5f || Keyboard.current.downArrowKey.isPressed) //Hold Key or joystick down
         {
+            print(currentPlayerLayer);
             Physics2D.IgnoreLayerCollision(currentPlayerLayer, currentPlatformLayer, true);
             IsFalling = true;
         }
