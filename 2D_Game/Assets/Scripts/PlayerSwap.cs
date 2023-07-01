@@ -101,6 +101,8 @@ public class PlayerSwap : MonoBehaviour
     {
         if (index >= 0 && index < possibleCharacters.Count)
         {
+            whichCharacter = index;
+
             DisableCharacterMovement(character);
 
             character = possibleCharacters[index];
@@ -109,17 +111,6 @@ public class PlayerSwap : MonoBehaviour
 
             m_ParticleSystem.transform.position = character.position;
             m_ParticleSystem.Play();
-
-            // Update the currentPlayerLayer in the Platform script
-            var platformObjects = GameObject.FindGameObjectsWithTag("Platform");
-            foreach (var platformObject in platformObjects)
-            {
-                var platformScript = platformObject.GetComponent<Platform>();
-                if (platformScript != null)
-                {
-                    platformScript.currentPlayerLayer = character.gameObject.layer;
-                }
-            }
 
             cam.SetTarget(character); // Update the camera's target to the newly selected character
         }
