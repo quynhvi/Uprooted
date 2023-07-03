@@ -28,12 +28,16 @@ public class VineTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKey(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && interactable)
+        if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)))
         {
             if (vineOpen)
+            {
                 CloseVine();
-            else
+            }
+            else if (interactable)
+            {
                 VineInteract();
+            }
         }
     }
 
@@ -41,6 +45,7 @@ public class VineTest : MonoBehaviour
     {
         vine.SetActive(false);
         vineOpen = false;
+        interactable = true;
     }
 
     private void VineInteract()

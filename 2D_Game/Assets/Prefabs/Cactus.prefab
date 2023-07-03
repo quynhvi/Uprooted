@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae865810c72364651b31a1c3287f480f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactIcon: {fileID: 0}
+  interactIcon: {fileID: 9219614762881926655, guid: 0eaea6803afb44e72998244cb83c6d42, type: 3}
   arm: {fileID: 2611304561545655518}
 --- !u!1 &6261242561552652680
 GameObject:
