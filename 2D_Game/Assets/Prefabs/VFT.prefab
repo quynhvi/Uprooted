@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 1468719295968932805}
   - component: {fileID: 1468719295968932808}
   - component: {fileID: 6273420432450562794}
+  - component: {fileID: 7399681336661807753}
   m_Layer: 8
   m_Name: VFT
   m_TagString: VFT
@@ -309,6 +310,24 @@ MonoBehaviour:
   followPoint: {fileID: 0}
   followingKey: {fileID: 0}
   followingObject: {fileID: 0}
+--- !u!114 &7399681336661807753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468719295968932803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed6af10a535ac42eabbbbdaa68f80a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabDetect: {fileID: 5944242346557442667}
+  grabHolder: {fileID: 7105345552364682056}
+  rayDist: 2
+  interactable: 0
+  heldObject: {fileID: 0}
+  droppedThisFrame: 0
 --- !u!1 &1468719296774470468
 GameObject:
   m_ObjectHideFlags: 0
