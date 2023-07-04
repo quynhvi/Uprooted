@@ -51,12 +51,7 @@ public class Platform : MonoBehaviour
         playerMovement.movementAction.action.canceled += OnMovementCanceled;
     }
 
-    private void OnDisable()
-    {
-        playerMovement.movementAction.action.Disable();
-        playerMovement.movementAction.action.performed -= OnMovement;
-        playerMovement.movementAction.action.canceled -= OnMovementCanceled;
-    }
+    
 
     private void OnMovement(InputAction.CallbackContext context)
     {

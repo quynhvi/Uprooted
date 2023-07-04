@@ -12,6 +12,8 @@ public class VineTest : MonoBehaviour
 
     private ResourceManagement rm;
     private LightSource ls;
+    private PlayerSwap ps;
+    private PlayerMovement pm;
 
     private Gamepad gamepad;
 
@@ -20,6 +22,9 @@ public class VineTest : MonoBehaviour
     {
         rm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
+        ps = FindAnyObjectByType<PlayerSwap>();
+        pm = GameObject.FindGameObjectWithTag("Ivy").GetComponent<PlayerMovement>();
+
         interactable = true;
 
         gamepad = Gamepad.current;
@@ -28,7 +33,7 @@ public class VineTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)))
+        if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && ps.whichCharacter == 2)
         {
             if (vineOpen)
             {
@@ -46,6 +51,7 @@ public class VineTest : MonoBehaviour
         vine.SetActive(false);
         vineOpen = false;
         interactable = true;
+        //pm.enabled = false;
     }
 
     private void VineInteract()
@@ -60,6 +66,7 @@ public class VineTest : MonoBehaviour
 
                 vine.SetActive(true);
                 vineOpen = true;
+                //pm.enabled = false;
 
                 if (rm != null && ls != null)
                 {
