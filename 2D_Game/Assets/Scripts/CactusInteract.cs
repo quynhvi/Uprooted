@@ -10,7 +10,7 @@ public class CactusInteract : MonoBehaviour
     public GameObject interactIcon;
     private Vector2 armSize = new Vector2(5f, 5f);
     private CactusArm armClass;
-    public GameObject arm;
+    //public GameObject arm;
     private Gamepad gamepad;
 
 
@@ -40,12 +40,12 @@ public class CactusInteract : MonoBehaviour
         {
             //Debug.Log("I pressed");
 
-            arm.SetActive(true);
+            //arm.SetActive(true);
             CheckInteraction();
         }
         else
         {
-            arm.SetActive(false);
+            //arm.SetActive(false);
         }
     }
 
