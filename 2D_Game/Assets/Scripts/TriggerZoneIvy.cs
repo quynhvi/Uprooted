@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class VineTest : MonoBehaviour
+public class TriggerZoneIvy : MonoBehaviour
 {
     public GameObject interactButton;
     public GameObject vine;
-    public GameObject interactZone;
-
     private bool interactable;
     private bool vineOpen = false; // Track whether the vine is open or closed
 
@@ -53,7 +51,7 @@ public class VineTest : MonoBehaviour
         vine.SetActive(false);
         vineOpen = false;
         interactable = true;
-        pm.enabled = true;
+        //pm.enabled = false;
     }
 
     private void VineInteract()
@@ -68,7 +66,7 @@ public class VineTest : MonoBehaviour
 
                 vine.SetActive(true);
                 vineOpen = true;
-                pm.enabled = false;
+                //pm.enabled = false;
 
                 if (rm != null && ls != null)
                 {
@@ -83,13 +81,24 @@ public class VineTest : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (interactable)
+    //        interactButton.SetActive(true);
+    //}
+
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    interactButton.SetActive(false);
+    //}
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (interactable)
             interactButton.SetActive(true);
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         interactButton.SetActive(false);
     }
