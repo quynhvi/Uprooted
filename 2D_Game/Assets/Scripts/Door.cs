@@ -13,6 +13,8 @@ public class Door : MonoBehaviour
     private LightSource ls;
 
     public GameObject interactButton;
+    public GameObject doorFollowPoint;
+    public GameObject key;
     private bool interactable;
 
     public InputActionReference openDoorAction;
@@ -62,8 +64,9 @@ public class Door : MonoBehaviour
 
         if (vft.followingKey != null)
         {
-            vft.followingKey.followTarget = door.transform; // Set the door as the followTarget
+            vft.followingKey.followTarget = doorFollowPoint.transform; // Set the door as the followTarget
             vft.followingKey.isFollowing = true;
+            key.SetActive(false);
         }
 
         vft.followingKey = null;

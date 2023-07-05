@@ -116,4 +116,9 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log($"Collided with {collision.collider} - {collision.contacts[0].otherCollider} - {collision.contacts[0].otherCollider}");
+    }
 }
