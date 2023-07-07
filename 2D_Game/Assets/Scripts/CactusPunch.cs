@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class DamagingObject : MonoBehaviour
+public class CactusPunch : MonoBehaviour
 {
     [SerializeField] private GameObject interactButton;
-    private bool interactable;
+    [SerializeField] private GameObject arm;
+    public bool interactable;
 
     private ResourceManagement rm;
     private LightSource ls;
     private PlayerSwap ps;
     private PlayerMovement pm;
+    private Damageable damagable;
 
     private Gamepad gamepad;
 
@@ -21,7 +23,8 @@ public class DamagingObject : MonoBehaviour
         rm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
         ps = FindObjectOfType<PlayerSwap>();
-        pm = GameObject.FindGameObjectWithTag("Ivy").GetComponent<PlayerMovement>();
+        pm = GameObject.FindGameObjectWithTag("Cactus").GetComponent<PlayerMovement>();
+        damagable = GameObject.FindGameObjectWithTag("damagable").GetComponent<Damageable>();
 
         interactable = true;
 
@@ -31,22 +34,22 @@ public class DamagingObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && ps.whichCharacter == 2)
+        if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && ps.whichCharacter == 0)
         {
-            CactusInteract();
+            cactusInteract();
         }
     }
 
-    private void CactusInteract()
+    private void cactusInteract()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
 
         foreach (Collider2D collider in colliders)
         {
-            Damageable damageableObject = collider.GetComponent<Damageable>();
-            if (damageableObject != null)
+            if (collider.CompareTag("damagable"))
             {
-                damageableObject.TakeDamage();
+                damagable.TakeDamage();
+
                 ls.chargedLight = 0.03f;
 
                 if (rm != null && ls != null)
@@ -56,15 +59,26 @@ public class DamagingObject : MonoBehaviour
                     rm.waterLevelNumber -= ls.chargedLight;
                     rm.waterBarFill.fillAmount -= ls.chargedLight;
                 }
+
+                arm.SetActive(true); // Activate the arm object
+
+                StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
+
                 interactable = false;
                 break;
             }
         }
     }
 
+    private IEnumerator DisableArmAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        arm.SetActive(false); // Disable the arm object
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (interactable)
+        if (interactable && collision.gameObject.CompareTag("damagable"))
             interactButton.SetActive(true);
     }
 
