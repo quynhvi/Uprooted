@@ -16,7 +16,6 @@ TagManager:
   - Key
   - damagable
   - AloeVera
-  - AloeArm
   - AloeZone
   layers:
   - Default
