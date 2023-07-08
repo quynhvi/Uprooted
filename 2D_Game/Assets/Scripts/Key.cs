@@ -11,6 +11,7 @@ public class Key : MonoBehaviour
 
     private ResourceManagement rm;
     private LightSource ls;
+    private PlayerSwap ps;
 
     public GameObject interactButton;
     private bool interactable;
@@ -33,6 +34,7 @@ public class Key : MonoBehaviour
     {
         rm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
+        ps = FindObjectOfType<PlayerSwap>();
         interactable = true;
     }
 
@@ -51,7 +53,7 @@ public class Key : MonoBehaviour
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
             foreach (Collider2D collider in colliders)
             {
-                if (collider.CompareTag("VFT"))
+                if (collider.CompareTag("VFT") && ps.whichCharacter == 1)
                 {
                     ls.chargedLight = 0.03f;
 
