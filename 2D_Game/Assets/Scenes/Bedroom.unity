@@ -2806,7 +2806,6 @@ GameObject:
   - component: {fileID: 815082332}
   - component: {fileID: 815082334}
   - component: {fileID: 815082337}
-  - component: {fileID: 815082338}
   m_Layer: 15
   m_Name: AloeVera
   m_TagString: AloeVera
@@ -2969,18 +2968,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aloeRevived: 0
---- !u!114 &815082338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815082331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12a23d9bab75b45628587b2755c2300e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &834293953
 GameObject:
   m_ObjectHideFlags: 0
@@ -13263,7 +13250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102934320476861369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: 8.6, z: 0}
+  m_LocalPosition: {x: 9.44, y: 8.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
