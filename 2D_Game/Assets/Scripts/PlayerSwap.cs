@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cinemachine;
 
 public class PlayerSwap : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class PlayerSwap : MonoBehaviour
     public List<Transform> possibleCharacters;
     public int whichCharacter;
     public ParticleSystem m_ParticleSystem;
-    public CameraFollow cam;
+    //public CameraFollow cam;
+    public CinemachineVirtualCamera cam;
 
     public InputActionReference swapLeftAction;
     public InputActionReference swapRightAction;
@@ -34,7 +36,8 @@ public class PlayerSwap : MonoBehaviour
                 DisableCharacterMovement(possibleCharacters[i]);
             }
 
-            cam.SetTarget(character);
+            //cam.SetTarget(character);
+            cam.Follow = character;
         }
         Swap();
     }
@@ -118,7 +121,8 @@ public class PlayerSwap : MonoBehaviour
             m_ParticleSystem.transform.position = character.position;
             m_ParticleSystem.Play();
 
-            cam.SetTarget(character); // Update the camera's target to the newly selected character
+            //cam.SetTarget(character); // Update the camera's target to the newly selected character
+            cam.Follow = character;
         }
     }
 
@@ -138,7 +142,8 @@ public class PlayerSwap : MonoBehaviour
                 m_ParticleSystem.transform.position = character.position;
                 m_ParticleSystem.Play();
 
-                cam.SetTarget(character);
+                //cam.SetTarget(character);
+                cam.Follow = character;
 
                 for (int i = 0; i < possibleCharacters.Count; i++)
                 {
