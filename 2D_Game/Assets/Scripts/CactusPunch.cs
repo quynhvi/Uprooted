@@ -78,7 +78,7 @@ public class CactusPunch : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (interactable && collision.gameObject.CompareTag("damagable"))
+        if (interactable && collision.gameObject.CompareTag("damagable") && ps.whichCharacter == 0)
             interactButton.SetActive(true);
     }
 

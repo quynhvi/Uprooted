@@ -8,6 +8,7 @@ public class Platform : MonoBehaviour
     private Rigidbody2D cactus;
     private Rigidbody2D vft;
     private Rigidbody2D ivy;
+    private Rigidbody2D aloe;
     public int currentPlayerLayer;
     public int currentPlatformLayer;
     public PlayerSwap PlayerSwapScript;
@@ -67,7 +68,7 @@ public class Platform : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Cactus") || collision.gameObject.CompareTag("VFT") || collision.gameObject.CompareTag("Ivy"))
+        if (collision.gameObject.CompareTag("Cactus") || collision.gameObject.CompareTag("VFT") || collision.gameObject.CompareTag("Ivy") || collision.gameObject.CompareTag("AloeVera"))
         {
             if (PlayerSwapScript.whichCharacter == 0) //check if cactus
             {
@@ -80,6 +81,10 @@ public class Platform : MonoBehaviour
             if (PlayerSwapScript.whichCharacter == 2) //check if ivy
             {
                 currentPlayerLayer = LayerMask.NameToLayer("Ivy");
+            }
+            if (PlayerSwapScript.whichCharacter == 3) //check if aloe vera
+            {
+                currentPlayerLayer = LayerMask.NameToLayer("AloeVera");
             }
         }
     }
