@@ -37,7 +37,6 @@ public class PlayerSwap : MonoBehaviour
             }
 
             //cam.SetTarget(character);
-            cam.LookAt = character;
             cam.Follow = character;
         }
         Swap();
@@ -117,7 +116,6 @@ public class PlayerSwap : MonoBehaviour
             m_ParticleSystem.Play();
 
             //cam.SetTarget(character); // Update the camera's target to the newly selected character
-            cam.LookAt = character;
             cam.Follow = character;
         }
     }
@@ -139,7 +137,6 @@ public class PlayerSwap : MonoBehaviour
                 m_ParticleSystem.Play();
 
                 //cam.SetTarget(character);
-                cam.LookAt = character;
                 cam.Follow = character;
 
                 for (int i = 0; i < possibleCharacters.Count; i++)
