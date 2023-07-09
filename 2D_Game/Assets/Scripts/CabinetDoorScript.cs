@@ -6,22 +6,22 @@ using UnityEngine.InputSystem;
 
 public class CabinetDoorScript : MonoBehaviour
 {
-    public GameObject _openDoor;
-    public GameObject _closedDoor;
+    public GameObject openDoor;
+    public GameObject closedDoor;
 
-    public GameObject _platformOne;
-    public GameObject _platformTwo;
+    public GameObject platformOne;
+    public GameObject platformTwo;
 
-    public GameObject _block;
+    public GameObject block;
 
-    public GameObject _interactButton;
+    public GameObject interactButton;
 
-    public InputActionReference _interactAction;
-    public bool _interactable;
+    public InputActionReference interactAction;
+    public bool interactable;
 
     private ResourceManagement rm;
     private LightSource ls;
-    public PlayerSwap PlayerSwapScript;
+    private PlayerSwap PlayerSwapScript;
 
     // Start is called before the first frame update
     void Awake()
@@ -30,33 +30,33 @@ public class CabinetDoorScript : MonoBehaviour
         ls = FindObjectOfType<LightSource>();
         PlayerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
 
-        _openDoor.SetActive(false);
-        _closedDoor.SetActive(true);
-        _platformOne.SetActive(false);
+        openDoor.SetActive(false);
+        closedDoor.SetActive(true);
+        platformOne.SetActive(false);
 
-        if(_platformTwo != null)
-            _platformTwo.SetActive(false);
+        if(platformTwo != null)
+            platformTwo.SetActive(false);
 
-        if (_block != null)
-            _block.SetActive(false);
+        if (block != null)
+            block.SetActive(false);
 
-        _interactable = true;
+        interactable = true;
     }
     private void OnEnable()
     {
-        _interactAction.action.Enable();
-        _interactAction.action.performed += InteractWithClosetDoor;
+        interactAction.action.Enable();
+        interactAction.action.performed += InteractWithClosetDoor;
     }
 
     private void OnDisable()
     {
-        _interactAction.action.Disable();
-        _interactAction.action.performed -= InteractWithClosetDoor;
+        interactAction.action.Disable();
+        interactAction.action.performed -= InteractWithClosetDoor;
     }
 
     private void InteractWithClosetDoor(InputAction.CallbackContext context)
     {
-        if(_interactable)
+        if(interactable)
         {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f); //radius muss angepasst werden
             foreach (Collider2D collider in colliders)
@@ -77,29 +77,29 @@ public class CabinetDoorScript : MonoBehaviour
                     if (!DoorOpen())
                     {
                         Debug.Log("Door has openend!");
-                        _closedDoor.SetActive(false);
-                        _openDoor.SetActive(true);
-                        _platformOne.SetActive(true);
+                        closedDoor.SetActive(false);
+                        openDoor.SetActive(true);
+                        platformOne.SetActive(true);
 
-                        if(_platformTwo != null)
-                            _platformTwo.SetActive(true);
+                        if(platformTwo != null)
+                            platformTwo.SetActive(true);
 
-                        if (_block != null)
-                            _block.SetActive(true);
+                        if (block != null)
+                            block.SetActive(true);
                         break; // Exit the loop after finding the first VFT
                     }
                     if (DoorOpen())
                     {
                         Debug.Log("Door has closed!");
-                        _closedDoor.SetActive(true);
-                        _openDoor.SetActive(false);
-                        _platformOne.SetActive(false);
+                        closedDoor.SetActive(true);
+                        openDoor.SetActive(false);
+                        platformOne.SetActive(false);
 
-                        if(_platformTwo != null)
-                            _platformTwo.SetActive(false);
+                        if(platformTwo != null)
+                            platformTwo.SetActive(false);
 
-                        if(_block != null)
-                            _block.SetActive(false);
+                        if(block != null)
+                            block.SetActive(false);
                         break; // Exit the loop after finding the first VFT
                     }
                 }
@@ -108,19 +108,19 @@ public class CabinetDoorScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (_interactable && collision.CompareTag("VFT"))
+        if (interactable && collision.CompareTag("VFT"))
         {
-            _interactButton.SetActive(true);
+            interactButton.SetActive(true);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        _interactButton.SetActive(false);
+        interactButton.SetActive(false);
     }
     private bool DoorOpen()
     {
-        if (_openDoor.activeSelf)
+        if (openDoor.activeSelf)
         {
             return true;
         }
