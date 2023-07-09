@@ -48,6 +48,8 @@ public class CactusPunch : MonoBehaviour
         {
             if (collider.CompareTag("damagable"))
             {
+                arm.SetActive(true); // Activate the arm object
+                Debug.Log("punch");
                 damagable.TakeDamage();
 
                 ls.chargedLight = 0.03f;
@@ -60,7 +62,7 @@ public class CactusPunch : MonoBehaviour
                     rm.waterBarFill.fillAmount -= ls.chargedLight;
                 }
 
-                arm.SetActive(true); // Activate the arm object
+                
 
                 StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
 
