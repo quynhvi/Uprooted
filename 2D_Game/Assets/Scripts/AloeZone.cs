@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Vine : MonoBehaviour
+public class AloeZone : MonoBehaviour
 {
-    public GameObject interactButton;
-    public GameObject vine;
-    public GameObject interactZone;
+    [SerializeField] private GameObject interactButton;
+    [SerializeField] private GameObject aloeArm;
+    [SerializeField] private GameObject interactZone;
 
     private bool interactable;
-    private bool vineOpen = false; // Track whether the vine is open or closed
+    private bool aloeOpen = false; // Track whether the aloe arm is open or closed
+    private Vector2 boxSize = new Vector2(5f, 5f);
 
     private ResourceManagement rm;
     private LightSource ls;
@@ -25,7 +26,7 @@ public class Vine : MonoBehaviour
         rm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
         ps = FindAnyObjectByType<PlayerSwap>();
-        pm = GameObject.FindGameObjectWithTag("Ivy").GetComponent<PlayerMovement>();
+        pm = GameObject.FindGameObjectWithTag("AloeVera").GetComponent<PlayerMovement>();
 
         interactable = true;
 
@@ -35,39 +36,40 @@ public class Vine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && ps.whichCharacter == 2)
+        if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && ps.whichCharacter == 3)
         {
-            if (vineOpen)
+            if (aloeOpen)
             {
-                CloseVine();
+                CloseArm();
             }
             else if (interactable)
             {
-                VineInteract();
+                AloeInteract();
             }
         }
     }
 
-    private void CloseVine()
+    private void CloseArm()
     {
-        vine.SetActive(false);
-        vineOpen = false;
+        aloeArm.SetActive(false);
+        aloeOpen = false;
         interactable = true;
         pm.enabled = true;
     }
 
-    private void VineInteract()
+    private void AloeInteract()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
 
-        foreach (Collider2D collider in colliders)
+        foreach (RaycastHit2D hit in hits)
         {
-            if (collider.CompareTag("Ivy"))
+            if (hit.collider.CompareTag("AloeVera"))
             {
+                Debug.Log("Aloe hits zone");
                 ls.chargedLight = 0.03f;
 
-                vine.SetActive(true);
-                vineOpen = true;
+                aloeArm.SetActive(true);
+                aloeOpen = true;
                 pm.enabled = false;
 
                 if (rm != null && ls != null)
@@ -78,18 +80,20 @@ public class Vine : MonoBehaviour
                     rm.waterBarFill.fillAmount -= ls.chargedLight;
                 }
                 interactable = false;
-                break; // exit loop after finding Ivy
+                break; // exit loop after finding aloe
             }
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (interactable)
+        if (collision.gameObject.CompareTag("AloeVera") && ps.whichCharacter == 3)
+        {
             interactButton.SetActive(true);
+        }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         interactButton.SetActive(false);
     }

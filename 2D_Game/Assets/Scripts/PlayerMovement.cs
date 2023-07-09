@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         Flip();
 
         // Perform the ground check
-        isGrounded = IsGrounded() || IsGroundedOnPlatform() || IsOnCharacter();
+        isGrounded = IsGrounded() || IsGroundedOnPlatform() || IsOnCharacter() || IsOnObject();
     }
 
     private bool IsGrounded()
@@ -97,7 +97,22 @@ public class PlayerMovement : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
-            if (collider.CompareTag("Cactus") || collider.CompareTag("VFT") || collider.CompareTag("Ivy"))
+            if (collider.CompareTag("Cactus") || collider.CompareTag("VFT") || collider.CompareTag("Ivy") || collider.CompareTag("AloeVera"))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private bool IsOnObject()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f);
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("dragable") || collider.CompareTag("damagable"))
             {
                 return true;
             }

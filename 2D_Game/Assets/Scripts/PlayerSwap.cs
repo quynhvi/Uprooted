@@ -18,7 +18,7 @@ public class PlayerSwap : MonoBehaviour
     public InputActionReference switchCharacter1Action;
     public InputActionReference switchCharacter2Action;
     public InputActionReference switchCharacter3Action;
-
+    public InputActionReference switchCharacter4Action;
 
     void Start()
     {
@@ -58,6 +58,9 @@ public class PlayerSwap : MonoBehaviour
 
         switchCharacter3Action.action.Enable();
         switchCharacter3Action.action.performed += _ => SwitchToCharacter(2);
+
+        switchCharacter4Action.action.Enable();
+        switchCharacter4Action.action.performed += _ => SwitchToCharacter(3);
     }
 
     private void OnDisable()
@@ -76,6 +79,9 @@ public class PlayerSwap : MonoBehaviour
 
         switchCharacter3Action.action.Disable();
         switchCharacter3Action.action.performed -= _ => SwitchToCharacter(2);
+
+        switchCharacter4Action.action.Disable();
+        switchCharacter4Action.action.performed -= _ => SwitchToCharacter(3);
     }
 
     public void SwapLeft()

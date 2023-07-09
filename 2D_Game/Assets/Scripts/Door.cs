@@ -11,6 +11,7 @@ public class Door : MonoBehaviour
 
     private ResourceManagement rm;
     private LightSource ls;
+    private PlayerSwap ps;
 
     public GameObject interactButton;
     public GameObject doorFollowPoint;
@@ -36,13 +37,14 @@ public class Door : MonoBehaviour
         vft = FindAnyObjectByType<FollowPoint>();
         rm = FindObjectOfType<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
+        ps = FindObjectOfType<PlayerSwap>();
 
         interactable = true;
     }
 
     private void OnOpenDoor(InputAction.CallbackContext context)
     {
-        if (vft != null && vft.followingKey != null && vft.followingKey.gameObject.CompareTag("Key") && interactable)
+        if (vft != null && vft.followingKey != null && vft.followingKey.gameObject.CompareTag("Key") && interactable && ps.whichCharacter == 1)
         {
             interactable = false;
             OpenDoor();
