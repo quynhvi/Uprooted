@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public class Vine : MonoBehaviour
 {
-    public GameObject interactButton;
+    //public GameObject interactButton;
     public GameObject vine;
-    public GameObject interactZone;
+    //public GameObject interactZone;
 
     private bool interactable;
     private bool vineOpen = false; // Track whether the vine is open or closed
@@ -58,12 +58,6 @@ public class Vine : MonoBehaviour
 
     private void VineInteract()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
-
-        foreach (Collider2D collider in colliders)
-        {
-            if (collider.CompareTag("Ivy"))
-            {
                 ls.chargedLight = 0.03f;
 
                 vine.SetActive(true);
@@ -77,20 +71,5 @@ public class Vine : MonoBehaviour
                     rm.waterLevelNumber -= ls.chargedLight;
                     rm.waterBarFill.fillAmount -= ls.chargedLight;
                 }
-                interactable = false;
-                break; // exit loop after finding Ivy
-            }
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (interactable)
-            interactButton.SetActive(true);
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        interactButton.SetActive(false);
     }
 }
