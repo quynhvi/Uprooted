@@ -9,11 +9,15 @@ public class ReviveAloe : MonoBehaviour
     private PlayerSwap playerSwapScript;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        aloeMovement = GetComponent<PlayerMovement>();
         playerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
         aloeMovement.enabled = false;
+    }
+
+    private void Update()
+    {
+        aloeMovement = GetComponent<PlayerMovement>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
