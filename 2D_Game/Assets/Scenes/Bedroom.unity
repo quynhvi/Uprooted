@@ -10378,7 +10378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537687772}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 9.19, y: -0.43, z: -0.024573747}
+  m_LocalPosition: {x: 6.29, y: -0.43, z: -0.024573747}
   m_LocalScale: {x: 4.505556, y: 6.850076, z: 4.0774264}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10437,8 +10437,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &1537687775
-CapsuleCollider2D:
+--- !u!61 &1537687775
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10450,9 +10450,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0000009536743, y: -0.0000009536743}
-  m_Size: {x: 1.0000002, y: 2.0000007}
-  m_Direction: 0
+  m_Offset: {x: 0, y: -0.00000011920929}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2}
+  m_EdgeRadius: 0
 --- !u!1 &1588657329
 GameObject:
   m_ObjectHideFlags: 0
@@ -12772,6 +12782,7 @@ GameObject:
   - component: {fileID: 4823573075074606102}
   - component: {fileID: 4823573075074606097}
   - component: {fileID: 4823573075074606104}
+  - component: {fileID: 4823573075074606105}
   m_Layer: 0
   m_Name: Object
   m_TagString: damagable
@@ -12861,6 +12872,27 @@ MonoBehaviour:
   damaged: {fileID: 1863808133}
   notDamaged: {fileID: 4823573075074606098}
   interactButton: {fileID: 891486122}
+--- !u!50 &4823573075074606105
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823573075074606098}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 100
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!114 &4858920890084709082
 MonoBehaviour:
   m_ObjectHideFlags: 0
