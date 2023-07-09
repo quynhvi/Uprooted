@@ -4247,11 +4247,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3054241971458250187, guid: 0e22dacd8aa1b409196064d851e40814, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.91
+      value: 10.1
       objectReference: {fileID: 0}
     - target: {fileID: 3054241971458250187, guid: 0e22dacd8aa1b409196064d851e40814, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.43
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 3054241971458250187, guid: 0e22dacd8aa1b409196064d851e40814, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12149,6 +12149,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2135117705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7958400918612606586, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
+  m_PrefabInstance: {fileID: 7958400917823146624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2135117711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135117705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da6d495e44ba403690775dcd5e26079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vine: {fileID: 1461186371}
 --- !u!1 &2143778409
 GameObject:
   m_ObjectHideFlags: 0
@@ -12767,7 +12785,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 854489063028760675, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 854489063028760675, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
       propertyPath: m_IsActive
@@ -12777,13 +12795,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 1750080414360494803, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
+      propertyPath: PlayerSwapScript
+      value: 
+      objectReference: {fileID: 1131988105}
     - target: {fileID: 2009974544596071143, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2615353322026518819, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2615353322026518819, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
       propertyPath: m_IsActive
@@ -12800,6 +12822,10 @@ PrefabInstance:
     - target: {fileID: 3650758444787528880, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.1500008
+      objectReference: {fileID: 0}
+    - target: {fileID: 3729327085124929982, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4406649062205476185, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12829,6 +12855,10 @@ PrefabInstance:
       propertyPath: interactIcon
       value: 
       objectReference: {fileID: 1017073972}
+    - target: {fileID: 5788830014257875078, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6587726039374912589, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
       propertyPath: m_Layer
       value: 14
@@ -12843,7 +12873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6719548117080259363, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6719548117080259363, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
       propertyPath: m_IsActive
@@ -12855,7 +12885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7338717317430257234, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7338717317430257234, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
       propertyPath: m_IsActive
@@ -12933,8 +12963,7 @@ PrefabInstance:
       propertyPath: aloeVera
       value: 
       objectReference: {fileID: 815082331}
-    m_RemovedComponents:
-    - {fileID: 5611722446092115693, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3f32b356796542b1a8e127f0d03dab5, type: 3}
 --- !u!1 &8406215615741845519
 GameObject:
