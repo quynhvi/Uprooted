@@ -24,7 +24,6 @@ public class GMScript : MonoBehaviour
     {
         //gamepad = Gamepad.current;
         action.Menu.Journal.performed += _ => DeterminePause();
-
     }
 
     private void DeterminePause()
