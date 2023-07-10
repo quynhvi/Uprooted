@@ -1406,7 +1406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactButton: {fileID: 891486122}
   aloeArm: {fileID: 497161774}
-  interactAction: {fileID: 9103543313068027609, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
+  interactAction: {fileID: 0}
 --- !u!61 &242489262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5065,7 +5065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactButton: {fileID: 891486122}
   aloeArm: {fileID: 497161774}
-  interactAction: {fileID: 9103543313068027609, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
+  interactAction: {fileID: 0}
 --- !u!1 &823986126
 GameObject:
   m_ObjectHideFlags: 0
