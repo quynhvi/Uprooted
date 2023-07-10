@@ -31,6 +31,8 @@ public class AloeZone : MonoBehaviour
 
         interactable = true;
 
+        aloeArm.SetActive(false);
+
         //gamepad = Gamepad.current;
     }
 
