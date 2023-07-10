@@ -63,6 +63,7 @@ public class Door : MonoBehaviour
 
         door.SetActive(false);
         ivyInteract.SetActive(true);
+        key.SetActive(false);
 
         if (vft.followingKey != null)
         {
