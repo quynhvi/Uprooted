@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Damageable : MonoBehaviour
+public class DamagableGutter : MonoBehaviour
 {
-    //public Sprite damageSprite;
-    //private SpriteRenderer spriteRenderer;
     [SerializeField] private GameObject damaged;
     [SerializeField] private GameObject notDamaged;
     [SerializeField] private GameObject interactButton;
@@ -23,12 +21,10 @@ public class Damageable : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
-            if (collider.CompareTag("CactusArm"))
-            {
-                Debug.Log("Arm touch");
-                notDamaged.SetActive(false);
-                damaged.SetActive(true);
-            }
+            Debug.Log("Arm touch");
+            notDamaged.SetActive(false);
+            damaged.SetActive(true);
+
         }
     }
 

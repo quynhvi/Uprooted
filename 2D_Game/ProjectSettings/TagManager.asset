@@ -19,6 +19,8 @@ TagManager:
   - AloeZone
   - Numpad
   - AloeArm
+  - Curtain
+  - Gutter
   layers:
   - Default
   - TransparentFX
