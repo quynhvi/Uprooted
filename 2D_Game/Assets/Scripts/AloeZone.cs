@@ -31,20 +31,22 @@ public class AloeZone : MonoBehaviour
 
         interactable = true;
 
+        aloeArm.SetActive(false);
+
         //gamepad = Gamepad.current;
     }
 
-    private void OnEnable()
-    {
-        interactAction.action.Enable();
-        interactAction.action.performed += AloeInteract;
-    }
+    //private void OnEnable()
+    //{
+    //    interactAction.action.Enable();
+    //    interactAction.action.performed += AloeInteract;
+    //}
 
-    private void OnDisable()
-    {
-        interactAction.action.Disable();
-        interactAction.action.performed -= AloeInteract;
-    }
+    //private void OnDisable()
+    //{
+    //    interactAction.action.Disable();
+    //    interactAction.action.performed -= AloeInteract;
+    //}
 
     //// Update is called once per frame
     //void Update()
@@ -62,49 +64,50 @@ public class AloeZone : MonoBehaviour
     //    }
     //}
 
-    private void CloseArm()
-    {
-        aloeArm.SetActive(false);
-        aloeOpen = false;
-        interactable = true;
-    }
+    //private void CloseArm()
+    //{
+    //    aloeArm.SetActive(false);
+    //    aloeOpen = false;
+    //    interactable = true;
+    //}
 
-    public void AloeInteract(InputAction.CallbackContext context)
-    {
-        Debug.Log("aloe press I");
-        if (interactable)
-        {
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f);
+    //public void AloeInteract(InputAction.CallbackContext context)
+    //{
+    //    Debug.Log("aloe press I");
+    //    if (interactable)
+    //    {
+    //        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f);
 
-            foreach (Collider2D collider in colliders)
-            {
-                if (collider.CompareTag("AloeVera") && ps.whichCharacter == 3)
-                {
-                    aloeArm.SetActive(true);
-                    Debug.Log("Aloe hits zone");
+    //        foreach (Collider2D collider in colliders)
+    //        {
+    //            if (collider.CompareTag("AloeZone") && ps.whichCharacter == 3)
+    //            {
+    //                aloeArm.SetActive(true);
+    //                Debug.Log("Aloe hits zone");
                     
-                    aloeOpen = true;
-                    pm.enabled = true;
-                    ls.chargedLight = 0.03f;
+    //                aloeOpen = true;
+    //                pm.enabled = true;
+    //                ls.chargedLight = 0.03f;
 
-                    if (rm != null && ls != null)
-                    {
-                        rm.lightLevelNumber -= ls.chargedLight;
-                        rm.lightBarFill.fillAmount -= ls.chargedLight;
-                        rm.waterLevelNumber -= ls.chargedLight;
-                        rm.waterBarFill.fillAmount -= ls.chargedLight;
-                    }
-                    interactable = false;
-                    break; // exit loop after finding aloe
-                }
-            }
-        }
-    }
+    //                if (rm != null && ls != null)
+    //                {
+    //                    rm.lightLevelNumber -= ls.chargedLight;
+    //                    rm.lightBarFill.fillAmount -= ls.chargedLight;
+    //                    rm.waterLevelNumber -= ls.chargedLight;
+    //                    rm.waterBarFill.fillAmount -= ls.chargedLight;
+    //                }
+    //                interactable = false;
+    //                break; // exit loop after finding aloe
+    //            }
+    //        }
+    //    }
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("AloeZone") && ps.whichCharacter == 3)
         {
+            aloeArm.SetActive(true);
             interactButton.SetActive(true);
         }
     }
@@ -112,5 +115,6 @@ public class AloeZone : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         interactButton.SetActive(false);
+        aloeArm.SetActive(false);
     }
 }
