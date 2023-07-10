@@ -15,7 +15,7 @@ public class TriggerZoneScript : MonoBehaviour
     void Awake()
     {
         PlayerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
-        closetBorderLayer = LayerMask.NameToLayer("Closet Borders");
+        closetBorderLayer = LayerMask.NameToLayer("ClosetBorders");
         IgnoreAll();
     }
 

@@ -1,5 +1,102 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6220817690573550934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1131785282179829630}
+  - component: {fileID: 5348325376620444931}
+  - component: {fileID: 4679945835862775150}
+  - component: {fileID: 4043192351167754016}
+  m_Layer: 12
+  m_Name: AloePlatform
+  m_TagString: Platform
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1131785282179829630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220817690573550934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.556, y: -0.87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9001695880662554579}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &5348325376620444931
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220817690573550934}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.46419138}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.071617246}
+  m_EdgeRadius: 0
+--- !u!114 &4679945835862775150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220817690573550934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4771da8c96e6a664989f0ea9d972dd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 0
+  currentPlayerLayer: 0
+  currentPlatformLayer: 0
+  PlayerSwapScript: {fileID: 0}
+  fallTimer: 0
+  IsFalling: 0
+--- !u!251 &4043192351167754016
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220817690573550934}
+  m_Enabled: 1
+  m_UseColliderMask: 0
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &9001695879087373639
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,15 +221,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd98b46e55b4aa4fa185c817843b294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _openDoor: {fileID: 9001695879770509779}
-  _closedDoor: {fileID: 9001695879213365456}
-  _platformOne: {fileID: 9001695880531325341}
-  _platformTwo: {fileID: 0}
-  _block: {fileID: 9001695879363224784}
-  _interactButton: {fileID: 0}
-  _interactAction: {fileID: 9103543313068027609, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
-  _interactable: 0
-  PlayerSwapScript: {fileID: 0}
+  openDoor: {fileID: 0}
+  closedDoor: {fileID: 0}
+  platformOne: {fileID: 0}
+  platformTwo: {fileID: 0}
+  block: {fileID: 0}
+  interactButton: {fileID: 0}
+  interactAction: {fileID: 0}
+  interactable: 0
 --- !u!1 &9001695879181489518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,15 +2336,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd98b46e55b4aa4fa185c817843b294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _openDoor: {fileID: 9001695880384515354}
-  _closedDoor: {fileID: 9001695879181489518}
-  _platformOne: {fileID: 9001695880837091740}
-  _platformTwo: {fileID: 9001695880757849546}
-  _block: {fileID: 0}
-  _interactButton: {fileID: 0}
-  _interactAction: {fileID: 9103543313068027609, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
-  _interactable: 0
-  PlayerSwapScript: {fileID: 0}
+  openDoor: {fileID: 0}
+  closedDoor: {fileID: 0}
+  platformOne: {fileID: 0}
+  platformTwo: {fileID: 0}
+  block: {fileID: 0}
+  interactButton: {fileID: 0}
+  interactAction: {fileID: 0}
+  interactable: 0
 --- !u!1 &9001695879870055053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3474,15 +3569,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd98b46e55b4aa4fa185c817843b294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _openDoor: {fileID: 9001695880207526900}
-  _closedDoor: {fileID: 9001695879538141723}
-  _platformOne: {fileID: 9001695881172203932}
-  _platformTwo: {fileID: 0}
-  _block: {fileID: 0}
-  _interactButton: {fileID: 0}
-  _interactAction: {fileID: 9103543313068027609, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
-  _interactable: 0
-  PlayerSwapScript: {fileID: 0}
+  openDoor: {fileID: 0}
+  closedDoor: {fileID: 0}
+  platformOne: {fileID: 0}
+  platformTwo: {fileID: 0}
+  block: {fileID: 0}
+  interactButton: {fileID: 0}
+  interactAction: {fileID: 0}
+  interactable: 0
 --- !u!1 &9001695880384515354
 GameObject:
   m_ObjectHideFlags: 0
@@ -4089,6 +4183,7 @@ Transform:
   - {fileID: 9001695880251130867}
   - {fileID: 9001695879277873274}
   - {fileID: 9001695880440662215}
+  - {fileID: 1131785282179829630}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5959,17 +6054,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49da05ba6998df469db2e80026b3882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _closetDoor: {fileID: 9001695881149031531}
-  _positionPoint: {fileID: 9001695880980217429}
-  _pivotPoint: {fileID: 9001695880280199160}
-  _openDoor: {fileID: 9001695880731442237}
-  _closedDoor: {fileID: 9001695880719241666}
-  _platformOne: {fileID: 9001695879378641688}
-  _platformTwo: {fileID: 9001695880159019292}
-  _block: {fileID: 0}
-  _interactButton: {fileID: 0}
-  _interactAction: {fileID: 9103543313068027609, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
-  _interactable: 0
+  closetDoor: {fileID: 0}
+  positionPoint: {fileID: 0}
+  pivotPoint: {fileID: 0}
+  openDoor: {fileID: 0}
+  closedDoor: {fileID: 0}
+  platformOne: {fileID: 0}
+  platformTwo: {fileID: 0}
+  block: {fileID: 0}
+  interactButton: {fileID: 0}
+  interactAction: {fileID: 0}
+  interactable: 0
   PlayerSwapScript: {fileID: 0}
 --- !u!4 &6237109801016442297 stripped
 Transform:
