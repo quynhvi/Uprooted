@@ -80,7 +80,7 @@ public class AloeZone : MonoBehaviour
 
             foreach (Collider2D collider in colliders)
             {
-                if (collider.CompareTag("AloeVera") && ps.whichCharacter == 3)
+                if (collider.CompareTag("AloeZone") && ps.whichCharacter == 3)
                 {
                     aloeArm.SetActive(true);
                     Debug.Log("Aloe hits zone");
