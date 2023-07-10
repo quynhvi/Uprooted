@@ -7,7 +7,7 @@ public class AloeZone : MonoBehaviour
 {
     [SerializeField] private GameObject interactButton;
     [SerializeField] private GameObject aloeArm;
-    [SerializeField] private GameObject interactZone;
+    //[SerializeField] private GameObject interactZone;
 
     private bool interactable;
     private bool aloeOpen = false; // Track whether the aloe arm is open or closed
@@ -18,7 +18,8 @@ public class AloeZone : MonoBehaviour
     private PlayerSwap ps;
     private PlayerMovement pm;
 
-    private Gamepad gamepad;
+    //private Gamepad gamepad;
+    public InputActionReference interactAction;
 
     // Start is called before the first frame update
     void Start()
@@ -30,64 +31,79 @@ public class AloeZone : MonoBehaviour
 
         interactable = true;
 
-        gamepad = Gamepad.current;
+        //gamepad = Gamepad.current;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && ps.whichCharacter == 3)
-        {
-            if (aloeOpen)
-            {
-                CloseArm();
-            }
-            else if (interactable)
-            {
-                AloeInteract();
-            }
-        }
+        interactAction.action.Enable();
+        interactAction.action.performed += AloeInteract;
     }
+
+    private void OnDisable()
+    {
+        interactAction.action.Disable();
+        interactAction.action.performed -= AloeInteract;
+    }
+
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && ps.whichCharacter == 3)
+    //    {
+    //        if (aloeOpen)
+    //        {
+    //            CloseArm();
+    //        }
+    //        else if (interactable)
+    //        {
+    //            AloeInteract();
+    //        }
+    //    }
+    //}
 
     private void CloseArm()
     {
         aloeArm.SetActive(false);
         aloeOpen = false;
         interactable = true;
-        pm.enabled = true;
     }
 
-    private void AloeInteract()
+    public void AloeInteract(InputAction.CallbackContext context)
     {
-        RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
-
-        foreach (RaycastHit2D hit in hits)
+        Debug.Log("aloe press I");
+        if (interactable)
         {
-            if (hit.collider.CompareTag("AloeVera"))
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f);
+
+            foreach (Collider2D collider in colliders)
             {
-                Debug.Log("Aloe hits zone");
-                ls.chargedLight = 0.03f;
-
-                aloeArm.SetActive(true);
-                aloeOpen = true;
-                pm.enabled = false;
-
-                if (rm != null && ls != null)
+                if (collider.CompareTag("AloeVera") && ps.whichCharacter == 3)
                 {
-                    rm.lightLevelNumber -= ls.chargedLight;
-                    rm.lightBarFill.fillAmount -= ls.chargedLight;
-                    rm.waterLevelNumber -= ls.chargedLight;
-                    rm.waterBarFill.fillAmount -= ls.chargedLight;
+                    aloeArm.SetActive(true);
+                    Debug.Log("Aloe hits zone");
+                    
+                    aloeOpen = true;
+                    pm.enabled = true;
+                    ls.chargedLight = 0.03f;
+
+                    if (rm != null && ls != null)
+                    {
+                        rm.lightLevelNumber -= ls.chargedLight;
+                        rm.lightBarFill.fillAmount -= ls.chargedLight;
+                        rm.waterLevelNumber -= ls.chargedLight;
+                        rm.waterBarFill.fillAmount -= ls.chargedLight;
+                    }
+                    interactable = false;
+                    break; // exit loop after finding aloe
                 }
-                interactable = false;
-                break; // exit loop after finding aloe
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("AloeVera") && ps.whichCharacter == 3)
+        if (collision.gameObject.CompareTag("AloeZone") && ps.whichCharacter == 3)
         {
             interactButton.SetActive(true);
         }

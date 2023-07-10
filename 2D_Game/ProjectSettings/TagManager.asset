@@ -17,6 +17,8 @@ TagManager:
   - damagable
   - AloeVera
   - AloeZone
+  - Numpad
+  - AloeArm
   layers:
   - Default
   - TransparentFX

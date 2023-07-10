@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6220817690573550934
+--- !u!1 &8005955649211535367
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1131785282179829630}
-  - component: {fileID: 5348325376620444931}
-  - component: {fileID: 4679945835862775150}
-  - component: {fileID: 4043192351167754016}
+  - component: {fileID: 8611907415055733111}
+  - component: {fileID: 3540327906242638450}
+  - component: {fileID: 5563881038316189739}
+  - component: {fileID: 7127849058631444473}
   m_Layer: 12
   m_Name: AloePlatform
   m_TagString: Platform
@@ -19,35 +19,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1131785282179829630
+--- !u!4 &8611907415055733111
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6220817690573550934}
+  m_GameObject: {fileID: 8005955649211535367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.556, y: -0.87, z: 0}
+  m_LocalPosition: {x: 1.55, y: -0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9001695880662554579}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &5348325376620444931
+--- !u!61 &3540327906242638450
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6220817690573550934}
+  m_GameObject: {fileID: 8005955649211535367}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.46419138}
+  m_Offset: {x: 0, y: 0.014094323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -58,33 +58,15 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.071617246}
+  m_Size: {x: 1, y: 0.06977266}
   m_EdgeRadius: 0
---- !u!114 &4679945835862775150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6220817690573550934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4771da8c96e6a664989f0ea9d972dd59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitTime: 0
-  currentPlayerLayer: 0
-  currentPlatformLayer: 0
-  PlayerSwapScript: {fileID: 0}
-  fallTimer: 0
-  IsFalling: 0
---- !u!251 &4043192351167754016
+--- !u!251 &5563881038316189739
 PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6220817690573550934}
+  m_GameObject: {fileID: 8005955649211535367}
   m_Enabled: 1
   m_UseColliderMask: 0
   m_ColliderMask:
@@ -97,6 +79,24 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &7127849058631444473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8005955649211535367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4771da8c96e6a664989f0ea9d972dd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 0
+  currentPlayerLayer: 0
+  currentPlatformLayer: 0
+  PlayerSwapScript: {fileID: 0}
+  fallTimer: 0
+  IsFalling: 0
 --- !u!1 &9001695879087373639
 GameObject:
   m_ObjectHideFlags: 0
@@ -4183,7 +4183,7 @@ Transform:
   - {fileID: 9001695880251130867}
   - {fileID: 9001695879277873274}
   - {fileID: 9001695880440662215}
-  - {fileID: 1131785282179829630}
+  - {fileID: 8611907415055733111}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5938,7 +5938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3054241971458250189, guid: 0e22dacd8aa1b409196064d851e40814, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 4.0587683
+      value: 6.06
       objectReference: {fileID: 0}
     - target: {fileID: 3054241971458250189, guid: 0e22dacd8aa1b409196064d851e40814, type: 3}
       propertyPath: m_ConnectedAnchor.y
