@@ -41,7 +41,9 @@ public class AloeNumpad : MonoBehaviour
                 if (collider.CompareTag("AloeArm") && ps.whichCharacter == 3) // Aloe is colliding and currently being played!
                 {
                     numpad.SetActive(true);
+                    
                     interactable = false;
+                    Time.timeScale = 0f;
                 }
             }
         }

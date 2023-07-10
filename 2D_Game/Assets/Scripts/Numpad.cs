@@ -25,8 +25,10 @@ public class Numpad : MonoBehaviour
     {
         if (number == code)
         {
+            Time.timeScale = 1f;
             UIText.text = "Correct";
             NumpadScreen.SetActive(false);
+            
             SceneManager.LoadScene(0);
         }
         else
