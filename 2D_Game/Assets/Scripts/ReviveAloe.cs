@@ -18,6 +18,7 @@ public class ReviveAloe : MonoBehaviour
         aloeMovement = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         aloeMovement.enabled = false;
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
