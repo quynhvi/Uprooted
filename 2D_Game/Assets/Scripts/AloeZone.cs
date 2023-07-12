@@ -9,8 +9,8 @@ public class AloeZone : MonoBehaviour
     [SerializeField] private GameObject aloeArm;
     //[SerializeField] private GameObject interactZone;
 
-    private bool interactable;
-    private bool aloeOpen = false; // Track whether the aloe arm is open or closed
+    //private bool interactable;
+    //private bool aloeOpen = false; // Track whether the aloe arm is open or closed
     private Vector2 boxSize = new Vector2(5f, 5f);
 
     private ResourceManagement rm;
@@ -29,7 +29,7 @@ public class AloeZone : MonoBehaviour
         ps = FindAnyObjectByType<PlayerSwap>();
         pm = GameObject.FindGameObjectWithTag("AloeVera").GetComponent<PlayerMovement>();
 
-        interactable = true;
+        //interactable = true;
 
         aloeArm.SetActive(false);
 

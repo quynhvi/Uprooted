@@ -21,6 +21,8 @@ TagManager:
   - AloeArm
   - Curtain
   - Gutter
+  - Box1
+  - Giraffe
   layers:
   - Default
   - TransparentFX

@@ -84,7 +84,7 @@ public class Drawer : MonoBehaviour
         interactButton.SetActive(false);
     }
 
-    private T FindAnyObjectByType<T>() where T : MonoBehaviour
+    private new T FindAnyObjectByType<T>() where T : MonoBehaviour
     {
         T[] objects = FindObjectsOfType<T>();
         if (objects.Length > 0)

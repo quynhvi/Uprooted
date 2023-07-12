@@ -13,10 +13,12 @@ public class CactusPunch : MonoBehaviour
     private LightSource ls;
     private PlayerSwap ps;
     private PlayerMovement pm;
+
     private Damageable damagable;
     private DamageableCurtain damageableCurtain;
     private DamagableGutter damageableGutter;
-
+    private DamagableBox1 damageableBox1;
+    private DamageableGiraffe damageableGiraffe;
 
     private Gamepad gamepad;
 
@@ -27,9 +29,12 @@ public class CactusPunch : MonoBehaviour
         ls = FindObjectOfType<LightSource>();
         ps = FindObjectOfType<PlayerSwap>();
         pm = GameObject.FindGameObjectWithTag("Cactus").GetComponent<PlayerMovement>();
+
         damagable = GameObject.FindGameObjectWithTag("damagable").GetComponent<Damageable>();
         damageableCurtain = GameObject.FindGameObjectWithTag("Curtain").GetComponent<DamageableCurtain>();
         damageableGutter = GameObject.FindGameObjectWithTag("Gutter").GetComponent<DamagableGutter>();
+        damageableBox1 = GameObject.FindGameObjectWithTag("Box1").GetComponent<DamagableBox1>();
+        damageableGiraffe = GameObject.FindGameObjectWithTag("Giraffe").GetComponent<DamageableGiraffe>();
 
         interactable = true;
 
@@ -53,67 +58,133 @@ public class CactusPunch : MonoBehaviour
         {
             if (collider.CompareTag("damagable"))
             {
-                arm.SetActive(true); // Activate the arm object
-                Debug.Log("punch");
-                damagable.TakeDamage();
-
-                ls.chargedLight = 0.03f;
-
-                if (rm != null && ls != null)
-                {
-                    rm.lightLevelNumber -= ls.chargedLight;
-                    rm.lightBarFill.fillAmount -= ls.chargedLight;
-                    rm.waterLevelNumber -= ls.chargedLight;
-                    rm.waterBarFill.fillAmount -= ls.chargedLight;
-                }
-                StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
-
-                //interactable = false;
+                Damageable();
                 break;
             }
 
             if (collider.CompareTag("Curtain"))
             {
-                arm.SetActive(true); // Activate the arm object
-                Debug.Log("punch");
-                damageableCurtain.TakeDamage();
-
-                ls.chargedLight = 0.03f;
-
-                if (rm != null && ls != null)
-                {
-                    rm.lightLevelNumber -= ls.chargedLight;
-                    rm.lightBarFill.fillAmount -= ls.chargedLight;
-                    rm.waterLevelNumber -= ls.chargedLight;
-                    rm.waterBarFill.fillAmount -= ls.chargedLight;
-                }
-                StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
-
-                //interactable = false;
+                Curtain();
                 break;
             }
 
             if (collider.CompareTag("Gutter"))
             {
-                arm.SetActive(true); // Activate the arm object
-                Debug.Log("punch");
-                damageableGutter.TakeDamage();
+                Gutter();
+                break;
+            }
 
-                ls.chargedLight = 0.03f;
+            if (collider.CompareTag("Box1"))
+            {
+                Box1();
+                break;
+            }
 
-                if (rm != null && ls != null)
-                {
-                    rm.lightLevelNumber -= ls.chargedLight;
-                    rm.lightBarFill.fillAmount -= ls.chargedLight;
-                    rm.waterLevelNumber -= ls.chargedLight;
-                    rm.waterBarFill.fillAmount -= ls.chargedLight;
-                }
-                StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
-
-                //interactable = false;
+            if (collider.CompareTag("Giraffe"))
+            {
+                Giraffe();
                 break;
             }
         }
+    }
+
+    private void Damageable()
+    {
+        arm.SetActive(true); // Activate the arm object
+        Debug.Log("punch");
+        damagable.TakeDamage();
+
+        ls.chargedLight = 0.03f;
+
+        if (rm != null && ls != null)
+        {
+            rm.lightLevelNumber -= ls.chargedLight;
+            rm.lightBarFill.fillAmount -= ls.chargedLight;
+            rm.waterLevelNumber -= ls.chargedLight;
+            rm.waterBarFill.fillAmount -= ls.chargedLight;
+        }
+        StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
+
+        //interactable = false;
+        //break;
+    }
+
+    private void Curtain()
+    {
+        arm.SetActive(true); // Activate the arm object
+        Debug.Log("punch");
+        damageableCurtain.TakeDamage();
+
+        ls.chargedLight = 0.03f;
+
+        if (rm != null && ls != null)
+        {
+            rm.lightLevelNumber -= ls.chargedLight;
+            rm.lightBarFill.fillAmount -= ls.chargedLight;
+            rm.waterLevelNumber -= ls.chargedLight;
+            rm.waterBarFill.fillAmount -= ls.chargedLight;
+        }
+        StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
+
+        //interactable = false;
+        //break;
+    }
+
+    private void Gutter()
+    {
+        arm.SetActive(true); // Activate the arm object
+        Debug.Log("punch");
+        damageableGutter.TakeDamage();
+
+        ls.chargedLight = 0.03f;
+
+        if (rm != null && ls != null)
+        {
+            rm.lightLevelNumber -= ls.chargedLight;
+            rm.lightBarFill.fillAmount -= ls.chargedLight;
+            rm.waterLevelNumber -= ls.chargedLight;
+            rm.waterBarFill.fillAmount -= ls.chargedLight;
+        }
+
+        StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
+    }
+
+    private void Box1()
+    {
+        arm.SetActive(true); // Activate the arm object
+        Debug.Log("punch");
+        damageableBox1.TakeDamage();
+
+        ls.chargedLight = 0.03f;
+
+        if (rm != null && ls != null)
+        {
+            rm.lightLevelNumber -= ls.chargedLight;
+            rm.lightBarFill.fillAmount -= ls.chargedLight;
+            rm.waterLevelNumber -= ls.chargedLight;
+            rm.waterBarFill.fillAmount -= ls.chargedLight;
+        }
+
+        StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
+    }
+
+    private void Giraffe()
+    {
+        arm.SetActive(true); // Activate the arm object
+        Debug.Log("punch");
+        damageableGiraffe.TakeDamage();
+
+        ls.chargedLight = 0.03f;
+
+        if (rm != null && ls != null)
+        {
+            rm.lightLevelNumber -= ls.chargedLight;
+            rm.lightBarFill.fillAmount -= ls.chargedLight;
+            rm.waterLevelNumber -= ls.chargedLight;
+            rm.waterBarFill.fillAmount -= ls.chargedLight;
+        }
+
+        StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
     }
 
     private IEnumerator DisableArmAfterDelay(float delay)
@@ -129,6 +200,10 @@ public class CactusPunch : MonoBehaviour
         if (interactable && collision.gameObject.CompareTag("Curtain") && ps.whichCharacter == 0)
             interactButton.SetActive(true);
         if (interactable && collision.gameObject.CompareTag("Gutter") && ps.whichCharacter == 0)
+            interactButton.SetActive(true);
+        if (interactable && collision.gameObject.CompareTag("Box1") && ps.whichCharacter == 0)
+            interactButton.SetActive(true);
+        if (interactable && collision.gameObject.CompareTag("Giraffe") && ps.whichCharacter == 0)
             interactButton.SetActive(true);
     }
 
