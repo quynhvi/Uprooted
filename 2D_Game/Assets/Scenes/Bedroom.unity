@@ -11526,7 +11526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429d0c10954ea4a72a6ede94474c7242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   jumpingPower: 11
   rb: {fileID: 587429930}
   groundCheck: {fileID: 325811387}
@@ -17083,7 +17083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429d0c10954ea4a72a6ede94474c7242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   jumpingPower: 11
   rb: {fileID: 815082333}
   groundCheck: {fileID: 64593251}
@@ -38333,13 +38333,13 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 3
-  m_LinearDrag: 0
-  m_AngularDrag: 4
+  m_LinearDrag: 3
+  m_AngularDrag: 0.05
   m_GravityScale: 0.5
   m_Material: {fileID: 6200000, guid: 69418de81088c4607be070157818ce8d, type: 2}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Interpolate: 1
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &1679346623
 BoxCollider2D:
@@ -40371,7 +40371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429d0c10954ea4a72a6ede94474c7242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   jumpingPower: 11
   rb: {fileID: 1895183611}
   groundCheck: {fileID: 329967644}
@@ -41334,7 +41334,7 @@ Rigidbody2D:
   m_Mass: 4
   m_LinearDrag: 4
   m_AngularDrag: 0.05
-  m_GravityScale: 1.81
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 69418de81088c4607be070157818ce8d, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 0
@@ -41404,7 +41404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429d0c10954ea4a72a6ede94474c7242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   jumpingPower: 11
   rb: {fileID: 2032176117}
   groundCheck: {fileID: 1222443893}
@@ -53480,7 +53480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8406215615741845519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.9, y: 0, z: 0}
+  m_LocalPosition: {x: -6.9, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
