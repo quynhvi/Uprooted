@@ -85,6 +85,24 @@
                     "processors": "",
                     "interactions": "Press",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "CameraZoomIn",
+                    "type": "Button",
+                    "id": "287972b1-be9c-462c-a178-be5a8a9b7550",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CameraZoomOut",
+                    "type": "Button",
+                    "id": "42a7ae04-9547-435d-a41a-e98b1a52af57",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -327,6 +345,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Switch Character 4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fbce9a8b-8dff-452b-aea3-2fd230d61440",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraZoomIn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cfe7b96f-8607-47e6-8d2c-fe2cb9707347",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraZoomOut",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
