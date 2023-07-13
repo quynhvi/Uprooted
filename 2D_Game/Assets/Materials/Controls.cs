@@ -107,6 +107,24 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Press"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CameraZoomIn"",
+                    ""type"": ""Button"",
+                    ""id"": ""287972b1-be9c-462c-a178-be5a8a9b7550"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CameraZoomOut"",
+                    ""type"": ""Button"",
+                    ""id"": ""42a7ae04-9547-435d-a41a-e98b1a52af57"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -351,6 +369,28 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""Switch Character 4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fbce9a8b-8dff-452b-aea3-2fd230d61440"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraZoomIn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cfe7b96f-8607-47e6-8d2c-fe2cb9707347"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraZoomOut"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -368,6 +408,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Default_SwitchCharacter2 = m_Default.FindAction("Switch Character 2", throwIfNotFound: true);
         m_Default_SwitchCharacter3 = m_Default.FindAction("Switch Character 3", throwIfNotFound: true);
         m_Default_SwitchCharacter4 = m_Default.FindAction("Switch Character 4", throwIfNotFound: true);
+        m_Default_CameraZoomIn = m_Default.FindAction("CameraZoomIn", throwIfNotFound: true);
+        m_Default_CameraZoomOut = m_Default.FindAction("CameraZoomOut", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -438,6 +480,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Default_SwitchCharacter2;
     private readonly InputAction m_Default_SwitchCharacter3;
     private readonly InputAction m_Default_SwitchCharacter4;
+    private readonly InputAction m_Default_CameraZoomIn;
+    private readonly InputAction m_Default_CameraZoomOut;
     public struct DefaultActions
     {
         private @Controls m_Wrapper;
@@ -451,6 +495,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @SwitchCharacter2 => m_Wrapper.m_Default_SwitchCharacter2;
         public InputAction @SwitchCharacter3 => m_Wrapper.m_Default_SwitchCharacter3;
         public InputAction @SwitchCharacter4 => m_Wrapper.m_Default_SwitchCharacter4;
+        public InputAction @CameraZoomIn => m_Wrapper.m_Default_CameraZoomIn;
+        public InputAction @CameraZoomOut => m_Wrapper.m_Default_CameraZoomOut;
         public InputActionMap Get() { return m_Wrapper.m_Default; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -487,6 +533,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @SwitchCharacter4.started += instance.OnSwitchCharacter4;
             @SwitchCharacter4.performed += instance.OnSwitchCharacter4;
             @SwitchCharacter4.canceled += instance.OnSwitchCharacter4;
+            @CameraZoomIn.started += instance.OnCameraZoomIn;
+            @CameraZoomIn.performed += instance.OnCameraZoomIn;
+            @CameraZoomIn.canceled += instance.OnCameraZoomIn;
+            @CameraZoomOut.started += instance.OnCameraZoomOut;
+            @CameraZoomOut.performed += instance.OnCameraZoomOut;
+            @CameraZoomOut.canceled += instance.OnCameraZoomOut;
         }
 
         private void UnregisterCallbacks(IDefaultActions instance)
@@ -518,6 +570,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @SwitchCharacter4.started -= instance.OnSwitchCharacter4;
             @SwitchCharacter4.performed -= instance.OnSwitchCharacter4;
             @SwitchCharacter4.canceled -= instance.OnSwitchCharacter4;
+            @CameraZoomIn.started -= instance.OnCameraZoomIn;
+            @CameraZoomIn.performed -= instance.OnCameraZoomIn;
+            @CameraZoomIn.canceled -= instance.OnCameraZoomIn;
+            @CameraZoomOut.started -= instance.OnCameraZoomOut;
+            @CameraZoomOut.performed -= instance.OnCameraZoomOut;
+            @CameraZoomOut.canceled -= instance.OnCameraZoomOut;
         }
 
         public void RemoveCallbacks(IDefaultActions instance)
@@ -546,5 +604,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnSwitchCharacter2(InputAction.CallbackContext context);
         void OnSwitchCharacter3(InputAction.CallbackContext context);
         void OnSwitchCharacter4(InputAction.CallbackContext context);
+        void OnCameraZoomIn(InputAction.CallbackContext context);
+        void OnCameraZoomOut(InputAction.CallbackContext context);
     }
 }
