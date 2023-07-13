@@ -23,7 +23,9 @@ public class MainMenu : MonoBehaviour
         if (SelectedButton == 1)
         {
             // When the button with the pointer is clicked, this piece of script is activated
+            Time.timeScale = 1f;
             SceneManager.LoadScene("Bedroom");
+            
         }
         else if (SelectedButton == 2)
         {

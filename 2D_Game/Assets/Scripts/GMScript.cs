@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Device;
 using UnityEngine.InputSystem;
 
 public class GMScript : MonoBehaviour
 {
     [SerializeField] private GameObject journalScreen;
+    [SerializeField] private GameObject GOScreen;
+    [SerializeField] private GameObject winScreen;
 
     private Gamepad gamepad;
     public InputActionReference journalAction;
@@ -22,6 +25,7 @@ public class GMScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1f;
         //gamepad = Gamepad.current;
         action.Menu.Journal.performed += _ => DeterminePause();
     }
@@ -86,5 +90,7 @@ public class GMScript : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game Over");
+        GOScreen.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
