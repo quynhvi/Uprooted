@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Jumppad : MonoBehaviour
 {
+    [SerializeField] private GameObject bedDamaged;
+    [SerializeField] private GameObject bed;
     public float bounce = 50f;
     public PlatformEffector2D platformEffector;
 
@@ -12,6 +14,8 @@ public class Jumppad : MonoBehaviour
         if (collision.gameObject.CompareTag("Cactus") || collision.gameObject.CompareTag("VFT") || collision.gameObject.CompareTag("Ivy") || collision.gameObject.CompareTag("AloeVera"))
         {
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+            bedDamaged.SetActive(true);
+            bed.SetActive(false);
 
             // Disable the platform effector to allow the character to pass through
             if (platformEffector != null)

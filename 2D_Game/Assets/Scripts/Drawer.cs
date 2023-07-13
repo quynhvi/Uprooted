@@ -51,7 +51,7 @@ public class Drawer : MonoBehaviour
                 {
                     ls.chargedLight = 0.03f;
 
-                    drawer.SetActive(false);
+                    drawer.SetActive(true);
                     key.SetActive(true);
 
                         // Decrease resource levels
