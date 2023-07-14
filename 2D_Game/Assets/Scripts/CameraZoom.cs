@@ -17,13 +17,13 @@ public class CameraZoom : MonoBehaviour
     public InputActionReference zoomInAction;
     public InputActionReference zoomOutAction;
 
-    private void OnEnable()
+    public void OnEnable()
     {
         zoomInAction.action.Enable();
         zoomOutAction.action.Enable();
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
         zoomInAction.action.Disable();
         zoomOutAction.action.Disable();
