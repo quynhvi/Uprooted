@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
-public class MainMenu : MonoBehaviour
+public class Menu : MonoBehaviour
 {
     public GameObject Point;
     public Animator transition;
@@ -24,8 +24,8 @@ public class MainMenu : MonoBehaviour
         if (SelectedButton == 1)
         {
             Debug.Log("retry");
-            LoadNextLevel();
-            
+            SceneManager.LoadScene(1);
+
         }
         else if (SelectedButton == 2)
         {
@@ -74,22 +74,4 @@ public class MainMenu : MonoBehaviour
         //    Point.transform.position = ButtonPosition4.position;
         //}
     }
-
-    public void LoadNextLevel()
-    {
-        // When the button with the pointer is clicked, this piece of script is activated
-        Time.timeScale = 1f;
-
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    IEnumerator LoadLevel(int levelIndex)
-    {
-        transition.SetTrigger("Start");
-        yield return new WaitForSeconds(transitionTime);
-
-        SceneManager.LoadScene(levelIndex);
-    }
-
 }
