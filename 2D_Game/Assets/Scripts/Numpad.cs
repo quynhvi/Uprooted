@@ -8,7 +8,6 @@ using UnityEngine.Playables;
 public class Numpad : MonoBehaviour
 {
     [SerializeField] private GameObject NumpadScreen;
-    [SerializeField] private PlayableDirector playableDirector;
 
     string code = "1234";
     string number = null;
@@ -29,9 +28,6 @@ public class Numpad : MonoBehaviour
         {
             Time.timeScale = 1f;
             UIText.text = "Correct";
-            NumpadScreen.SetActive(false);
-
-            playableDirector.Play();
             
             SceneManager.LoadScene(0);
         }

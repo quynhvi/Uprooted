@@ -7,24 +7,23 @@ using UnityEngine.InputSystem;
 public class MainMenu : MonoBehaviour
 {
     public GameObject Point;
+    public Animator transition;
+    public float transitionTime = 1f;
 
     private int SelectedButton = 1;
-    [SerializeField]
-    private int NumberOfButtons;
+    [SerializeField] private int NumberOfButtons;
+    public Animator transitionAnim;
 
     public Transform ButtonPosition1;
     public Transform ButtonPosition2;
-    public Transform ButtonPosition3;
-    public Transform ButtonPosition4;
-
+    //public Transform ButtonPosition3;
+    //public Transform ButtonPosition4;
 
     private void OnPlay()
     {
         if (SelectedButton == 1)
         {
-            // When the button with the pointer is clicked, this piece of script is activated
-            Time.timeScale = 1f;
-            SceneManager.LoadScene("Bedroom");
+            LoadNextLevel();
             
         }
         else if (SelectedButton == 2)
@@ -64,14 +63,31 @@ public class MainMenu : MonoBehaviour
         {
             Point.transform.position = ButtonPosition2.position;
         }
-        else if (SelectedButton == 3)
-        {
-            Point.transform.position = ButtonPosition3.position;
-        }
-        else if (SelectedButton == 4)
-        {
-            Point.transform.position = ButtonPosition4.position;
-        }
+        //else if (SelectedButton == 3)
+        //{
+        //    Point.transform.position = ButtonPosition3.position;
+        //}
+        //else if (SelectedButton == 4)
+        //{
+        //    Point.transform.position = ButtonPosition4.position;
+        //}
+    }
+
+    public void LoadNextLevel()
+    {
+        // When the button with the pointer is clicked, this piece of script is activated
+        Time.timeScale = 1f;
+
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        Debug.Log(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(levelIndex);
     }
 
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Device;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GMScript : MonoBehaviour
 {
@@ -74,7 +75,7 @@ public class GMScript : MonoBehaviour
     public void Restart(InputAction.CallbackContext context)
     {
         Time.timeScale = 1f;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(2);
     }
 
     //// Update is called once per frame
