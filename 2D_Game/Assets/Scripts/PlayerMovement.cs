@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public InputActionReference jumpAction;
 
 
-    private void OnEnable()
+    public void OnEnable()
     {
         // Enable the player's movement input action
         movementAction.action.Enable();
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         jumpAction.action.performed += OnJump;
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
         // Disable the player's movement input action
         movementAction.action.Disable();

@@ -42,7 +42,7 @@ public class PlayerSwap : MonoBehaviour
         Swap();
     }
 
-    private void OnEnable()
+    public void OnEnable()
     {
         swapLeftAction.action.Enable();
         swapLeftAction.action.performed += _ => SwapLeft();
@@ -63,7 +63,7 @@ public class PlayerSwap : MonoBehaviour
         switchCharacter4Action.action.performed += _ => SwitchToCharacter(3);
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
         swapLeftAction.action.Disable();
         swapLeftAction.action.performed -= _ => SwapLeft();
