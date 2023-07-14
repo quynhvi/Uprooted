@@ -27,15 +27,4 @@ public class DamagableGutter : MonoBehaviour
 
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (cp.interactable)
-            interactButton.SetActive(true);
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        interactButton.SetActive(false);
-    }
 }

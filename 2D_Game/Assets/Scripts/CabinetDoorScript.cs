@@ -117,7 +117,7 @@ public class CabinetDoorScript : MonoBehaviour
     {
         interactButton.SetActive(false);
     }
-    private bool DoorOpen()
+    public bool DoorOpen()
     {
         if (openDoor.activeSelf)
         {
