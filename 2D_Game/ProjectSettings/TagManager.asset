@@ -23,6 +23,9 @@ TagManager:
   - Gutter
   - Box1
   - Giraffe
+  - Box2
+  - Basket
+  - Painting2
   layers:
   - Default
   - TransparentFX
