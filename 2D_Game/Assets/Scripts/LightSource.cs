@@ -24,7 +24,7 @@ public class LightSource : MonoBehaviour
         chargedLight = 0.0009f;
         if (ResourceManagement.lightLevelNumber < 1f && collider.gameObject.CompareTag("Cactus")) //Ivy erstmal rausgenommen! >>collider.gameObject.CompareTag("Ivy") || collider.gameObject.CompareTag("VFT") ||<<
         {
-            Debug.Log("Player passed through light");
+            //Debug.Log("Player passed through light");
             if (ResourceManagement.lightLevelNumber > 1f)
                 return;
             ResourceManagement.lightLevelNumber += chargedLight;
