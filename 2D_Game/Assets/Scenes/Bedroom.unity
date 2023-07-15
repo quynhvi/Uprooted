@@ -41612,6 +41612,7 @@ GameObject:
   - component: {fileID: 1858094714}
   - component: {fileID: 1858094713}
   - component: {fileID: 1858094715}
+  - component: {fileID: 1858094716}
   m_Layer: 0
   m_Name: Timeline_Intro
   m_TagString: Untagged
@@ -41763,6 +41764,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1858094716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858094712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ff8a4839e534417bd675544da0d742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiElementsToDeactivate:
+  - {fileID: 1776514304}
+  - {fileID: 2050191177}
+  - {fileID: 1529364358}
+  cutsceneDirector: {fileID: 1858094713}
 --- !u!1 &1862824287
 GameObject:
   m_ObjectHideFlags: 0
