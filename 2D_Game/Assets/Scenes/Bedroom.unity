@@ -952,10 +952,18 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 891486122}
+    - target: {fileID: 1229596392177252888, guid: 461367fe679c84778869faf28fa22eaf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1229596392177252898, guid: 461367fe679c84778869faf28fa22eaf, type: 3}
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 891486122}
+    - target: {fileID: 1229596392440472317, guid: 461367fe679c84778869faf28fa22eaf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3422453851076619245, guid: 461367fe679c84778869faf28fa22eaf, type: 3}
       propertyPath: interactButton
       value: 
