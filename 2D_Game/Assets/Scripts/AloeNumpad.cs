@@ -38,7 +38,7 @@ public class AloeNumpad : MonoBehaviour
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f);
             foreach (Collider2D collider in colliders)
             {
-                if (collider.CompareTag("AloeArm") && ps.whichCharacter == 3) // Aloe is colliding and currently being played!
+                if (collider.CompareTag("AloeArm") && ps.whichCharacter == 3 || ps.whichCharacter == 2 && gameObject.CompareTag("AloeArm")) // Aloe is colliding and currently being played!
                 {
                     numpad.SetActive(true);
                     

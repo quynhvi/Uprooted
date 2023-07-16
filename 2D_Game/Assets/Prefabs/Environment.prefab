@@ -1654,6 +1654,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8918964869163714369}
     m_Modifications:
+    - target: {fileID: 342179578806446253, guid: 974557737967645b592ecdcdde90e74f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1491197
+      objectReference: {fileID: 0}
+    - target: {fileID: 342179579128574196, guid: 974557737967645b592ecdcdde90e74f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1491197
+      objectReference: {fileID: 0}
+    - target: {fileID: 342179579258597135, guid: 974557737967645b592ecdcdde90e74f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.102429554
+      objectReference: {fileID: 0}
+    - target: {fileID: 342179579258597135, guid: 974557737967645b592ecdcdde90e74f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0105
+      objectReference: {fileID: 0}
+    - target: {fileID: 342179579338003878, guid: 974557737967645b592ecdcdde90e74f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.102429554
+      objectReference: {fileID: 0}
+    - target: {fileID: 342179579338003878, guid: 974557737967645b592ecdcdde90e74f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.24194
+      objectReference: {fileID: 0}
+    - target: {fileID: 342179579338003878, guid: 974557737967645b592ecdcdde90e74f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0105
+      objectReference: {fileID: 0}
+    - target: {fileID: 342179579534102226, guid: 974557737967645b592ecdcdde90e74f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.102429554
+      objectReference: {fileID: 0}
+    - target: {fileID: 342179579534102226, guid: 974557737967645b592ecdcdde90e74f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3343
+      objectReference: {fileID: 0}
+    - target: {fileID: 342179579534102226, guid: 974557737967645b592ecdcdde90e74f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0105
+      objectReference: {fileID: 0}
     - target: {fileID: 342179579696390290, guid: 974557737967645b592ecdcdde90e74f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1701,6 +1741,18 @@ PrefabInstance:
     - target: {fileID: 342179579696390293, guid: 974557737967645b592ecdcdde90e74f, type: 3}
       propertyPath: m_Name
       value: Light Sources
+      objectReference: {fileID: 0}
+    - target: {fileID: 342179580021128708, guid: 974557737967645b592ecdcdde90e74f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.135
+      objectReference: {fileID: 0}
+    - target: {fileID: 342179580307523046, guid: 974557737967645b592ecdcdde90e74f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.102429554
+      objectReference: {fileID: 0}
+    - target: {fileID: 342179580307523046, guid: 974557737967645b592ecdcdde90e74f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0105
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 974557737967645b592ecdcdde90e74f, type: 3}
