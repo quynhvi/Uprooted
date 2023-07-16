@@ -12,6 +12,10 @@ public class PlayerSwap : MonoBehaviour
     public ParticleSystem m_ParticleSystem;
     //public CameraFollow cam;
     public CinemachineVirtualCamera cam;
+    public GameObject cactusUI;
+    public GameObject vftUI;
+    public GameObject ivyUI;
+    public GameObject aloeUI;
 
     public InputActionReference swapLeftAction;
     public InputActionReference swapRightAction;
@@ -29,7 +33,7 @@ public class PlayerSwap : MonoBehaviour
             EnableCharacterMovement(character);
 
             m_ParticleSystem.transform.position = character.position;
-            m_ParticleSystem.Play();
+            //m_ParticleSystem.Play();
 
             for (int i = 1; i < possibleCharacters.Count; i++)
             {
@@ -40,6 +44,11 @@ public class PlayerSwap : MonoBehaviour
             cam.Follow = character;
         }
         Swap();
+    }
+
+    private void Update()
+    {
+        CharacterUI();
     }
 
     public void OnEnable()
@@ -153,6 +162,38 @@ public class PlayerSwap : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    private void CharacterUI()
+    {
+        if (whichCharacter == 0)
+        {
+            cactusUI.SetActive(true);
+            vftUI.SetActive(false);
+            ivyUI.SetActive(false);
+            aloeUI.SetActive(false);
+        }
+        else if (whichCharacter == 1)
+        {
+            cactusUI.SetActive(false);
+            vftUI.SetActive(true);
+            ivyUI.SetActive(false);
+            aloeUI.SetActive(false);
+        }
+        else if (whichCharacter == 2)
+        {
+            cactusUI.SetActive(false);
+            vftUI.SetActive(false);
+            ivyUI.SetActive(true);
+            aloeUI.SetActive(false);
+        }
+        else if (whichCharacter == 3)
+        {
+            cactusUI.SetActive(false);
+            vftUI.SetActive(false);
+            ivyUI.SetActive(false);
+            aloeUI.SetActive(true);
         }
     }
 

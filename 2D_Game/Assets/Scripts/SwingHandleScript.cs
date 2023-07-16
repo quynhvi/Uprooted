@@ -77,16 +77,16 @@ public class SwingHandleScript : MonoBehaviour
                 if (collider.CompareTag("Cactus") && PlayerSwapScript.whichCharacter == 0)
                 {
                     CheckRotation();
-                    ls.chargedLight = 0.03f;
+                    //ls.chargedLight = 0.03f;
 
-                    // Decrease resource levels
-                    if (rm != null && ls != null)
-                    {
-                        rm.lightLevelNumber -= ls.chargedLight;
-                        rm.lightBarFill.fillAmount -= ls.chargedLight;
-                        rm.waterLevelNumber -= ls.chargedLight;
-                        rm.waterBarFill.fillAmount -= ls.chargedLight;
-                    }
+                    //// Decrease resource levels
+                    //if (rm != null && ls != null)
+                    //{
+                    //    rm.lightLevelNumber -= ls.chargedLight;
+                    //    rm.lightBarFill.fillAmount -= ls.chargedLight;
+                    //    rm.waterLevelNumber -= ls.chargedLight;
+                    //    rm.waterBarFill.fillAmount -= ls.chargedLight;
+                    //}
                     //if square or I is pressed then set open door active, closed door deactived, platform activated
                     if (!DoorOpen() && rotation > -30f)
                     {
