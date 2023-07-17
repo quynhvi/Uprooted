@@ -16,6 +16,7 @@ public class RevivePlant : MonoBehaviour
         ivyMovementScript = GetComponent<PlayerMovement>();
         playerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
         ivyMovementScript.enabled = false;
+        aloeVera.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
