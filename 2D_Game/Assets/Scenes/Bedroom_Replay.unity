@@ -433,6 +433,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &754561199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8918964870029191072, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+  m_PrefabInstance: {fileID: 8918964868248351308}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &815082331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7518960918721579528, guid: 4bd8952c6497749f28c7889fbe78d602, type: 3}
@@ -478,6 +483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   jumpingPower: 9
+  isGrounded: 0
   rb: {fileID: 823986129}
   groundCheck: {fileID: 1643915413}
   groundLayer:
@@ -788,6 +794,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6407142565259065570, guid: 2c873a5d620fa4dd88a4ac95f36716ba, type: 3}
   m_PrefabInstance: {fileID: 8104870915767167045}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1579595031 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8918964869189325428, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+  m_PrefabInstance: {fileID: 8918964868248351308}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1579595037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579595031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33210761a737c475c9a2901741a337a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bedDamaged: {fileID: 754561199}
+  bed: {fileID: 1579595031}
+  bounce: 30
+  platformEffector: {fileID: 0}
 --- !u!1 &1643915412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,7 +1097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3861392188000250903, guid: 6581c8103ee21494f943a2648166087a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3861392188450450793, guid: 6581c8103ee21494f943a2648166087a, type: 3}
       propertyPath: uiElementsToDeactivate.Array.size
@@ -1185,6 +1212,14 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 891486122}
+    - target: {fileID: 1897671323518221584, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6404051
+      objectReference: {fileID: 0}
+    - target: {fileID: 1897671323518221584, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.08
+      objectReference: {fileID: 0}
     - target: {fileID: 3125589246563906242, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
       propertyPath: interactButton
       value: 
@@ -1245,6 +1280,10 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 891486122}
+    - target: {fileID: 6564557431696063861, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6564557431817194379, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
       propertyPath: interactButton
       value: 
@@ -1253,6 +1292,10 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 891486122}
+    - target: {fileID: 6564557431856918263, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6564557431955481272, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
       propertyPath: interactButton
       value: 
@@ -1273,10 +1316,18 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 891486122}
+    - target: {fileID: 6564557432741858876, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6564557432895268650, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 891486122}
+    - target: {fileID: 6564557432898114016, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6564557432898114043, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
       propertyPath: interactButton
       value: 
@@ -1297,10 +1348,58 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 587429933}
+    - target: {fileID: 8177172223852490248, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177172223852490251, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177172224303815568, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_Anchor.x
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177172224303815568, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_Anchor.y
+      value: 4.0800004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177172224303815568, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_UseLimits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177172224303815568, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177172224303815568, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 4.8610783
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177172224303815568, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 360
+      objectReference: {fileID: 0}
     - target: {fileID: 8177172224303815569, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 587429933}
+    - target: {fileID: 8177172224303815569, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: leftAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177172224303815569, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: rightAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177172224303815574, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177172224303815574, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
 --- !u!1001 &6567000064709103102
@@ -1708,6 +1807,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7729800238811596073, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: damagedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eec1828d502db4da0b28bc32c0849474, type: 3}
     - target: {fileID: 8918964868540052888, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: interactButton
       value: 
@@ -1728,6 +1831,18 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 891486122}
+    - target: {fileID: 8918964868830676658, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: bounce
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918964869189325428, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918964869189325428, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8918964869420662985, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: key
       value: 
@@ -1740,6 +1855,10 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 891486122}
+    - target: {fileID: 8918964869713476471, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8918964869969874916, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: interactButton
       value: 
@@ -1797,5 +1916,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 891486122}
     m_RemovedComponents:
-    - {fileID: 8918964870029191075, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+    - {fileID: 8918964869189325425, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+    - {fileID: 4257478715703710981, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}

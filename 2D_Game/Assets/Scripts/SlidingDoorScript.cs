@@ -95,7 +95,7 @@ public class SlidingDoorScript : MonoBehaviour
 
                         if (_block != null)
                             _block.SetActive(false);
-                        break; 
+                        break;
                     }
                     if (!DoorIsRight()) //LEFT TO RIGHT
                     {
@@ -115,6 +115,7 @@ public class SlidingDoorScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        print("Yeet");
         if (_interactable && collision.CompareTag("VFT"))
         {
             _interactButton.SetActive(true);
@@ -126,4 +127,3 @@ public class SlidingDoorScript : MonoBehaviour
         _interactButton.SetActive(false);
     }
 }
-

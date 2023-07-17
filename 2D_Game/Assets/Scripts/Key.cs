@@ -24,11 +24,6 @@ public class Key : MonoBehaviour
         collectKeyAction.action.performed += OnCollectKey;
     }
 
-    private void OnDisable()
-    {
-        collectKeyAction.action.Disable();
-        collectKeyAction.action.performed -= OnCollectKey;
-    }
 
     private void Start()
     {
