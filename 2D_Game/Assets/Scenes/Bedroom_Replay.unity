@@ -1097,7 +1097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3861392188000250903, guid: 6581c8103ee21494f943a2648166087a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3861392188450450793, guid: 6581c8103ee21494f943a2648166087a, type: 3}
       propertyPath: uiElementsToDeactivate.Array.size

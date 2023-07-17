@@ -38,6 +38,10 @@ public class GrabController : MonoBehaviour
 
         if (heldObject != null && playerSwap.whichCharacter == 1)
         {
+            if (heldObject.CompareTag("Key"))
+            {
+                return;
+            }
             // Release the object if it is held and the grab input is pressed
             if (Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame))
             {

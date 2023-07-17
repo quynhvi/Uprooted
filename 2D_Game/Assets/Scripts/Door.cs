@@ -26,12 +26,6 @@ public class Door : MonoBehaviour
         openDoorAction.action.performed += OnOpenDoor;
     }
 
-    private void OnDisable()
-    {
-        openDoorAction.action.Disable();
-        openDoorAction.action.performed -= OnOpenDoor;
-    }
-
     private void Start()
     {
         vft = FindAnyObjectByType<FollowPoint>();
@@ -69,7 +63,7 @@ public class Door : MonoBehaviour
         {
             vft.followingKey.followTarget = doorFollowPoint.transform; // Set the door as the followTarget
             vft.followingKey.isFollowing = true;
-            key.SetActive(false);
+            //key.SetActive(false);
         }
 
         vft.followingKey = null;
