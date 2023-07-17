@@ -9,7 +9,7 @@ public class Numpad : MonoBehaviour
 {
     [SerializeField] private GameObject NumpadScreen;
 
-    string code = "1234";
+    string code = "012";
     string number = null;
     int numberIndex = 0;
     string alpha;
