@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 2758915815173104961}
   - component: {fileID: 2758915815173104830}
   - component: {fileID: 2758915815149198897}
-  - component: {fileID: 2758915815149198894}
+  - component: {fileID: 9187858191428201349}
   m_Layer: 10
   m_Name: Ivy 1
   m_TagString: Ivy
@@ -351,8 +351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vine: {fileID: 905410803976327391}
---- !u!58 &2758915815149198894
-CircleCollider2D:
+--- !u!70 &9187858191428201349
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -364,9 +364,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 8.971597, y: -3.0286088}
-  serializedVersion: 2
-  m_Radius: 4.137332
+  m_Offset: {x: 8.543141, y: -4.185959}
+  m_Size: {x: 11.401528, y: 5.9385457}
+  m_Direction: 1
 --- !u!1 &2758915815649212875
 GameObject:
   m_ObjectHideFlags: 0
