@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 6f;
     public float jumpingPower = 9f;
     private bool isFacingRight = true;
-    private bool isGrounded; // Flag indicating if the player is grounded
+    public bool isGrounded; // Flag indicating if the player is grounded
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -99,7 +99,10 @@ public class PlayerMovement : MonoBehaviour
         {
             if (collider.CompareTag("Cactus") || collider.CompareTag("VFT") || collider.CompareTag("Ivy") || collider.CompareTag("AloeVera"))
             {
-                return true;
+                if (collider.gameObject != this.gameObject)
+                {
+                    return true;
+                }
             }
         }
 
