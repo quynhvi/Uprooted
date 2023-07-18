@@ -840,9 +840,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5564688967930835526}
   - component: {fileID: 5564688967930835530}
-  - component: {fileID: 5564688967930835531}
   - component: {fileID: 5564688967930835524}
   - component: {fileID: 5564688967930835525}
+  - component: {fileID: 6412500904279323601}
   m_Layer: 12
   m_Name: Collider (4)
   m_TagString: Platform
@@ -917,32 +917,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5564688967930835531
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564688967930835527}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00828661, y: -0.040628076}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9834267, y: 1.015902}
-  m_EdgeRadius: 0
 --- !u!251 &5564688967930835524
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -980,6 +954,22 @@ MonoBehaviour:
   PlayerSwapScript: {fileID: 0}
   fallTimer: 0
   IsFalling: 0
+--- !u!70 &6412500904279323601
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564688967930835527}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000009536743, y: 0}
+  m_Size: {x: 0.99999994, y: 1}
+  m_Direction: 1
 --- !u!1 &5564688968060751100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,9 +1214,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5564688968403437460}
   - component: {fileID: 5564688968403437464}
-  - component: {fileID: 5564688968403437465}
   - component: {fileID: 5564688968403437466}
   - component: {fileID: 5564688968403437467}
+  - component: {fileID: 4317043708650981597}
   m_Layer: 12
   m_Name: Collider (7)
   m_TagString: Platform
@@ -1301,32 +1291,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5564688968403437465
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564688968403437461}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00828661, y: -0.040628076}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9834267, y: 1.015902}
-  m_EdgeRadius: 0
 --- !u!251 &5564688968403437466
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -1364,6 +1328,22 @@ MonoBehaviour:
   PlayerSwapScript: {fileID: 0}
   fallTimer: 0
   IsFalling: 0
+--- !u!70 &4317043708650981597
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564688968403437461}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.0000076293945}
+  m_Size: {x: 0.99999994, y: 1.0000001}
+  m_Direction: 1
 --- !u!1 &5564688968416733985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,9 +1950,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5564688968884835650}
   - component: {fileID: 5564688968884835654}
-  - component: {fileID: 5564688968884835655}
   - component: {fileID: 5564688968884835648}
   - component: {fileID: 5564688968884835649}
+  - component: {fileID: 5084409372501953043}
   m_Layer: 12
   m_Name: Collider (5)
   m_TagString: Platform
@@ -2047,32 +2027,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5564688968884835655
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564688968884835651}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00828661, y: -0.040628076}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9834267, y: 1.015902}
-  m_EdgeRadius: 0
 --- !u!251 &5564688968884835648
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2110,6 +2064,22 @@ MonoBehaviour:
   PlayerSwapScript: {fileID: 0}
   fallTimer: 0
   IsFalling: 0
+--- !u!70 &5084409372501953043
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564688968884835651}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000009536743, y: 0.0000076293945}
+  m_Size: {x: 0.9999999, y: 1}
+  m_Direction: 1
 --- !u!1 &5564688969003477511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,9 +2090,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5564688969003477510}
   - component: {fileID: 5564688969003477514}
-  - component: {fileID: 5564688969003477515}
   - component: {fileID: 5564688969003477508}
   - component: {fileID: 5564688969003477509}
+  - component: {fileID: 8814271353289990072}
   m_Layer: 12
   m_Name: Collider (6)
   m_TagString: Platform
@@ -2197,32 +2167,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5564688969003477515
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564688969003477511}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00828661, y: -0.040628076}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9834267, y: 1.015902}
-  m_EdgeRadius: 0
 --- !u!251 &5564688969003477508
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2260,6 +2204,22 @@ MonoBehaviour:
   PlayerSwapScript: {fileID: 0}
   fallTimer: 0
   IsFalling: 0
+--- !u!70 &8814271353289990072
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564688969003477511}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.0000076293945}
+  m_Size: {x: 0.9999999, y: 1}
+  m_Direction: 1
 --- !u!1 &5564688969043311101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,9 +2230,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5564688969043311100}
   - component: {fileID: 5564688969043311072}
-  - component: {fileID: 5564688969043311073}
   - component: {fileID: 5564688969043311074}
   - component: {fileID: 5564688969043311075}
+  - component: {fileID: 2024545228679108901}
   m_Layer: 12
   m_Name: Collider (1)
   m_TagString: Platform
@@ -2347,32 +2307,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5564688969043311073
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564688969043311101}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00828661, y: -0.040628076}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9834267, y: 1.015902}
-  m_EdgeRadius: 0
 --- !u!251 &5564688969043311074
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2410,6 +2344,22 @@ MonoBehaviour:
   PlayerSwapScript: {fileID: 0}
   fallTimer: 0
   IsFalling: 0
+--- !u!70 &2024545228679108901
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564688969043311101}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00000047683716, y: 0.0000076293945}
+  m_Size: {x: 0.9999999, y: 1}
+  m_Direction: 1
 --- !u!1 &5564688969076295572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,9 +2404,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5564688969217213909}
   - component: {fileID: 5564688969217213913}
-  - component: {fileID: 5564688969217213914}
   - component: {fileID: 5564688969217213915}
   - component: {fileID: 5564688969217213908}
+  - component: {fileID: 4885042942746586005}
   m_Layer: 12
   m_Name: Collider (2)
   m_TagString: Platform
@@ -2531,32 +2481,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5564688969217213914
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564688969217213910}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00828661, y: -0.040628076}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9834267, y: 1.015902}
-  m_EdgeRadius: 0
 --- !u!251 &5564688969217213915
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2594,6 +2518,22 @@ MonoBehaviour:
   PlayerSwapScript: {fileID: 0}
   fallTimer: 0
   IsFalling: 0
+--- !u!70 &4885042942746586005
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564688969217213910}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00000011920929, y: -0.0000076293945}
+  m_Size: {x: 0.9999999, y: 1}
+  m_Direction: 1
 --- !u!1 &5564688969277397001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,8 +2544,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5564688969277397006}
   - component: {fileID: 5564688969277397007}
-  - component: {fileID: 5564688969277397000}
   - component: {fileID: 5564688969277397005}
+  - component: {fileID: 6094859149905637582}
   m_Layer: 0
   m_Name: Bed_Base
   m_TagString: Untagged
@@ -2680,32 +2620,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5564688969277397000
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564688969277397001}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.03196478, y: 0.13138056}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 15.15, y: 6.51}
-    newSize: {x: 15.15, y: 6.51}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 7.8568344, y: 0.546394}
-  m_EdgeRadius: 0
 --- !u!114 &5564688969277397005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2722,6 +2636,22 @@ MonoBehaviour:
   bed: {fileID: 5564688969277397001}
   bounce: 50
   platformEffector: {fileID: 0}
+--- !u!70 &6094859149905637582
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564688969277397001}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000006689859, y: -0.19267674}
+  m_Size: {x: 8.402041, y: 0.2582305}
+  m_Direction: 1
 --- !u!1 &5564688969396534909
 GameObject:
   m_ObjectHideFlags: 0
@@ -2732,9 +2662,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5564688969396534908}
   - component: {fileID: 5564688969396534880}
-  - component: {fileID: 5564688969396534881}
   - component: {fileID: 5564688969396534882}
   - component: {fileID: 5564688969396534883}
+  - component: {fileID: 8879003907375307057}
   m_Layer: 12
   m_Name: Collider (3)
   m_TagString: Platform
@@ -2809,32 +2739,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5564688969396534881
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564688969396534909}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00828661, y: -0.040628076}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9834267, y: 1.015902}
-  m_EdgeRadius: 0
 --- !u!251 &5564688969396534882
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2872,6 +2776,22 @@ MonoBehaviour:
   PlayerSwapScript: {fileID: 0}
   fallTimer: 0
   IsFalling: 0
+--- !u!70 &8879003907375307057
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564688969396534909}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000011920929, y: 0.0000076293945}
+  m_Size: {x: 0.99999994, y: 1.0000001}
+  m_Direction: 1
 --- !u!1 &6634513126123848508
 GameObject:
   m_ObjectHideFlags: 0
@@ -3067,9 +2987,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7843147322352807426}
   - component: {fileID: 7843147322352807427}
-  - component: {fileID: 7843147322352807424}
   - component: {fileID: 7843147322352807436}
   - component: {fileID: 7843147322352807439}
+  - component: {fileID: 4592653547790124370}
   m_Layer: 12
   m_Name: Collider
   m_TagString: Platform
@@ -3144,32 +3064,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7843147322352807424
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7843147322352807425}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00828661, y: -0.040628076}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9834267, y: 1.015902}
-  m_EdgeRadius: 0
 --- !u!251 &7843147322352807436
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -3207,3 +3101,19 @@ MonoBehaviour:
   PlayerSwapScript: {fileID: 0}
   fallTimer: 0
   IsFalling: 0
+--- !u!70 &4592653547790124370
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843147322352807425}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000000051435833, y: 0.6559042}
+  m_Size: {x: 1.029296, y: 1.1192648}
+  m_Direction: 1

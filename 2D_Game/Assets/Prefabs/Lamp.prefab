@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1935929128756149932}
   - component: {fileID: 1935929128756149935}
   - component: {fileID: 1935929128756149934}
-  - component: {fileID: 1935929128756149906}
+  - component: {fileID: 3438359620427551357}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -155,8 +155,8 @@ MonoBehaviour:
   playerJoint: {fileID: 0}
   jumpForce: 5
   waitTimer: 0
---- !u!61 &1935929128756149906
-BoxCollider2D:
+--- !u!70 &3438359620427551357
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -168,19 +168,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.019010901, y: -0.94060075}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.48, y: 4.96}
-    newSize: {x: 3.48, y: 4.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5799689, y: 1.8324769}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.03864226, y: -1.1355222}
+  m_Size: {x: 1.122809, y: 2.1570828}
+  m_Direction: 0
 --- !u!1 &1935929130284321591
 GameObject:
   m_ObjectHideFlags: 0

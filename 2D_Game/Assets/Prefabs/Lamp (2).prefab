@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6437388612118443930}
   - component: {fileID: 6437388612118443929}
   - component: {fileID: 6437388612118443928}
-  - component: {fileID: 6437388612118443940}
+  - component: {fileID: 1985498151569446395}
   m_Layer: 0
   m_Name: Lamp (2)
   m_TagString: Untagged
@@ -210,7 +210,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.09488633, y: 10.684436}
-  m_ConnectedAnchor: {x: 3.623248, y: 4.9881144}
+  m_ConnectedAnchor: {x: 1.543248, y: 7.048115}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -239,8 +239,8 @@ MonoBehaviour:
   playerJoint: {fileID: 0}
   jumpForce: 5
   waitTimer: 0
---- !u!61 &6437388612118443940
-BoxCollider2D:
+--- !u!70 &1985498151569446395
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -252,19 +252,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05525464, y: -3.295351}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.24, y: 8.16}
-    newSize: {x: 3.48, y: 4.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7386346, y: 1.1976092}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.03298853, y: -3.5255804}
+  m_Size: {x: 1.2399062, y: 1.1088442}
+  m_Direction: 1
 --- !u!1 &6437388613810127361
 GameObject:
   m_ObjectHideFlags: 0
