@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3765505452659261505}
   - component: {fileID: 3765505452659261504}
-  - component: {fileID: 3765505452659261507}
   - component: {fileID: 3765505452659261519}
   - component: {fileID: 3765505452659261516}
+  - component: {fileID: 6577430182390764547}
   m_Layer: 12
   m_Name: Shelf_Collider
   m_TagString: Platform
@@ -87,32 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3765505452659261507
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3765505452659261506}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.005605191, y: -1.1497535}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9879346, y: 1.1268146}
-  m_EdgeRadius: 0
 --- !u!251 &3765505452659261519
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -150,6 +124,22 @@ MonoBehaviour:
   PlayerSwapScript: {fileID: 0}
   fallTimer: 0
   IsFalling: 0
+--- !u!70 &6577430182390764547
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3765505452659261506}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.01436156, y: -1.2094326}
+  m_Size: {x: 1.0943785, y: 1.3721358}
+  m_Direction: 1
 --- !u!1 &5658609756230405255
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,9 +236,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5658609756668688696}
   - component: {fileID: 5658609756668688692}
-  - component: {fileID: 5658609756668688693}
   - component: {fileID: 5658609756668688698}
   - component: {fileID: 5658609756668688699}
+  - component: {fileID: 8483564122625371191}
   m_Layer: 12
   m_Name: Shelf_Collider (1)
   m_TagString: Platform
@@ -323,32 +313,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5658609756668688693
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5658609756668688697}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.008286595, y: -1.1220242}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1080128, y: 1.62592}
-  m_EdgeRadius: 0
 --- !u!251 &5658609756668688698
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -386,3 +350,19 @@ MonoBehaviour:
   PlayerSwapScript: {fileID: 0}
   fallTimer: 0
   IsFalling: 0
+--- !u!70 &8483564122625371191
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5658609756668688697}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000000053807057, y: -1.0233654}
+  m_Size: {x: 1.0000004, y: 1.3721342}
+  m_Direction: 1

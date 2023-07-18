@@ -26,6 +26,7 @@ TagManager:
   - Box2
   - Basket
   - Painting2
+  - Garbage
   layers:
   - Default
   - TransparentFX

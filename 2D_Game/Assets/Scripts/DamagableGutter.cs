@@ -6,13 +6,6 @@ public class DamagableGutter : MonoBehaviour
 {
     [SerializeField] private GameObject damaged;
     [SerializeField] private GameObject notDamaged;
-    [SerializeField] private GameObject interactButton;
-    private CactusPunch cp;
-
-    private void Start()
-    {
-        //spriteRenderer = GetComponent<SpriteRenderer>();
-    }
 
     public void TakeDamage()
     {
