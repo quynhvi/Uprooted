@@ -1497,6 +1497,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9024155546269098517, guid: b93257bf6e15440d5b33490be434439d, type: 3}
   m_PrefabInstance: {fileID: 2988042760069376816}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8918964869189325428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5958594652380281156, guid: b93257bf6e15440d5b33490be434439d, type: 3}
+  m_PrefabInstance: {fileID: 2988042760069376816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5728516589965856216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8918964869189325428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33210761a737c475c9a2901741a337a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bedDamaged: {fileID: 8918964870029191072}
+  bed: {fileID: 8918964869189325428}
+  bounce: 30
+  platformEffector: {fileID: 0}
+--- !u!1 &8918964870029191072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5958594653692087440, guid: b93257bf6e15440d5b33490be434439d, type: 3}
+  m_PrefabInstance: {fileID: 2988042760069376816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3097557314138828644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1652,7 +1678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5564688969277397005, guid: 864e3e1f2c981430bb6b4ff1733ab6b7, type: 3}
       propertyPath: bounce
-      value: 40
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 864e3e1f2c981430bb6b4ff1733ab6b7, type: 3}

@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 5958594652380281158}
   - component: {fileID: 5958594652380281157}
   - component: {fileID: 5958594652380281152}
-  - component: {fileID: 5958594652380281153}
-  - component: {fileID: 1324677704990244405}
   m_Layer: 12
   m_Name: Barcelona_Chair
   m_TagString: Platform
@@ -113,38 +111,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.789858, y: 0.6340792}
   m_EdgeRadius: 0
---- !u!114 &5958594652380281153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5958594652380281156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4771da8c96e6a664989f0ea9d972dd59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitTime: 0
-  currentPlayerLayer: 0
-  currentPlatformLayer: 0
-  PlayerSwapScript: {fileID: 0}
-  fallTimer: 0
-  IsFalling: 0
---- !u!114 &1324677704990244405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5958594652380281156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47e43badefe4d47f288d4254a28c64e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damagedChair: {fileID: 5958594653692087440}
-  chair: {fileID: 5958594652380281156}
 --- !u!1 &5958594653692087440
 GameObject:
   m_ObjectHideFlags: 0
