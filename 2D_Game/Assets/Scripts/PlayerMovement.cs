@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     public InputActionAsset inputActions;
     public InputActionReference jumpAction;
 
+    //public Animator animator;
+
 
     public void OnEnable()
     {
@@ -63,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        //animator.SetFloat("Speed", Mathf.Abs(horizontal));
         Flip();
 
         // Perform the ground check
