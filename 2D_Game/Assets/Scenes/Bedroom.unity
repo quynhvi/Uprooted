@@ -1482,6 +1482,14 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 891486122}
+    - target: {fileID: 6564557432460253159, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0154271
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564557432460253159, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.96
+      objectReference: {fileID: 0}
     - target: {fileID: 6564557432741858871, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
       propertyPath: interactButton
       value: 
@@ -2045,6 +2053,10 @@ PrefabInstance:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7091606403838455409, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 4dc38e3c30aaf48b68022a5881961302, type: 2}
     - target: {fileID: 7729800238811596073, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: damagedSprite
       value: 
@@ -2069,9 +2081,13 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 891486122}
+    - target: {fileID: 8918964868596584899, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8918964868596584925, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: bounce
-      value: 35
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8918964868596584925, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: maxBounceForce
@@ -2139,7 +2155,7 @@ PrefabInstance:
       objectReference: {fileID: 891486122}
     - target: {fileID: 8918964868830676658, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: bounce
-      value: 35
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8918964868830676658, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: maxBounceForce
@@ -2167,7 +2183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8918964868830676662, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8918964868830676662, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: m_TagString
