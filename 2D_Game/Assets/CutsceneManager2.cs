@@ -1,31 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Burst.Intrinsics;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class CutsceneManager : MonoBehaviour
+public class CutsceneManager2 : MonoBehaviour
 {
     public GameObject[] uiElementsToDeactivate; // Array of UI elements to be deactivated during the cutscene
     public PlayableDirector cutsceneDirector;
     [SerializeField] private GameObject journalTip;
 
+    private bool cutscenePlaying = false; // Flag to check if the cutscene is currently playing
+
     private void Start()
     {
-        // Deactivate UI elements at the start of the cutscene
-        DeactivateUIElements();
-
-        // Start the cutscene (e.g., play a timeline)
-        StartCutscene();
-    }
-
-    private void StartCutscene()
-    {
-        // Play your cutscene timeline or perform any other cutscene-related logic here
-        cutsceneDirector.Play();
+        
 
         // Subscribe to the stopped event of the PlayableDirector to reactivate UI elements
         cutsceneDirector.stopped += OnCutsceneStopped;
+    }
+
+    private void Update()
+    {
+        // Check if the cutscene is currently playing
+        cutscenePlaying = cutsceneDirector.state == PlayState.Playing;
+
+        // Deactivate UI elements while the cutscene is playing
+        if (cutscenePlaying)
+        {
+            foreach (GameObject uiElement in uiElementsToDeactivate)
+            {
+                uiElement.SetActive(false);
+            }
+        }
     }
 
     private void DeactivateUIElements()
