@@ -1151,7 +1151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3861392188000250903, guid: 6581c8103ee21494f943a2648166087a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3861392188172031008, guid: 6581c8103ee21494f943a2648166087a, type: 3}
       propertyPath: m_Sprite
@@ -2071,11 +2071,31 @@ PrefabInstance:
       objectReference: {fileID: 891486122}
     - target: {fileID: 8918964868596584925, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: bounce
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918964868596584925, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: maxBounceForce
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918964868596584925, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: minBounceForce
       value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 8918964868596584925, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: platformEffector
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918964868596584925, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: customGravityScale
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918964868596584925, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: gravityScaleOnJump
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918964868596584925, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: maxSpeedForMaxForce
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8918964868612183842, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: m_Anchor.x
@@ -2118,8 +2138,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 891486122}
     - target: {fileID: 8918964868830676658, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: bounce
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918964868830676658, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: maxBounceForce
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918964868830676658, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: minBounceForce
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918964868830676658, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: platformEffector
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918964868830676658, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: customGravityScale
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918964868830676658, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: gravityScaleOnJump
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918964868830676658, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
+      propertyPath: maxSpeedForMaxForce
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8918964868830676662, guid: 453407eabb10048f29ddc2d2dd5c90d6, type: 3}
       propertyPath: m_Layer
