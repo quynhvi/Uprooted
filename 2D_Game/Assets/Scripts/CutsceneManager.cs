@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -7,6 +8,7 @@ public class CutsceneManager : MonoBehaviour
 {
     public GameObject[] uiElementsToDeactivate; // Array of UI elements to be deactivated during the cutscene
     public PlayableDirector cutsceneDirector;
+    [SerializeField] private GameObject journalTip;
 
     private void Start()
     {
@@ -39,11 +41,19 @@ public class CutsceneManager : MonoBehaviour
     {
         // Unsubscribe from the stopped event
         director.stopped -= OnCutsceneStopped;
+        journalTip.SetActive(true);
+        StartCoroutine(DisableTextAfterDelay(1.5f));
 
         // Reactivate each UI element in the array
         foreach (GameObject uiElement in uiElementsToDeactivate)
         {
             uiElement.SetActive(true);
         }
+    }
+
+    private IEnumerator DisableTextAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        journalTip.SetActive(false); // Disable the arm object
     }
 }
