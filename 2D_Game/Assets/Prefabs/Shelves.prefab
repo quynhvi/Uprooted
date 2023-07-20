@@ -488,6 +488,30 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3531373700098675299, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 7.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531373700098675299, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531373700098675321, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531373700098675324, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.747633
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531373700098675324, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.8231317
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531373700098675326, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 21a6b76e99e624024bf39dadfe57b51d, type: 3}
     - target: {fileID: 3531373701238283830, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
       propertyPath: m_Name
       value: SwingBrokenShelf
@@ -535,6 +559,34 @@ PrefabInstance:
     - target: {fileID: 3531373701238283831, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531373701893470080, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531373701893470087, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d63dbaa5b2c8f4ec09be2080808a2df3, type: 3}
+    - target: {fileID: 3531373701893470087, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531373701893470087, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531373701893470087, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189206071939672614, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bef256d9b0d6b472bb60f4f58ab153de, type: 3}
+    - target: {fileID: 9189206071939672615, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee32fffc98164bdd858978b307820bf, type: 3}
@@ -601,6 +653,10 @@ PrefabInstance:
     - target: {fileID: 5658609756230405255, guid: 3609d1e0d370642e9a18b2692523eeb5, type: 3}
       propertyPath: m_Name
       value: Shelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658609756230405255, guid: 3609d1e0d370642e9a18b2692523eeb5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3609d1e0d370642e9a18b2692523eeb5, type: 3}

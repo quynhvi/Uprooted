@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Device;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GMScript : MonoBehaviour
 {
@@ -21,6 +20,7 @@ public class GMScript : MonoBehaviour
     private void Awake()
     {
         action = new MenuInput();
+        Application.targetFrameRate = 60;
     }
 
     // Start is called before the first frame update
@@ -29,6 +29,15 @@ public class GMScript : MonoBehaviour
         Time.timeScale = 1f;
         //gamepad = Gamepad.current;
         action.Menu.Journal.performed += _ => DeterminePause();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            Debug.Log("quit");
+        }
     }
 
     private void DeterminePause()

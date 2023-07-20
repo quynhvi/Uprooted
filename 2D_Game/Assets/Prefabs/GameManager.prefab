@@ -4867,6 +4867,10 @@ MonoBehaviour:
   whichCharacter: 0
   m_ParticleSystem: {fileID: 6818127201124372828}
   cam: {fileID: 0}
+  cactusUI: {fileID: 0}
+  vftUI: {fileID: 0}
+  ivyUI: {fileID: 0}
+  aloeUI: {fileID: 0}
   swapLeftAction: {fileID: -8803093245566205712, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
   swapRightAction: {fileID: 5983590383620981126, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
   switchCharacter1Action: {fileID: 2596550819272375454, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
@@ -4925,6 +4929,6 @@ MonoBehaviour:
   - {x: 0, y: -1.4, z: -10}
   virtualCamera: {fileID: 0}
   speed: 0.0325
-  zoomOutDuration: 2
+  zoomOutDuration: 4
   zoomInAction: {fileID: -4235910856991696187, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
   zoomOutAction: {fileID: 440312115388138147, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}

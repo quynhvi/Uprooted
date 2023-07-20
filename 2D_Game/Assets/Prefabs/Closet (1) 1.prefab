@@ -2929,7 +2929,7 @@ GameObject:
   - component: {fileID: 1401430145207340327}
   - component: {fileID: 1401430145207340326}
   - component: {fileID: 1401430145207340324}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: TriggerZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2634,7 +2634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bedDamaged: {fileID: 5564688968506953596}
   bed: {fileID: 5564688969277397001}
-  bounce: 50
+  bounce: 35
   platformEffector: {fileID: 0}
 --- !u!70 &6094859149905637582
 CapsuleCollider2D:
