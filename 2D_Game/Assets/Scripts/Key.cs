@@ -12,6 +12,7 @@ public class Key : MonoBehaviour
     private ResourceManagement rm;
     private LightSource ls;
     private PlayerSwap ps;
+    private Door door;
 
     public GameObject interactButton;
     private bool interactable;
@@ -24,12 +25,13 @@ public class Key : MonoBehaviour
         collectKeyAction.action.performed += OnCollectKey;
     }
 
-
     private void Start()
     {
         rm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
         ps = FindObjectOfType<PlayerSwap>();
+        door = FindObjectOfType<Door>();
+
         interactable = true;
     }
 
@@ -58,6 +60,7 @@ public class Key : MonoBehaviour
                         Debug.Log("Colliding with key");
                         followTarget = vft.followPoint;
                         isFollowing = true;
+                        door.hasKey = true;
                         vft.followingKey = this;
 
                         // Decrease resource levels
@@ -70,6 +73,14 @@ public class Key : MonoBehaviour
                         }
 
                         interactable = false;
+                        interactButton.SetActive(false); // Hide the interact button after collecting the key
+
+                        // Set the door interactable after the key is collected
+                        if (door != null)
+                        {
+                            door.SetInteractable(true);
+                        }
+
                         break; // Exit the loop after finding the first VFT
                     }
                 }
@@ -81,13 +92,22 @@ public class Key : MonoBehaviour
     {
         if (interactable && collision.CompareTag("VFT"))
         {
-            interactButton.SetActive(true);
+            interactButton.SetActive(true); // Show the interact button when the key is nearby
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        interactButton.SetActive(false);
+        interactButton.SetActive(false); // Hide the interact button when the key is no longer nearby
+    }
+
+    public void SetInteractable(bool value)
+    {
+        interactable = value;
+        if (value && isFollowing) // Check if the key is already collected and following
+        {
+            interactButton.SetActive(false); // Hide the interact button if the key is collected
+        }
     }
 
     private new T FindAnyObjectByType<T>() where T : MonoBehaviour

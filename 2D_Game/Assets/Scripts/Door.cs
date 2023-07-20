@@ -12,11 +12,16 @@ public class Door : MonoBehaviour
     private ResourceManagement rm;
     private LightSource ls;
     private PlayerSwap ps;
+    private Key keyClass;
 
     public GameObject interactButton;
+    public GameObject keyNotification;
+
     public GameObject doorFollowPoint;
     public GameObject key;
     private bool interactable;
+    private bool isPlayerInRange; // Flag to check if the player is in range of the door
+    public bool hasKey;
 
     public InputActionReference openDoorAction;
 
@@ -33,12 +38,15 @@ public class Door : MonoBehaviour
         ls = FindObjectOfType<LightSource>();
         ps = FindObjectOfType<PlayerSwap>();
 
+        // Find the Key script in the scene and assign it to the keyClass variable
+        keyClass = FindObjectOfType<Key>();
+
         interactable = true;
     }
 
     private void OnOpenDoor(InputAction.CallbackContext context)
     {
-        if (vft != null && vft.followingKey != null && vft.followingKey.gameObject.CompareTag("Key") && interactable && ps.whichCharacter == 1)
+        if (vft != null && vft.followingKey != null && vft.followingKey.gameObject.CompareTag("Key") && interactable && ps.whichCharacter == 1 && isPlayerInRange)
         {
             interactable = false;
             OpenDoor();
@@ -63,7 +71,6 @@ public class Door : MonoBehaviour
         {
             vft.followingKey.followTarget = doorFollowPoint.transform; // Set the door as the followTarget
             vft.followingKey.isFollowing = true;
-            //key.SetActive(false);
         }
 
         vft.followingKey = null;
@@ -71,18 +78,40 @@ public class Door : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "VFT" && interactable)
+        if (collision.gameObject.CompareTag("VFT"))
         {
-            interactButton.SetActive(true);
+            //bool hasKey = (keyClass != null && keyClass.isFollowing);
+
+            if (hasKey)
+            {
+                Debug.Log("has key");
+                isPlayerInRange = true; // Player is in range to open the door
+                interactButton.SetActive(true);
+                keyNotification.SetActive(false); // Hide the "Find the key" notification
+            }
+            else
+            {
+                Debug.Log("no key");
+                isPlayerInRange = true; // Player is in range, but doesn't have the key yet
+                interactButton.SetActive(false);
+                keyNotification.SetActive(true); // Show the "Find the key" notification
+            }
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "VFT")
+        if (collision.gameObject.CompareTag("VFT"))
         {
+            isPlayerInRange = false; // Player is no longer in range to open the door
             interactButton.SetActive(false);
+            keyNotification.SetActive(false); // Hide the "Find the key" notification
         }
+    }
+
+    public void SetInteractable(bool value)
+    {
+        interactable = value;
     }
 
     private new T FindAnyObjectByType<T>() where T : MonoBehaviour

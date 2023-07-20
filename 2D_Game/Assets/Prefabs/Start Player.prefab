@@ -114,6 +114,14 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1418991843551074297, guid: 04d1182e0b68545f0ad8cd316fddcafe, type: 3}
+      propertyPath: m_Size.y
+      value: 16.336891
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418991843551074297, guid: 04d1182e0b68545f0ad8cd316fddcafe, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.62969387
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04d1182e0b68545f0ad8cd316fddcafe, type: 3}
 --- !u!4 &1613242685524301376 stripped
