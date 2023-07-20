@@ -42,7 +42,7 @@ public class CutsceneManager : MonoBehaviour
         // Unsubscribe from the stopped event
         director.stopped -= OnCutsceneStopped;
         journalTip.SetActive(true);
-        StartCoroutine(DisableTextAfterDelay(1.5f));
+        StartCoroutine(DisableTextAfterDelay(5f));
 
         // Reactivate each UI element in the array
         foreach (GameObject uiElement in uiElementsToDeactivate)
