@@ -128,6 +128,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8104870915761073374, guid: 2c873a5d620fa4dd88a4ac95f36716ba, type: 3}
   m_PrefabInstance: {fileID: 8104870915767167045}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &15140000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15139995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6218703cf08e4da19694d5eddcf564a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &84574368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1613242685960072909, guid: 59f194a4aeaa24386827a430a7d29ee1, type: 3}
@@ -619,7 +631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numpad: {fileID: 15139995}
   interactButton: {fileID: 891486122}
-  interactAction: {fileID: 9103543313068027609, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
+  numpadAction: {fileID: 0}
 --- !u!1 &891486122 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8104870916519925743, guid: 2c873a5d620fa4dd88a4ac95f36716ba, type: 3}
@@ -1841,6 +1853,10 @@ PrefabInstance:
       propertyPath: numpad
       value: 
       objectReference: {fileID: 15139995}
+    - target: {fileID: 7518960919473747809, guid: 4bd8952c6497749f28c7889fbe78d602, type: 3}
+      propertyPath: numpadAction
+      value: 
+      objectReference: {fileID: 9103543313068027609, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
     - target: {fileID: 7518960919473747809, guid: 4bd8952c6497749f28c7889fbe78d602, type: 3}
       propertyPath: interactButton
       value: 
