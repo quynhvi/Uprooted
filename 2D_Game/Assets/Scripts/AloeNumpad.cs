@@ -29,6 +29,7 @@ public class AloeNumpad : MonoBehaviour
 
     private void OnEnable()
     {
+
         // Enable the input action for Interact when the numpad is not active
         if (!isNumpadActive)
         {
