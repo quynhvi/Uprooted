@@ -10,7 +10,7 @@ public class CameraZoom : MonoBehaviour
     public Vector3[] target;
     public CinemachineVirtualCamera virtualCamera;
     public float speed;
-    public float zoomOutDuration = 2f; // Duration in seconds for zoom out
+    public float zoomOutDuration = 4f; // Duration in seconds for zoom out
 
     private float zoomOutTimer; // Timer for tracking zoom out duration
 

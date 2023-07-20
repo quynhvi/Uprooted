@@ -6,7 +6,7 @@ public class Jumppad : MonoBehaviour
 {
     [SerializeField] private GameObject bedDamaged;
     [SerializeField] private GameObject bed;
-    public float bounce = 50f;
+    public float bounce = 0f;
     public PlatformEffector2D platformEffector;
 
     private void OnCollisionEnter2D(Collision2D collision)

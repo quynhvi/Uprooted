@@ -7,6 +7,7 @@ public class BrokenPlatform : MonoBehaviour
     [SerializeField] private GameObject brokenPlatform;
     [SerializeField] private GameObject halfBrokenPlatform;
     [SerializeField] private GameObject platform;
+    [SerializeField] private GameObject colliderPlatform;
 
     private bool isBroken = false;
     private int playerCount = 0;
@@ -20,6 +21,7 @@ public class BrokenPlatform : MonoBehaviour
 
         if (playerCount == 1 && !isBroken)
         {
+            platform.SetActive(false);
             halfBrokenPlatform.SetActive(true);
         }
 
@@ -29,6 +31,7 @@ public class BrokenPlatform : MonoBehaviour
             brokenPlatform.SetActive(true);
             halfBrokenPlatform.SetActive(false);
             platform.SetActive(false);
+            colliderPlatform.SetActive(false);
         }
         else if (playerCount < 2 && isBroken)
         {
