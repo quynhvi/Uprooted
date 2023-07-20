@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class ReviveAloe : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class ReviveAloe : MonoBehaviour
     private PlayerMovement aloeMovement;
     private PlayerSwap playerSwapScript;
     private SpriteRenderer spriteRenderer;
+
+    [SerializeField] PlayableDirector aloeDirector;
+    private bool cutscenePlayed = false; // Flag to check if the cutscene has been played
+    [SerializeField] private GameObject code2;
+
 
     public Sprite revivedSprite;  // Add the sprite that represents the revived state
 
@@ -18,6 +24,16 @@ public class ReviveAloe : MonoBehaviour
         aloeMovement = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         aloeMovement.enabled = false;
+    }
+
+    private void Update()
+    {
+        if (aloeRevived && !cutscenePlayed)
+        {
+            aloeDirector.Play();
+            cutscenePlayed = true;
+            code2.SetActive(true);
+        }
 
     }
 
