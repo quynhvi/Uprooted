@@ -13,7 +13,14 @@ public class Jumppad : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Cactus") || collision.gameObject.CompareTag("VFT") || collision.gameObject.CompareTag("Ivy") || collision.gameObject.CompareTag("AloeVera"))
         {
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                // Reset the vertical velocity to zero before applying the upward force
+                rb.velocity = new Vector2(rb.velocity.x, 0f);
+                rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+            }
+
             bedDamaged.SetActive(true);
             bed.SetActive(false);
 
