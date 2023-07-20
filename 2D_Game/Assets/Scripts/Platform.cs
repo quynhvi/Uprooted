@@ -33,7 +33,7 @@ public class Platform : MonoBehaviour
 
         if (verticalInput < -0.5f || Keyboard.current.downArrowKey.isPressed) //Hold Key or joystick down
         {
-            print(currentPlayerLayer);
+            //print(currentPlayerLayer);
             Physics2D.IgnoreLayerCollision(currentPlayerLayer, currentPlatformLayer, true);
             IsFalling = true;
         }

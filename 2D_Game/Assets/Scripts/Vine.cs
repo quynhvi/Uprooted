@@ -53,7 +53,7 @@ public class Vine : MonoBehaviour
         vine.SetActive(false);
         vineOpen = false;
         interactable = true;
-        pm.enabled = true;
+        //pm.enabled = true;
     }
 
     private void VineInteract()
@@ -62,7 +62,7 @@ public class Vine : MonoBehaviour
 
                 vine.SetActive(true);
                 vineOpen = true;
-                pm.enabled = false;
+                //pm.enabled = false;
 
                 if (rm != null && ls != null)
                 {
