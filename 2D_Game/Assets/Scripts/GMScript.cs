@@ -17,10 +17,13 @@ public class GMScript : MonoBehaviour
     MenuInput action;
     private bool paused;
 
+    Soundmanager soundmanager;
+
     private void Awake()
     {
         action = new MenuInput();
         Application.targetFrameRate = 60;
+        soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
     // Start is called before the first frame update
@@ -69,6 +72,7 @@ public class GMScript : MonoBehaviour
 
     public void OpenJournal()
     {
+        soundmanager.playSFX(soundmanager.bookOpen);
         journalScreen.SetActive(true);
         paused = true;
         Time.timeScale = 0f;
@@ -76,6 +80,7 @@ public class GMScript : MonoBehaviour
 
     public void CloseJournal()
     {
+        soundmanager.playSFX(soundmanager.bookClose);
         Time.timeScale = 1f;
         paused = false;
         journalScreen.SetActive(false);   

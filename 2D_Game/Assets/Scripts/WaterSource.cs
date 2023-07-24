@@ -1,30 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class WaterSource : MonoBehaviour
 {
     private ResourceManagement RessourceManagement;
     public float chargedWater;
-    //public Image waterPuddle;
-    // Start is called before the first frame update
+
+    Soundmanager soundmanager;
+
     void Awake()
     {
         RessourceManagement = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
+        soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
     private void OnTriggerStay2D(Collider2D collider)
     {
         chargedWater = 0.0025f;
-        if (RessourceManagement.lightLevelNumber < 1f && collider.gameObject.CompareTag("Cactus")) //Ivy erstmal rausgenommen! >>collider.gameObject.CompareTag("Ivy") || collider.gameObject.CompareTag("VFT") |<<
+        if (RessourceManagement.lightLevelNumber < 1f && collider.gameObject.CompareTag("Cactus"))
         {
-            Debug.Log("Player charging in water");
             if (RessourceManagement.waterLevelNumber > 1f)
                 return;
             RessourceManagement.waterLevelNumber += chargedWater;
             RessourceManagement.waterBarFill.fillAmount += chargedWater;
-            //waterPuddle.fillAmount -= chargedWater;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        chargedWater = 0f; // Reset the chargedWater value when the player exits the water source trigger
     }
 }
