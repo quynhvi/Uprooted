@@ -27,6 +27,7 @@ TagManager:
   - Basket
   - Painting2
   - Garbage
+  - Sound
   layers:
   - Default
   - TransparentFX
