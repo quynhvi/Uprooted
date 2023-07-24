@@ -3417,8 +3417,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 456.11682}
-  m_SizeDelta: {x: 372.005, y: 23.4439}
+  m_AnchoredPosition: {x: -298.89404, y: 457.22705}
+  m_SizeDelta: {x: 367.1248, y: 21.2234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8104870916106631785
 CanvasRenderer:
@@ -3796,8 +3796,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -708.63007, y: 441.69678}
-  m_SizeDelta: {x: 372.005, y: 32.605}
+  m_AnchoredPosition: {x: -708.63007, y: 443.36096}
+  m_SizeDelta: {x: 372.005, y: 25.7104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8104870916230153602
 CanvasRenderer:
@@ -5410,8 +5410,8 @@ MonoBehaviour:
   transitionTime: 1
   NumberOfButtons: 2
   transitionAnim: {fileID: 8104870917269409812}
-  ButtonPosition1: {fileID: 1772321757131463881}
-  ButtonPosition2: {fileID: 1772321756910250017}
+  ButtonPosition1: {fileID: 1772321756655545016}
+  ButtonPosition2: {fileID: 1772321755694959014}
 --- !u!1 &8104870916806477990
 GameObject:
   m_ObjectHideFlags: 0
@@ -7021,8 +7021,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.000043631}
-  m_SizeDelta: {x: 372.005, y: 32.605}
+  m_AnchoredPosition: {x: 0, y: -0.6539}
+  m_SizeDelta: {x: 372.01, y: 26.2254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8104870917270200302
 CanvasRenderer:
@@ -8102,8 +8102,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 372.005, y: 23.4439}
+  m_AnchoredPosition: {x: 2.6585, y: 0.1129}
+  m_SizeDelta: {x: 365.3559, y: 23.2171}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8104870917674249961
 CanvasRenderer:
