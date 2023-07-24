@@ -15,7 +15,7 @@ public class CactusPunch : MonoBehaviour
     private PlayerMovement pm;
 
     private Damageable damagable;
-    private DamageableCurtain damageableCurtain;
+    //private DamageableCurtain damageableCurtain;
     private DamagableGutter damageableGutter;
     private DamagableBox1 damageableBox1;
     private DamageableGiraffe damageableGiraffe;
@@ -34,7 +34,7 @@ public class CactusPunch : MonoBehaviour
         pm = GameObject.FindGameObjectWithTag("Cactus").GetComponent<PlayerMovement>();
 
         damagable = GameObject.FindGameObjectWithTag("damagable").GetComponent<Damageable>();
-        damageableCurtain = GameObject.FindGameObjectWithTag("Curtain").GetComponent<DamageableCurtain>();
+        //damageableCurtain = GameObject.FindGameObjectWithTag("Curtain").GetComponent<DamageableCurtain>();
         damageableGutter = GameObject.FindGameObjectWithTag("Gutter").GetComponent<DamagableGutter>();
         damageableBox1 = GameObject.FindGameObjectWithTag("Box1").GetComponent<DamagableBox1>();
         damageableBox2 = GameObject.FindGameObjectWithTag("Box2").GetComponent<DamageableBox2>();
@@ -68,11 +68,11 @@ public class CactusPunch : MonoBehaviour
                 break;
             }
 
-            if (collider.CompareTag("Curtain"))
-            {
-                Curtain();
-                break;
-            }
+            //if (collider.CompareTag("Curtain"))
+            //{
+            //    Curtain();
+            //    break;
+            //}
 
             if (collider.CompareTag("Gutter"))
             {
@@ -132,26 +132,26 @@ public class CactusPunch : MonoBehaviour
         //break;
     }
 
-    private void Curtain()
-    {
-        arm.SetActive(true); // Activate the arm object
-        Debug.Log("punch");
-        damageableCurtain.TakeDamage();
+    //private void Curtain()
+    //{
+    //    arm.SetActive(true); // Activate the arm object
+    //    Debug.Log("punch");
+    //    damageableCurtain.TakeDamage();
 
-        ls.chargedLight = 0.03f;
+    //    ls.chargedLight = 0.03f;
 
-        if (rm != null && ls != null)
-        {
-            rm.lightLevelNumber -= ls.chargedLight;
-            rm.lightBarFill.fillAmount -= ls.chargedLight;
-            rm.waterLevelNumber -= ls.chargedLight;
-            rm.waterBarFill.fillAmount -= ls.chargedLight;
-        }
-        StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
+    //    if (rm != null && ls != null)
+    //    {
+    //        rm.lightLevelNumber -= ls.chargedLight;
+    //        rm.lightBarFill.fillAmount -= ls.chargedLight;
+    //        rm.waterLevelNumber -= ls.chargedLight;
+    //        rm.waterBarFill.fillAmount -= ls.chargedLight;
+    //    }
+    //    StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
 
-        //interactable = false;
-        //break;
-    }
+    //    //interactable = false;
+    //    //break;
+    //}
 
     private void Gutter()
     {
@@ -277,8 +277,8 @@ public class CactusPunch : MonoBehaviour
     {
         if (interactable && collision.gameObject.CompareTag("damagable") && ps.whichCharacter == 0)
             interactButton.SetActive(true);
-        if (interactable && collision.gameObject.CompareTag("Curtain") && ps.whichCharacter == 0)
-            interactButton.SetActive(true);
+        //if (interactable && collision.gameObject.CompareTag("Curtain") && ps.whichCharacter == 0)
+        //    interactButton.SetActive(true);
         if (interactable && collision.gameObject.CompareTag("Gutter") && ps.whichCharacter == 0)
             interactButton.SetActive(true);
         if (interactable && collision.gameObject.CompareTag("Box1") && ps.whichCharacter == 0)
