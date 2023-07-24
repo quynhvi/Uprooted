@@ -103,7 +103,7 @@ public class AloeZone : MonoBehaviour
     //    }
     //}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("AloeZone") && ps.whichCharacter == 3 || collision.gameObject.CompareTag("AloeZone") && ps.whichCharacter == 2)
         {
