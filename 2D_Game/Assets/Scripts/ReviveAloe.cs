@@ -15,7 +15,7 @@ public class ReviveAloe : MonoBehaviour
     [SerializeField] private GameObject code2;
 
 
-    public Sprite revivedSprite;  // Add the sprite that represents the revived state
+    public Sprite revivedSprite; 
 
     // Start is called before the first frame update
     void Start()

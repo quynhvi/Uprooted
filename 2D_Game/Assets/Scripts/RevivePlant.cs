@@ -9,6 +9,8 @@ public class RevivePlant : MonoBehaviour
     private PlayerSwap playerSwapScript;
 
     [SerializeField] private GameObject aloeVera;
+    [SerializeField] private Sprite revivedSprite;
+    private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Awake()
@@ -17,6 +19,7 @@ public class RevivePlant : MonoBehaviour
         playerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
         ivyMovementScript.enabled = false;
         aloeVera.SetActive(false);
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,6 +34,9 @@ public class RevivePlant : MonoBehaviour
                 playerSwapScript.whichCharacter = 2;
                 ivyJustRevived = true;
                 ivyMovementScript.enabled = true;
+
+                // Change the sprite to the revived sprite
+                spriteRenderer.sprite = revivedSprite;
             }
         }
     }

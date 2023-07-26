@@ -1,0 +1,651 @@
+fileFormatVersion: 2
+guid: 8731a01e871ba417081ea22cb42116fe
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_VFT_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1318.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd00757bcfba405083a0535a735e0f9
+      internalID: -802274686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_1
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1318.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57835ce4d1cd44551a81b74ad9803160
+      internalID: 1425934884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_2
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 1318.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0468bdd554843a1889d167f95207a7
+      internalID: 1218530604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_3
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 1318.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456482a28605c498f9c179724b58e2ff
+      internalID: 1762734451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_4
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1318.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063393cb6c8d040898c2601aa6c8db2a
+      internalID: -850905903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_5
+      rect:
+        serializedVersion: 2
+        x: 1825
+        y: 1318.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718f2cb94a009492cb4cb6400a08780b
+      internalID: -971590189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_6
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 1318.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffbfdf0fd9a943e9b9b39d387c4c0ec
+      internalID: -1804407742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 879.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b20ce621263043218d26c8f18c48e4c
+      internalID: 396787415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_8
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 879.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b4f0d27d7c1455ab161802a1d1bde0
+      internalID: 354708105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_9
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 879.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa4a569210ab4f11925744a3ef27e3a
+      internalID: 1385521319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_10
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 879.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53087f0e7b49d4834b9bfd98903b8259
+      internalID: -1340546501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_11
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 879.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54999ff9cfe5a428fac5b6df8011d1ce
+      internalID: 354829942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_12
+      rect:
+        serializedVersion: 2
+        x: 1825
+        y: 879.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c503487da6049d3aecbad1c398a258
+      internalID: -916165150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_13
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 879.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5b85c079943406bbf6425550ce2fc9
+      internalID: 1231148440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cc538251e294d42ad3ab155d849465
+      internalID: -114869781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_15
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 440.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c2bea4728b4481ca67f795e4c9a89b
+      internalID: 804641264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_16
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 440.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9187c99f7df4244159f30d0216b151d6
+      internalID: 344089746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_17
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 440.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e384c5344db10476ea06510cba000d5f
+      internalID: -60778689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_18
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 440.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b32c417321954714a6903eb56e29042
+      internalID: 1499380423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_19
+      rect:
+        serializedVersion: 2
+        x: 1825
+        y: 440.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0908832f5d824bd290ac8b785c52b87
+      internalID: -1009150039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_20
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 440.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afbea31a366542d18828d9592a9a394
+      internalID: 617866357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb15b2fa8c3842eda1cba56c642739e
+      internalID: 2141968319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_22
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37104f505288c434e961b1a9489f34a9
+      internalID: 1615426240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_VFT_23
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 1.5
+        width: 365.57144
+        height: 439.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007a51a5b1ba44f18bd80a8000c04d3f
+      internalID: 266784699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Walk_VFT_0: -802274686
+      Walk_VFT_1: 1425934884
+      Walk_VFT_10: -1340546501
+      Walk_VFT_11: 354829942
+      Walk_VFT_12: -916165150
+      Walk_VFT_13: 1231148440
+      Walk_VFT_14: -114869781
+      Walk_VFT_15: 804641264
+      Walk_VFT_16: 344089746
+      Walk_VFT_17: -60778689
+      Walk_VFT_18: 1499380423
+      Walk_VFT_19: -1009150039
+      Walk_VFT_2: 1218530604
+      Walk_VFT_20: 617866357
+      Walk_VFT_21: 2141968319
+      Walk_VFT_22: 1615426240
+      Walk_VFT_23: 266784699
+      Walk_VFT_3: 1762734451
+      Walk_VFT_4: -850905903
+      Walk_VFT_5: -971590189
+      Walk_VFT_6: -1804407742
+      Walk_VFT_7: 396787415
+      Walk_VFT_8: 354708105
+      Walk_VFT_9: 1385521319
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
