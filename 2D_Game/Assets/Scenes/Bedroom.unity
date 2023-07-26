@@ -175,11 +175,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSrc: {fileID: 0}
   sfxSrc: {fileID: 2090038875}
-  lightCharge: {fileID: 8300000, guid: 6884a67391753430a93c1dc322eaf745, type: 3}
-  waterCharge: {fileID: 8300000, guid: f5e4525327d1844189a9a73715d91ab7, type: 3}
+  lightCharge: {fileID: 8300000, guid: 5098f9851fa094dd2ae31ab0634276cd, type: 3}
+  waterCharge: {fileID: 8300000, guid: d7cefecc9c3c848bdac65b46c3f2b5d5, type: 3}
   lowHPSound: {fileID: 8300000, guid: ccab88799ee644aa6aa9e036f643c272, type: 3}
   bookOpen: {fileID: 8300000, guid: bfbfd299ebf384047982c2d34a405265, type: 3}
-  bookClose: {fileID: 8300000, guid: 3f5c4be0db0eb486b80b38e484e9bc0c, type: 3}
+  bookClose: {fileID: 8300000, guid: 623f83678bb894afc94ca95e21616bd0, type: 3}
+  jump: {fileID: 8300000, guid: 22f1f966a4d444f219321b479c254e94, type: 3}
+  wrongCode: {fileID: 8300000, guid: e26abd127b65f4529af3e05bc0fc8e23, type: 3}
+  drawer: {fileID: 8300000, guid: e4f70836b04f644078d76e0cb2924bb0, type: 3}
+  fabricRip: {fileID: 8300000, guid: abd5fc8daf33440cfae2379d1cf8b81a, type: 3}
 --- !u!82 &310661888
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1278,7 +1282,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1823,16 +1827,16 @@ PrefabInstance:
       objectReference: {fileID: 1293063067}
     - target: {fileID: 3861392188450450796, guid: 6581c8103ee21494f943a2648166087a, type: 3}
       propertyPath: m_SceneBindings.Array.size
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3861392188450450796, guid: 6581c8103ee21494f943a2648166087a, type: 3}
       propertyPath: m_SceneBindings.Array.data[6].key
       value: 
-      objectReference: {fileID: -3068597808041440242, guid: 604525b673c574f78b4dc54911fd8cb5, type: 2}
+      objectReference: {fileID: 8759382221083826498, guid: 604525b673c574f78b4dc54911fd8cb5, type: 2}
     - target: {fileID: 3861392188450450796, guid: 6581c8103ee21494f943a2648166087a, type: 3}
       propertyPath: m_SceneBindings.Array.data[7].key
       value: 
-      objectReference: {fileID: 8759382221083826498, guid: 604525b673c574f78b4dc54911fd8cb5, type: 2}
+      objectReference: {fileID: -8036871412387989984, guid: 604525b673c574f78b4dc54911fd8cb5, type: 2}
     - target: {fileID: 3861392188450450796, guid: 6581c8103ee21494f943a2648166087a, type: 3}
       propertyPath: m_SceneBindings.Array.data[8].key
       value: 
@@ -1848,11 +1852,11 @@ PrefabInstance:
     - target: {fileID: 3861392188450450796, guid: 6581c8103ee21494f943a2648166087a, type: 3}
       propertyPath: m_SceneBindings.Array.data[6].value
       value: 
-      objectReference: {fileID: 1613242686011027055}
+      objectReference: {fileID: 1157078135}
     - target: {fileID: 3861392188450450796, guid: 6581c8103ee21494f943a2648166087a, type: 3}
       propertyPath: m_SceneBindings.Array.data[7].value
       value: 
-      objectReference: {fileID: 1157078135}
+      objectReference: {fileID: 1613242686011027055}
     - target: {fileID: 3861392188450450796, guid: 6581c8103ee21494f943a2648166087a, type: 3}
       propertyPath: m_SceneBindings.Array.data[8].value
       value: 
@@ -2959,7 +2963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2427894985303273095, guid: 2c873a5d620fa4dd88a4ac95f36716ba, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2637840891706239650, guid: 2c873a5d620fa4dd88a4ac95f36716ba, type: 3}
       propertyPath: m_Color.a
