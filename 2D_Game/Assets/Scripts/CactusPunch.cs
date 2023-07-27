@@ -25,6 +25,8 @@ public class CactusPunch : MonoBehaviour
 
     private Gamepad gamepad;
 
+    private Soundmanager soundmanager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,8 @@ public class CactusPunch : MonoBehaviour
         interactable = true;
 
         gamepad = Gamepad.current;
+
+        soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
     // Update is called once per frame
@@ -64,6 +68,7 @@ public class CactusPunch : MonoBehaviour
         {
             if (collider.CompareTag("damagable"))
             {
+                soundmanager.playSFX(soundmanager.cactusPunch);
                 Damageable();
                 break;
             }
@@ -76,35 +81,41 @@ public class CactusPunch : MonoBehaviour
 
             if (collider.CompareTag("Gutter"))
             {
+                soundmanager.playSFX(soundmanager.cactusPunch);
                 Gutter();
                 break;
             }
 
             if (collider.CompareTag("Box1"))
             {
+                soundmanager.playSFX(soundmanager.cactusPunch);
                 Box1();
                 break;
             }
 
             if (collider.CompareTag("Box2"))
             {
+                soundmanager.playSFX(soundmanager.cactusPunch);
                 Box2();
                 break;
             }
 
             if (collider.CompareTag("Giraffe"))
             {
+                soundmanager.playSFX(soundmanager.cactusPunch);
                 Giraffe();
                 break;
             }
 
             if (collider.CompareTag("Basket"))
             {
+                soundmanager.playSFX(soundmanager.cactusPunch);
                 Basket();
                 break;
             }
             if (collider.CompareTag("Garbage"))
             {
+                soundmanager.playSFX(soundmanager.cactusPunch);
                 Garabge();
                 break;
             }

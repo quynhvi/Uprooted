@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1469568097061538526}
   - component: {fileID: 1469568097061538525}
   - component: {fileID: 1469568097061538524}
-  - component: {fileID: 1469568097061538527}
   m_Layer: 0
   m_Name: Square
   m_TagString: AloeZone
@@ -112,21 +111,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1469568097061538527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469568097061538521}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fcfda2796e5846dcbf842ab5733f4ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactButton: {fileID: 0}
-  aloeArm: {fileID: 0}
-  interactAction: {fileID: 9103543313068027609, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
 --- !u!1 &1469568097286516833
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class RevivePlant : MonoBehaviour
     [SerializeField] private Sprite revivedSprite;
     private SpriteRenderer spriteRenderer;
 
+    private Soundmanager soundmanager;
     // Start is called before the first frame update
     void Awake()
     {
@@ -20,6 +21,7 @@ public class RevivePlant : MonoBehaviour
         ivyMovementScript.enabled = false;
         aloeVera.SetActive(false);
         spriteRenderer = GetComponent<SpriteRenderer>();
+        soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -28,6 +30,7 @@ public class RevivePlant : MonoBehaviour
         {
             if (!ivyJustRevived)
             {
+                soundmanager.playSFX(soundmanager.revive);
                 aloeVera.SetActive(true);
                 playerSwapScript.possibleCharacters.Add(transform);
                 playerSwapScript.SwitchToCharacter(playerSwapScript.possibleCharacters.Count - 1);
