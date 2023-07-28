@@ -580,6 +580,7 @@ GameObject:
   - component: {fileID: 7518960918721579570}
   - component: {fileID: 7518960918721579569}
   - component: {fileID: 7518960918721579568}
+  - component: {fileID: 3566615267980843297}
   m_Layer: 15
   m_Name: AloeVera
   m_TagString: AloeVera
@@ -751,6 +752,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0.12771538, y: 0.0000037420511}
   m_Size: {x: 5.577539, y: 13.659999}
   m_Direction: 0
+--- !u!95 &3566615267980843297
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7518960918721579528}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bc7364c373de5402fbefa9de14f7711f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7518960919036918833
 GameObject:
   m_ObjectHideFlags: 0

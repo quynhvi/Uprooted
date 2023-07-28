@@ -26,6 +26,8 @@ public class CactusPunch : MonoBehaviour
 
     private Gamepad gamepad;
 
+    private Soundmanager soundmanager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,8 @@ public class CactusPunch : MonoBehaviour
         interactable = true;
 
         gamepad = Gamepad.current;
+
+        soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
     // Update is called once per frame
@@ -121,6 +125,7 @@ public class CactusPunch : MonoBehaviour
 
     private void Damageable()
     {
+        soundmanager.playSFX(soundmanager.cactusPunch);
         arm.SetActive(true); // Activate the arm object
         Debug.Log("punch");
         damagable.TakeDamage();
@@ -163,6 +168,7 @@ public class CactusPunch : MonoBehaviour
 
     private void Gutter()
     {
+        soundmanager.playSFX(soundmanager.cactusPunch);
         arm.SetActive(true); // Activate the arm object
         Debug.Log("punch");
         damageableGutter.TakeDamage();
@@ -182,6 +188,7 @@ public class CactusPunch : MonoBehaviour
 
     private void Box1()
     {
+        soundmanager.playSFX(soundmanager.cactusPunch);
         arm.SetActive(true); // Activate the arm object
         Debug.Log("punch");
         damageableBox1.TakeDamage();
@@ -201,6 +208,7 @@ public class CactusPunch : MonoBehaviour
 
     private void Box2()
     {
+        soundmanager.playSFX(soundmanager.cactusPunch);
         arm.SetActive(true); // Activate the arm object
         Debug.Log("punch");
         damageableBox2.TakeDamage();
@@ -220,6 +228,7 @@ public class CactusPunch : MonoBehaviour
 
     private void Box3()
     {
+        soundmanager.playSFX(soundmanager.cactusPunch);
         arm.SetActive(true); // Activate the arm object
         Debug.Log("punch");
         damageableBox3.TakeDamage();
@@ -239,6 +248,7 @@ public class CactusPunch : MonoBehaviour
 
     private void Giraffe()
     {
+        soundmanager.playSFX(soundmanager.cactusPunch);
         arm.SetActive(true); // Activate the arm object
         Debug.Log("punch");
         damageableGiraffe.TakeDamage();
@@ -258,6 +268,7 @@ public class CactusPunch : MonoBehaviour
 
     private void Basket()
     {
+        soundmanager.playSFX(soundmanager.cactusPunch);
         arm.SetActive(true); // Activate the arm object
         Debug.Log("punch");
         damageableBasket.TakeDamage();
@@ -277,6 +288,7 @@ public class CactusPunch : MonoBehaviour
 
     private void Garabge()
     {
+        soundmanager.playSFX(soundmanager.cactusPunch);
         arm.SetActive(true); // Activate the arm object
         Debug.Log("punch");
         damageableGarbage.TakeDamage();
