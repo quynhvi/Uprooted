@@ -25,6 +25,8 @@ public class Door : MonoBehaviour
 
     public InputActionReference openDoorAction;
 
+    private Soundmanager soundmanager;
+
     private void OnEnable()
     {
         openDoorAction.action.Enable();
@@ -42,12 +44,15 @@ public class Door : MonoBehaviour
         keyClass = FindObjectOfType<Key>();
 
         interactable = true;
+
+        soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
     private void OnOpenDoor(InputAction.CallbackContext context)
     {
         if (vft != null && vft.followingKey != null && vft.followingKey.gameObject.CompareTag("Key") && interactable && ps.whichCharacter == 1 && isPlayerInRange)
         {
+            soundmanager.playSFX(soundmanager.keyOpen);
             interactable = false;
             OpenDoor();
         }

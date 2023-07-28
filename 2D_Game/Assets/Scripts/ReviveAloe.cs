@@ -14,8 +14,9 @@ public class ReviveAloe : MonoBehaviour
     private bool cutscenePlayed = false; // Flag to check if the cutscene has been played
     [SerializeField] private GameObject code2;
 
+    private Soundmanager soundmanager;
 
-    public Sprite revivedSprite;  // Add the sprite that represents the revived state
+    public Sprite revivedSprite;  
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class ReviveAloe : MonoBehaviour
         aloeMovement = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         aloeMovement.enabled = false;
+        soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
     private void Update()
@@ -43,6 +45,7 @@ public class ReviveAloe : MonoBehaviour
         {
             if (!aloeRevived)
             {
+                soundmanager.playSFX(soundmanager.revive);
                 playerSwapScript.possibleCharacters.Add(transform);
                 playerSwapScript.SwitchToCharacter(playerSwapScript.possibleCharacters.Count - 1);
                 playerSwapScript.whichCharacter = 3;

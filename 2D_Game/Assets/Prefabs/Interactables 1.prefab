@@ -829,7 +829,7 @@ GameObject:
   - component: {fileID: 8029132276372034514}
   m_Layer: 0
   m_Name: Box3
-  m_TagString: Box2
+  m_TagString: Box3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -950,6 +950,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94cf24197927643eeabdac4b083d2ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damaged: {fileID: 0}
+  notDamaged: {fileID: 0}
 --- !u!1 &2619063747263064158
 GameObject:
   m_ObjectHideFlags: 0
@@ -3853,7 +3855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6039453346084976558, guid: 0226605c5335f4e098ae0168b62c3680, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.11
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 6039453346084976558, guid: 0226605c5335f4e098ae0168b62c3680, type: 3}
       propertyPath: m_LocalPosition.y

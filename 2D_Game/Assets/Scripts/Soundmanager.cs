@@ -6,7 +6,8 @@ public class Soundmanager : MonoBehaviour
 {
     public AudioSource musicSrc;
     public AudioSource sfxSrc;
-    public AudioClip lightCharge, waterCharge, lowHPSound, bookOpen, bookClose; // backgroundMusic
+    public AudioClip lightCharge, waterCharge, lowHPSound, bookOpen, bookClose, revive, keyOpen,
+        cactusPunch, fabricRip, codeWrong, drawer, jump; // backgroundMusic
 
     private void Start()
     {

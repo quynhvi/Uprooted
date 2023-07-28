@@ -13,8 +13,6 @@ public class CutsceneManager2 : MonoBehaviour
 
     private void Start()
     {
-        
-
         // Subscribe to the stopped event of the PlayableDirector to reactivate UI elements
         cutsceneDirector.stopped += OnCutsceneStopped;
     }
