@@ -25,8 +25,6 @@ public class Door : MonoBehaviour
 
     public InputActionReference openDoorAction;
 
-    private Soundmanager soundmanger;
-
     private void OnEnable()
     {
         openDoorAction.action.Enable();
@@ -44,8 +42,6 @@ public class Door : MonoBehaviour
         keyClass = FindObjectOfType<Key>();
 
         interactable = true;
-
-        soundmanger = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
     private void OnOpenDoor(InputAction.CallbackContext context)
@@ -59,7 +55,6 @@ public class Door : MonoBehaviour
 
     public void OpenDoor()
     {
-        soundmanger.playSFX(soundmanger.keySound);
         if (rm != null && ls != null)
         {
             rm.lightLevelNumber -= ls.chargedLight;

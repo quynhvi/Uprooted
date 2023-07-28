@@ -3140,7 +3140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6567000063128858756}
   m_Layer: 0
-  m_Name: Lights
+  m_Name: Lights_old
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

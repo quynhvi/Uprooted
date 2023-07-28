@@ -21,8 +21,6 @@ public class PlayerMovement : MonoBehaviour
     public InputActionAsset inputActions;
     public InputActionReference jumpAction;
 
-    private Soundmanager soundmanager;
-
     //public Animator animator;
 
 
@@ -59,15 +57,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded) // Check if the player is grounded
         {
-            soundmanager.playSFX(soundmanager.jump);
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             isGrounded = false; // Set grounded flag to false after jumping
         }
-    }
-
-    private void Start()
-    {
-        soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
     private void FixedUpdate()
@@ -126,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
-            if (collider.CompareTag("dragable") || collider.CompareTag("damagable"))
+            if (collider.CompareTag("dragable") || collider.CompareTag("damagable") || collider.CompareTag("movable"))
             {
                 return true;
             }

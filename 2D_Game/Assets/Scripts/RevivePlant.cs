@@ -9,10 +9,7 @@ public class RevivePlant : MonoBehaviour
     private PlayerSwap playerSwapScript;
 
     [SerializeField] private GameObject aloeVera;
-    [SerializeField] private Sprite revivedSprite;
-    private SpriteRenderer spriteRenderer;
 
-    private Soundmanager soundmanager;
     // Start is called before the first frame update
     void Awake()
     {
@@ -20,8 +17,6 @@ public class RevivePlant : MonoBehaviour
         playerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
         ivyMovementScript.enabled = false;
         aloeVera.SetActive(false);
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -30,16 +25,12 @@ public class RevivePlant : MonoBehaviour
         {
             if (!ivyJustRevived)
             {
-                soundmanager.playSFX(soundmanager.revive);
                 aloeVera.SetActive(true);
                 playerSwapScript.possibleCharacters.Add(transform);
                 playerSwapScript.SwitchToCharacter(playerSwapScript.possibleCharacters.Count - 1);
                 playerSwapScript.whichCharacter = 2;
                 ivyJustRevived = true;
                 ivyMovementScript.enabled = true;
-
-                // Change the sprite to the revived sprite
-                spriteRenderer.sprite = revivedSprite;
             }
         }
     }
