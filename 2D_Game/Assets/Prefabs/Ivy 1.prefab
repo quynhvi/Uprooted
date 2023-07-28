@@ -223,7 +223,7 @@ Transform:
   m_GameObject: {fileID: 2758915815173104964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.7, y: 1.36, z: 0}
-  m_LocalScale: {x: 0.0644628, y: 0.06310601, z: 0.053640116}
+  m_LocalScale: {x: 0.090464346, y: 0.08856027, z: 0.07527625}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2758915816836921762}
@@ -345,7 +345,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ivyJustRevived: 0
   aloeVera: {fileID: 0}
-  revivedSprite: {fileID: 0}
 --- !u!114 &2758915815149198897
 MonoBehaviour:
   m_ObjectHideFlags: 0

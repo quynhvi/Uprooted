@@ -20,9 +20,10 @@ public class Jumppad : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, 0f);
                 rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
             }
-
-            bedDamaged.SetActive(true);
-            bed.SetActive(false);
+            if(bedDamaged != null)
+                bedDamaged.SetActive(true);
+            if (bed != null)
+                bed.SetActive(false);
 
             // Disable the platform effector to allow the character to pass through
             if (platformEffector != null)

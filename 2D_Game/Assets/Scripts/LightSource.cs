@@ -42,7 +42,7 @@ public class LightSource : MonoBehaviour
         if (!isPlayerInside) // Check if the player is not inside the light source
             return;
 
-        chargedLight = 0.002f;
+        chargedLight = 0.0005f;
         if (ResourceManagement.lightLevelNumber < 1f && collider.gameObject.CompareTag("Cactus"))
         {
             // Increment the time the player has been in the light source

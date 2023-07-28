@@ -19,8 +19,6 @@ public class Key : MonoBehaviour
 
     public InputActionReference collectKeyAction;
 
-    private Soundmanager soundamanager;
-
     private void OnEnable()
     {
         collectKeyAction.action.Enable();

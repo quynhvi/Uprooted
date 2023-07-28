@@ -28,6 +28,8 @@ TagManager:
   - Painting2
   - Garbage
   - Sound
+  - movable
+  - Box3
   layers:
   - Default
   - TransparentFX

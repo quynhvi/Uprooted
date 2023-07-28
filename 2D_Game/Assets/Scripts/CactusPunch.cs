@@ -20,12 +20,11 @@ public class CactusPunch : MonoBehaviour
     private DamagableBox1 damageableBox1;
     private DamageableGiraffe damageableGiraffe;
     private DamageableBox2 damageableBox2;
+    private DamageableBox3 damageableBox3;
     private DamageableBasket damageableBasket;
     private DamageableGarbage damageableGarbage;
 
     private Gamepad gamepad;
-
-    private Soundmanager soundmanager;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +39,7 @@ public class CactusPunch : MonoBehaviour
         damageableGutter = GameObject.FindGameObjectWithTag("Gutter").GetComponent<DamagableGutter>();
         damageableBox1 = GameObject.FindGameObjectWithTag("Box1").GetComponent<DamagableBox1>();
         damageableBox2 = GameObject.FindGameObjectWithTag("Box2").GetComponent<DamageableBox2>();
+        damageableBox3 = GameObject.FindGameObjectWithTag("Box3").GetComponent<DamageableBox3>();
         damageableGiraffe = GameObject.FindGameObjectWithTag("Giraffe").GetComponent<DamageableGiraffe>();
         damageableBasket = GameObject.FindGameObjectWithTag("Basket").GetComponent<DamageableBasket>();
         damageableGarbage = GameObject.FindGameObjectWithTag("Garbage").GetComponent<DamageableGarbage>();
@@ -47,8 +47,6 @@ public class CactusPunch : MonoBehaviour
         interactable = true;
 
         gamepad = Gamepad.current;
-
-        soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
     // Update is called once per frame
@@ -68,7 +66,6 @@ public class CactusPunch : MonoBehaviour
         {
             if (collider.CompareTag("damagable"))
             {
-                soundmanager.playSFX(soundmanager.cactusPunch);
                 Damageable();
                 break;
             }
@@ -81,41 +78,41 @@ public class CactusPunch : MonoBehaviour
 
             if (collider.CompareTag("Gutter"))
             {
-                soundmanager.playSFX(soundmanager.cactusPunch);
                 Gutter();
                 break;
             }
 
             if (collider.CompareTag("Box1"))
             {
-                soundmanager.playSFX(soundmanager.cactusPunch);
                 Box1();
                 break;
             }
 
             if (collider.CompareTag("Box2"))
             {
-                soundmanager.playSFX(soundmanager.cactusPunch);
                 Box2();
+                break;
+            }
+
+            if (collider.CompareTag("Box3"))
+            {
+                Box3();
                 break;
             }
 
             if (collider.CompareTag("Giraffe"))
             {
-                soundmanager.playSFX(soundmanager.cactusPunch);
                 Giraffe();
                 break;
             }
 
             if (collider.CompareTag("Basket"))
             {
-                soundmanager.playSFX(soundmanager.cactusPunch);
                 Basket();
                 break;
             }
             if (collider.CompareTag("Garbage"))
             {
-                soundmanager.playSFX(soundmanager.cactusPunch);
                 Garabge();
                 break;
             }
@@ -221,6 +218,25 @@ public class CactusPunch : MonoBehaviour
         StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
     }
 
+    private void Box3()
+    {
+        arm.SetActive(true); // Activate the arm object
+        Debug.Log("punch");
+        damageableBox3.TakeDamage();
+
+        ls.chargedLight = 0.03f;
+
+        if (rm != null && ls != null)
+        {
+            rm.lightLevelNumber -= ls.chargedLight;
+            rm.lightBarFill.fillAmount -= ls.chargedLight;
+            rm.waterLevelNumber -= ls.chargedLight;
+            rm.waterBarFill.fillAmount -= ls.chargedLight;
+        }
+
+        StartCoroutine(DisableArmAfterDelay(0.5f)); // Disable the arm after a certain duration
+    }
+
     private void Giraffe()
     {
         arm.SetActive(true); // Activate the arm object
@@ -295,6 +311,8 @@ public class CactusPunch : MonoBehaviour
         if (interactable && collision.gameObject.CompareTag("Box1") && ps.whichCharacter == 0)
             interactButton.SetActive(true);
         if (interactable && collision.gameObject.CompareTag("Box2") && ps.whichCharacter == 0)
+            interactButton.SetActive(true);
+        if (interactable && collision.gameObject.CompareTag("Box3") && ps.whichCharacter == 0)
             interactButton.SetActive(true);
         if (interactable && collision.gameObject.CompareTag("Giraffe") && ps.whichCharacter == 0)
             interactButton.SetActive(true);
