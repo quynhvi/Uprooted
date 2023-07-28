@@ -12,6 +12,7 @@ public class ResourceManagement : MonoBehaviour
     public LightSource lightSource;
 
     Soundmanager soundmanger;
+    private bool lowHPPlayed = false; // Flag to track if low HP sound has been played
 
     // Start is called before the first frame update
     void Awake()
@@ -40,9 +41,17 @@ public class ResourceManagement : MonoBehaviour
 
     private void LowHP()
     {
-        if (waterLevelNumber >= 0.8 || waterLevelNumber <= 0.2)
+        // If the water level is below 0.2 or above 0.8, and the sound has not been played yet
+        if ((waterLevelNumber <= 0.3f || waterLevelNumber >= 0.7f) && !lowHPPlayed)
         {
             soundmanger.playSFX(soundmanger.lowHPSound);
+            lowHPPlayed = true; // Set the flag to true to prevent playing the sound repeatedly
+        }
+
+        // If the water level is within the normal range, reset the flag
+        if (waterLevelNumber > 0.2f && waterLevelNumber < 0.8f)
+        {
+            lowHPPlayed = false;
         }
     }
 }

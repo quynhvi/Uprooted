@@ -15,6 +15,8 @@ public class DrawerOpen : MonoBehaviour
 
     public InputActionReference openDrawerAction;
 
+    private Soundmanager soundmanager;
+
     private void OnEnable()
     {
         openDrawerAction.action.Enable();
@@ -32,6 +34,7 @@ public class DrawerOpen : MonoBehaviour
         rm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
         interactable = true;
+        soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
     private void OpenDrawer(InputAction.CallbackContext context)
@@ -41,8 +44,10 @@ public class DrawerOpen : MonoBehaviour
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
             foreach (Collider2D collider in colliders)
             {
+                
                 if (collider.CompareTag("VFT"))
                 {
+                    soundmanager.playSFX(soundmanager.drawer);
                     ls.chargedLight = 0.03f;
 
                     drawerOpen.SetActive(true);
