@@ -95,7 +95,7 @@ public class AloeNumpad : MonoBehaviour
             }
             else
             {
-                animator.SetBool("isInteracting", false); // Move this line outside the loop
+                animator.SetBool("isInteracting", false); // Move this line here
             }
         }
     }
@@ -103,12 +103,14 @@ public class AloeNumpad : MonoBehaviour
     private IEnumerator OpenNumpadAfterAnimation()
     {
         isAnimationPlaying = true;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
 
         numpad.SetActive(true);
         interactable = false;
         isNumpadActive = true; // Set the numpad as active
         Time.timeScale = 0f;
+
+        animator.SetBool("isInteracting", false); // Move this line outside the coroutine to stop the animation
 
         isAnimationPlaying = false;
     }
