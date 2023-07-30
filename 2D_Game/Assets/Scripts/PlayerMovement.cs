@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnMovement(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
+        animator.SetFloat("Speed", Math.Abs(horizontal));
     }
 
     private void OnJump(InputAction.CallbackContext context)

@@ -72,7 +72,7 @@ public class GrabController : MonoBehaviour
     private IEnumerator GrabAfterAnimation(GameObject grabbedObject)
     {
         // Wait for the end of the animation (replace `0.5f` with the duration of your animation clip)
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
 
         animator.SetBool("isInteracting", false); // Reset the animation parameter
 
