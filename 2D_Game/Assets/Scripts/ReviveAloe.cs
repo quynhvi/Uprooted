@@ -10,7 +10,6 @@ public class ReviveAloe : MonoBehaviour
 
     [SerializeField] PlayableDirector aloeDirector;
     private bool cutscenePlayed = false; // Flag to check if the cutscene has been played
-    [SerializeField] private GameObject code2;
     public GameObject playableAloe;
     [SerializeField] private GameObject aloeDead2;
 
@@ -29,7 +28,6 @@ public class ReviveAloe : MonoBehaviour
         {
             aloeDirector.Play();
             cutscenePlayed = true;
-            code2.SetActive(true);
         }
 
     }
