@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public InputActionAsset inputActions;
     public InputActionReference jumpAction;
 
-    //public Animator animator;
+    public Animator animator;
 
 
     public void OnEnable()
@@ -59,6 +59,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             isGrounded = false; // Set grounded flag to false after jumping
+            animator.SetBool("isJumping", true);
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
         }
     }
 

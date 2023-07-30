@@ -19,6 +19,8 @@ public class GrabController : MonoBehaviour
     private Gamepad gamepad;
     private PlayerSwap playerSwap; // Reference to the PlayerSwap script
 
+    public Animator animator;
+
     private void Start()
     {
         rm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
@@ -27,7 +29,6 @@ public class GrabController : MonoBehaviour
 
         gamepad = Gamepad.current;
         playerSwap = FindAnyObjectByType<PlayerSwap>().GetComponent<PlayerSwap>();
-        //playerSwap = GetComponent<PlayerSwap>(); // Get the PlayerSwap script reference from the player object
     }
 
     private void Update()
@@ -46,7 +47,6 @@ public class GrabController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame))
             {
                 Debug.Log("Object Released");
-
                 heldObject.transform.parent = null;
                 heldObject.GetComponent<Rigidbody2D>().isKinematic = false;
                 heldObject = null;
@@ -57,25 +57,38 @@ public class GrabController : MonoBehaviour
         {
             if (heldObject == null && grabCheck.collider.CompareTag("dragable") && !droppedThisFrame && playerSwap.whichCharacter == 1)
             {
-                Debug.Log("grabbed");
                 // Grab the object if it is interactable and the grab input is pressed, and the second character is the current one
                 if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && playerSwap.whichCharacter == 1)
                 {
-                    grabCheck.collider.gameObject.transform.parent = grabHolder;
-                    grabCheck.collider.gameObject.transform.position = grabHolder.position;
-                    grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-                    heldObject = grabCheck.transform.gameObject;
-
-                    // Decrease resource levels
-                    if (rm != null && ls != null)
-                    {
-                        rm.lightLevelNumber -= ls.chargedLight;
-                        rm.lightBarFill.fillAmount -= ls.chargedLight;
-                        rm.waterLevelNumber -= ls.chargedLight;
-                        rm.waterBarFill.fillAmount -= ls.chargedLight;
-                    }
+                    animator.SetBool("isInteracting", true);
+                    // Start the coroutine to handle the grabbing process after the animation
+                    StartCoroutine(GrabAfterAnimation(grabCheck.collider.gameObject));
                 }
             }
+        }
+    }
+
+    // Coroutine to handle grabbing process after the animation
+    private IEnumerator GrabAfterAnimation(GameObject grabbedObject)
+    {
+        // Wait for the end of the animation (replace `0.5f` with the duration of your animation clip)
+        yield return new WaitForSeconds(0.5f);
+
+        animator.SetBool("isInteracting", false); // Reset the animation parameter
+
+        // Continue with grabbing the object
+        grabbedObject.transform.parent = grabHolder;
+        grabbedObject.transform.position = grabHolder.position;
+        grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        heldObject = grabbedObject;
+
+        // Decrease resource levels
+        if (rm != null && ls != null)
+        {
+            rm.lightLevelNumber -= ls.chargedLight;
+            rm.lightBarFill.fillAmount -= ls.chargedLight;
+            rm.waterLevelNumber -= ls.chargedLight;
+            rm.waterBarFill.fillAmount -= ls.chargedLight;
         }
     }
 }
