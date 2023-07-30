@@ -2965,7 +2965,7 @@ PrefabInstance:
       objectReference: {fileID: 3283037643526008354}
     - target: {fileID: 3283037643248452986, guid: 4bd8952c6497749f28c7889fbe78d602, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3283037643248452990, guid: 4bd8952c6497749f28c7889fbe78d602, type: 3}
       propertyPath: m_SortingOrder
@@ -2977,7 +2977,7 @@ PrefabInstance:
       objectReference: {fileID: 1891045031}
     - target: {fileID: 3283037643603474447, guid: 4bd8952c6497749f28c7889fbe78d602, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3283037643603474451, guid: 4bd8952c6497749f28c7889fbe78d602, type: 3}
       propertyPath: numpad
@@ -3789,6 +3789,10 @@ PrefabInstance:
       propertyPath: aloeRevivedSprite
       value: 
       objectReference: {fileID: 21300000, guid: 5d4f449102c444fb2a5c44a1d8ff30bb, type: 3}
+    - target: {fileID: 1125286370671198863, guid: 2c873a5d620fa4dd88a4ac95f36716ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f32bf24ab0fae4521b5730a5f575355a, type: 3}
     - target: {fileID: 2427894985303273095, guid: 2c873a5d620fa4dd88a4ac95f36716ba, type: 3}
       propertyPath: m_IsActive
       value: 1
