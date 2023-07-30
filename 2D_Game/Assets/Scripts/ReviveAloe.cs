@@ -6,25 +6,20 @@ using UnityEngine.Playables;
 public class ReviveAloe : MonoBehaviour
 {
     public bool aloeRevived = false;
-    private PlayerMovement aloeMovement;
     private PlayerSwap playerSwapScript;
-    private SpriteRenderer spriteRenderer;
 
     [SerializeField] PlayableDirector aloeDirector;
     private bool cutscenePlayed = false; // Flag to check if the cutscene has been played
     [SerializeField] private GameObject code2;
+    public GameObject playableAloe;
+    [SerializeField] private GameObject aloeDead2;
 
     private Soundmanager soundmanager;
-
-    public Sprite revivedSprite;  
 
     // Start is called before the first frame update
     void Start()
     {
         playerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
-        aloeMovement = GetComponent<PlayerMovement>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        aloeMovement.enabled = false;
         soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
@@ -45,15 +40,13 @@ public class ReviveAloe : MonoBehaviour
         {
             if (!aloeRevived)
             {
+                playableAloe.SetActive(true);
+                aloeDead2.SetActive(false);
                 soundmanager.playSFX(soundmanager.revive);
-                playerSwapScript.possibleCharacters.Add(transform);
+                playerSwapScript.possibleCharacters.Add(playableAloe.transform);
                 playerSwapScript.SwitchToCharacter(playerSwapScript.possibleCharacters.Count - 1);
                 playerSwapScript.whichCharacter = 3;
                 aloeRevived = true;
-                aloeMovement.enabled = true;
-
-                // Change the sprite to the revived sprite
-                spriteRenderer.sprite = revivedSprite;
             }
         }
     }

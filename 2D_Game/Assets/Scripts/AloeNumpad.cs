@@ -12,6 +12,9 @@ public class AloeNumpad : MonoBehaviour
     private bool interactable;
     private bool isNumpadActive = false; // Flag to track if the numpad is active
 
+    public Animator animator;
+    private bool isAnimationPlaying = false;
+
     Controls action;
     public InputActionReference numpadAction;
 
@@ -75,18 +78,39 @@ public class AloeNumpad : MonoBehaviour
         if (interactable && !isNumpadActive) // Check if the numpad is not active
         {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f);
+            bool canInteract = false; // Flag to track if the interaction can happen
             foreach (Collider2D collider in colliders)
             {
                 if (collider.CompareTag("AloeArm") && ps.whichCharacter == 3 || ps.whichCharacter == 2 && gameObject.CompareTag("AloeArm")) // Aloe is colliding and currently being played!
                 {
-                    numpad.SetActive(true);
-                    interactable = false;
-                    isNumpadActive = true; // Set the numpad as active
-                    Time.timeScale = 0f;
+                    canInteract = true;
                     break;
                 }
             }
+
+            if (canInteract)
+            {
+                animator.SetBool("isInteracting", true);
+                StartCoroutine(OpenNumpadAfterAnimation());
+            }
+            else
+            {
+                animator.SetBool("isInteracting", false); // Move this line outside the loop
+            }
         }
+    }
+
+    private IEnumerator OpenNumpadAfterAnimation()
+    {
+        isAnimationPlaying = true;
+        yield return new WaitForSeconds(3f);
+
+        numpad.SetActive(true);
+        interactable = false;
+        isNumpadActive = true; // Set the numpad as active
+        Time.timeScale = 0f;
+
+        isAnimationPlaying = false;
     }
 
     // Call this method to close the numpad and re-enable player input.

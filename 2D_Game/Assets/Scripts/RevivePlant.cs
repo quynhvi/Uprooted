@@ -13,6 +13,8 @@ public class RevivePlant : MonoBehaviour
     public Sprite revivedSprite;
 
     [SerializeField] private GameObject aloeVera;
+    [SerializeField] private GameObject fakeAloe;
+    [SerializeField] private GameObject ivySpeech;
     [SerializeField] private PlayableDirector ivyDirector;
     private bool cutscenePlayed = false; // Flag to check if the cutscene has been played
 
@@ -46,6 +48,8 @@ public class RevivePlant : MonoBehaviour
             {
                 soundmanager.playSFX(soundmanager.revive);
                 aloeVera.SetActive(true);
+                fakeAloe.SetActive(false);
+                ivySpeech.SetActive(false);
                 playerSwapScript.possibleCharacters.Add(transform);
                 playerSwapScript.SwitchToCharacter(playerSwapScript.possibleCharacters.Count - 1);
                 playerSwapScript.whichCharacter = 2;

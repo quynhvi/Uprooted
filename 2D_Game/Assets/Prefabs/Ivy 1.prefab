@@ -348,6 +348,8 @@ MonoBehaviour:
   ivyJustRevived: 0
   revivedSprite: {fileID: 0}
   aloeVera: {fileID: 0}
+  fakeAloe: {fileID: 0}
+  ivySpeech: {fileID: 0}
   ivyDirector: {fileID: 0}
 --- !u!114 &2758915815149198897
 MonoBehaviour:
@@ -1449,8 +1451,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5383492739311440752}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.6943693, y: 5.4930725, z: 0.073087454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.45, y: 4.59, z: 0.073087454}
   m_LocalScale: {x: 0.90546864, y: 0.9249365, z: 1.0881603}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1498,7 +1500,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f039b8b8f03ad4aa0aba5682284171af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71c0d9662f5d44e3d992495f552a9d13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

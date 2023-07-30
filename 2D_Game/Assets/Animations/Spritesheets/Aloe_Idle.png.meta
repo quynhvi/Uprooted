@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a4b188fe46c584f6a8f9eee2ccce1b86
+guid: bc49ab6a3b1b54193a57e52c66127a1d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: aloe idle spritesheet_0
+      name: Aloe_Idle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1587
-        width: 332
-        height: 529
+        y: 1821
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fd9ab24bcf33406ab98c6934c05f20c
-      internalID: -662267327
+      spriteID: 9276d260bb7514df2bb71e990501ebca
+      internalID: 739492036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_1
+      name: Aloe_Idle_1
       rect:
         serializedVersion: 2
-        x: 332
-        y: 1587
-        width: 332
-        height: 529
+        x: 471
+        y: 1821
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abd861aaabbc94b429805d60e0aceb3b
-      internalID: 923292284
+      spriteID: a335e39e6385a44d9b8f165ad6db662d
+      internalID: 1130882820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_2
+      name: Aloe_Idle_2
       rect:
         serializedVersion: 2
-        x: 664
-        y: 1587
-        width: 332
-        height: 529
+        x: 942
+        y: 1821
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d679d6ef5d7184ee48cbead9ec3396ce
-      internalID: 65550150
+      spriteID: 7a9add53fd2c5454598970cb8b0039ad
+      internalID: -676973451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_3
+      name: Aloe_Idle_3
       rect:
         serializedVersion: 2
-        x: 996
-        y: 1587
-        width: 332
-        height: 529
+        x: 1413
+        y: 1821
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b5d8d740d7f44c6095309e7c71cfe32
-      internalID: 480406993
+      spriteID: 59a86f6d8c49d43ec9cc1d64c4e04b18
+      internalID: 1994148233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_4
+      name: Aloe_Idle_4
       rect:
         serializedVersion: 2
-        x: 1328
-        y: 1587
-        width: 332
-        height: 529
+        x: 1884
+        y: 1821
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39d6c1b2c51a34f80b902bd989ba9619
-      internalID: 1320820235
+      spriteID: bb147f4f6fd2443cc9be45740bcc5434
+      internalID: 1300298085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_5
+      name: Aloe_Idle_5
       rect:
         serializedVersion: 2
-        x: 1660
-        y: 1587
-        width: 332
-        height: 529
+        x: 2355
+        y: 1821
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,146 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dc2b74f633e549d18b915b61564546f
-      internalID: -2009463718
+      spriteID: 89bdc0283e0c544d684cd317e0dc9ce5
+      internalID: 1951707467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1058
-        width: 332
-        height: 529
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21992a580757e41ef8bbb97ee6748460
-      internalID: 963756887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe idle spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 332
-        y: 1058
-        width: 332
-        height: 529
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c75647b662044cd68c31286cef5ec8c
-      internalID: -1298797835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe idle spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 664
-        y: 1058
-        width: 332
-        height: 529
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ab437d204ff744bd98db74166bbb87d
-      internalID: -2065362653
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe idle spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 996
-        y: 1058
-        width: 332
-        height: 529
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4851a08f9f1544b1ab7c41fa352e8323
-      internalID: -135992988
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe idle spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 1328
-        y: 1058
-        width: 332
-        height: 529
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0599aed74b6674c1d8036e753f5e7ae3
-      internalID: -1077550986
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe idle spritesheet_11
-      rect:
-        serializedVersion: 2
-        x: 1660
-        y: 1058
-        width: 332
-        height: 529
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0195e194a1c27479e9c6b5cca4a81abf
-      internalID: -5083802
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe idle spritesheet_12
+      name: Aloe_Idle_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 529
-        width: 332
-        height: 529
+        y: 1214
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c3e9ffdf77964af5b6f99818fb01598
-      internalID: -307962818
+      spriteID: 02e90d4edc5be45ea8ff1b485f047f3f
+      internalID: -2418734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_13
+      name: Aloe_Idle_7
       rect:
         serializedVersion: 2
-        x: 332
-        y: 529
-        width: 332
-        height: 529
+        x: 471
+        y: 1214
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,20 +266,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f05c6a96f481544e6b9681110554f820
-      internalID: 1103807858
+      spriteID: 0f5184a91d7b24b6da82992ec0d75a50
+      internalID: 1126704204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_14
+      name: Aloe_Idle_8
       rect:
         serializedVersion: 2
-        x: 664
-        y: 529
-        width: 332
-        height: 529
+        x: 942
+        y: 1214
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -413,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e49561068d8164f569509b00210f8702
-      internalID: -1811463470
+      spriteID: 307496ce662de450fab2043df66f73d0
+      internalID: -279124203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_15
+      name: Aloe_Idle_9
       rect:
         serializedVersion: 2
-        x: 996
-        y: 529
-        width: 332
-        height: 529
+        x: 1413
+        y: 1214
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b6482c5fe77b415eb5b9ae6e69cc8f7
-      internalID: 2066547980
+      spriteID: af6c8e2ec58bc4c829dd33bd0bc03bc3
+      internalID: 1826449156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_16
+      name: Aloe_Idle_10
       rect:
         serializedVersion: 2
-        x: 1328
-        y: 529
-        width: 332
-        height: 529
+        x: 1884
+        y: 1214
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,20 +329,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a2e5f283791148c1801eb2736ca18c3
-      internalID: 761260765
+      spriteID: cba1d1566d92f4e7ba0e470143e5df91
+      internalID: -38494895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_17
+      name: Aloe_Idle_11
       rect:
         serializedVersion: 2
-        x: 1660
-        y: 529
-        width: 332
-        height: 529
+        x: 2355
+        y: 1214
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -476,20 +350,146 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3013ac6b39c44e2ebb484410af73479
-      internalID: 689359441
+      spriteID: 4a764fa962fcb48b1907c6aa9a5e6216
+      internalID: -175098186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_18
+      name: Aloe_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 607
+        width: 471.83334
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06c0378c86504b13a072c262b898b30
+      internalID: -1724360558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aloe_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 607
+        width: 471.83334
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0777dd52be9b43d89b6e91df124ae35
+      internalID: -1252279593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aloe_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 607
+        width: 471.83334
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d6dd632c896497c9ed712446570781
+      internalID: 522716315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aloe_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 607
+        width: 471.83334
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a76e2b21eadc41059b3f8245c75d919
+      internalID: -283761593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aloe_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 607
+        width: 471.83334
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18edc8faef3646a8b04a03f5ee31931
+      internalID: 1688519654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aloe_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 2355
+        y: 607
+        width: 471.83334
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd793c9764504abaabddfb6cd2bacf7
+      internalID: -2063164318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aloe_Idle_18
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 332
-        height: 529
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -497,20 +497,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85af125d305e24f49a38562f100fc160
-      internalID: 2122120223
+      spriteID: 3239b8364157142bf8f0add4be0553e4
+      internalID: 1200763187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_19
+      name: Aloe_Idle_19
       rect:
         serializedVersion: 2
-        x: 332
+        x: 471
         y: 0
-        width: 332
-        height: 529
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -518,20 +518,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d26ccaac8aa8446ba7a2cae97ce575f
-      internalID: -960749251
+      spriteID: 61c2b6d0379b24c529e1043cf023ff8b
+      internalID: -847998896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_20
+      name: Aloe_Idle_20
       rect:
         serializedVersion: 2
-        x: 664
+        x: 942
         y: 0
-        width: 332
-        height: 529
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,20 +539,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdfb6ba7bcf014426a1363d1d1d79b12
-      internalID: 641512219
+      spriteID: 38755e14d024a466bb0193c4f8e88b63
+      internalID: -893775670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe idle spritesheet_21
+      name: Aloe_Idle_21
       rect:
         serializedVersion: 2
-        x: 996
+        x: 1413
         y: 0
-        width: 332
-        height: 529
+        width: 471.83334
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -560,50 +560,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad1236ddaa9334115acdca592925aced
-      internalID: -2130361909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe idle spritesheet_22
-      rect:
-        serializedVersion: 2
-        x: 1328
-        y: 0
-        width: 332
-        height: 529
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 000a649fdc8e9489eb2c113e0133b9dd
-      internalID: 1663677179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe idle spritesheet_23
-      rect:
-        serializedVersion: 2
-        x: 1660
-        y: 0
-        width: 332
-        height: 529
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f24348553a7c746f4a8c2e9bf7aa9ddd
-      internalID: -240985621
+      spriteID: 3c16d10475df34b34b232e42717569c2
+      internalID: 1311287011
       vertices: []
       indices: 
       edges: []
@@ -619,30 +577,28 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      aloe idle spritesheet_0: -662267327
-      aloe idle spritesheet_1: 923292284
-      aloe idle spritesheet_10: -1077550986
-      aloe idle spritesheet_11: -5083802
-      aloe idle spritesheet_12: -307962818
-      aloe idle spritesheet_13: 1103807858
-      aloe idle spritesheet_14: -1811463470
-      aloe idle spritesheet_15: 2066547980
-      aloe idle spritesheet_16: 761260765
-      aloe idle spritesheet_17: 689359441
-      aloe idle spritesheet_18: 2122120223
-      aloe idle spritesheet_19: -960749251
-      aloe idle spritesheet_2: 65550150
-      aloe idle spritesheet_20: 641512219
-      aloe idle spritesheet_21: -2130361909
-      aloe idle spritesheet_22: 1663677179
-      aloe idle spritesheet_23: -240985621
-      aloe idle spritesheet_3: 480406993
-      aloe idle spritesheet_4: 1320820235
-      aloe idle spritesheet_5: -2009463718
-      aloe idle spritesheet_6: 963756887
-      aloe idle spritesheet_7: -1298797835
-      aloe idle spritesheet_8: -2065362653
-      aloe idle spritesheet_9: -135992988
+      Aloe_Idle_0: 739492036
+      Aloe_Idle_1: 1130882820
+      Aloe_Idle_10: -38494895
+      Aloe_Idle_11: -175098186
+      Aloe_Idle_12: -1724360558
+      Aloe_Idle_13: -1252279593
+      Aloe_Idle_14: 522716315
+      Aloe_Idle_15: -283761593
+      Aloe_Idle_16: 1688519654
+      Aloe_Idle_17: -2063164318
+      Aloe_Idle_18: 1200763187
+      Aloe_Idle_19: -847998896
+      Aloe_Idle_2: -676973451
+      Aloe_Idle_20: -893775670
+      Aloe_Idle_21: 1311287011
+      Aloe_Idle_3: 1994148233
+      Aloe_Idle_4: 1300298085
+      Aloe_Idle_5: 1951707467
+      Aloe_Idle_6: -2418734
+      Aloe_Idle_7: 1126704204
+      Aloe_Idle_8: -279124203
+      Aloe_Idle_9: 1826449156
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
