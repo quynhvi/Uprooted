@@ -150,7 +150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d1953c1a455ed44b5baefe7911ff03b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 068ed68af847b48d39dc43994fcd4f0c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -688,7 +688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numpad: {fileID: 0}
-  interactButton: {fileID: 8291657037336321685}
+  interactButton: {fileID: 1303654118918256637}
   animator: {fileID: 8406021452255794771}
   numpadAction: {fileID: 9103543313068027609, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
 --- !u!1 &3283037644066818703
