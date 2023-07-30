@@ -103,7 +103,7 @@ public class AloeNumpad : MonoBehaviour
     private IEnumerator OpenNumpadAfterAnimation()
     {
         isAnimationPlaying = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
 
         numpad.SetActive(true);
         interactable = false;

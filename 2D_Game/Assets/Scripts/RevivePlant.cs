@@ -19,6 +19,7 @@ public class RevivePlant : MonoBehaviour
     private bool cutscenePlayed = false; // Flag to check if the cutscene has been played
 
     private Soundmanager soundmanager;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Awake()
@@ -46,6 +47,7 @@ public class RevivePlant : MonoBehaviour
         {
             if (!ivyJustRevived)
             {
+                animator.SetBool("isRevived", true);
                 soundmanager.playSFX(soundmanager.revive);
                 aloeVera.SetActive(true);
                 fakeAloe.SetActive(false);

@@ -30,6 +30,7 @@ TagManager:
   - Sound
   - movable
   - Box3
+  - AloeDead
   layers:
   - Default
   - TransparentFX
