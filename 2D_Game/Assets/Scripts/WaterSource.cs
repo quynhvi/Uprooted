@@ -6,6 +6,7 @@ public class WaterSource : MonoBehaviour
 {
     private ResourceManagement RessourceManagement;
     public float chargedWater;
+    public bool isCharging;
 
     Soundmanager soundmanager;
 
@@ -21,6 +22,8 @@ public class WaterSource : MonoBehaviour
         if (RessourceManagement.waterLevelNumber < 1f && collider.gameObject.CompareTag("Cactus"))
         {
             soundmanager.playSFX(soundmanager.waterCharge);
+            isCharging = true;
+
             if (RessourceManagement.waterLevelNumber > 1f)
                 return;
             RessourceManagement.waterLevelNumber += chargedWater;
@@ -31,5 +34,6 @@ public class WaterSource : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collider)
     {
         chargedWater = 0f; // Reset the chargedWater value when the player exits the water source trigger
+        isCharging = false;
     }
 }

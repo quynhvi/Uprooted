@@ -13,6 +13,7 @@ public class ResourceManagement : MonoBehaviour
 
     Soundmanager soundmanger;
     private bool lowHPPlayed = false; // Flag to track if low HP sound has been played
+    private WaterSource watersource;
 
     // Start is called before the first frame update
     void Awake()
@@ -22,6 +23,7 @@ public class ResourceManagement : MonoBehaviour
         lightLevelNumber = 0.4f;
         waterBarFill.fillAmount = 0.6f; //Water Level is set to 60% at the start of the game
         waterLevelNumber = 0.6f;
+        watersource = FindAnyObjectByType<WaterSource>().GetComponent<WaterSource>();
 
         soundmanger = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
@@ -35,21 +37,21 @@ public class ResourceManagement : MonoBehaviour
 
     private void CheckForDeath()
     {
-        if (lightLevelNumber <= 0 || waterLevelNumber <= 0 || waterLevelNumber >= 1)
+        if (lightLevelNumber <= 0 || waterLevelNumber <= 0 || waterLevelNumber > 1)
             this.gameObject.GetComponent<GMScript>().GameOver();
     }
 
     private void LowHP()
     {
-        // If the water level is below 0.2 or above 0.8, and the sound has not been played yet
-        if ((waterLevelNumber <= 0.3f || waterLevelNumber >= 0.7f) && !lowHPPlayed)
+        // If the water level is below 0.3 or above 0.7, and the sound has not been played yet
+        if ((waterLevelNumber <= 0.3f || (waterLevelNumber >= 0.7f && watersource.isCharging)) && !lowHPPlayed)
         {
             soundmanger.playSFX(soundmanger.lowHPSound);
             lowHPPlayed = true; // Set the flag to true to prevent playing the sound repeatedly
         }
 
         // If the water level is within the normal range, reset the flag
-        if (waterLevelNumber > 0.2f && waterLevelNumber < 0.8f)
+        if (waterLevelNumber > 0.3f && waterLevelNumber < 0.7f)
         {
             lowHPPlayed = false;
         }
