@@ -41,7 +41,7 @@ public class LightSource : MonoBehaviour
         if (!isPlayerInside)
             return;
 
-        chargedLight = 0.0005f;
+        chargedLight = 0.0003f;
         if (collider.gameObject.CompareTag("Cactus"))
         {
             timeInLight += Time.deltaTime;

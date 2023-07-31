@@ -13,7 +13,6 @@ public class ResourceManagement : MonoBehaviour
 
     Soundmanager soundmanger;
     private bool lowHPPlayed = false; // Flag to track if low HP sound has been played
-    private WaterSource watersource;
     public Animator animator;
 
     // Start is called before the first frame update
@@ -24,7 +23,6 @@ public class ResourceManagement : MonoBehaviour
         lightLevelNumber = 0.4f;
         waterBarFill.fillAmount = 0.6f; // Water Level is set to 60% at the start of the game
         waterLevelNumber = 0.6f;
-        watersource = FindAnyObjectByType<WaterSource>().GetComponent<WaterSource>();
 
         soundmanger = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
@@ -46,17 +44,23 @@ public class ResourceManagement : MonoBehaviour
     private void LowHP()
     {
         // If the water level is below 0.3 or above 0.7, and the sound has not been played yet
-        if (waterLevelNumber <= 0.3f && !lowHPPlayed)
+        if (waterLevelNumber <= 0.3f)
         {
+            if (!lowHPPlayed)
+            {
+                soundmanger.playSFX(soundmanger.lowHPSound);
+                lowHPPlayed = true; // Set the flag to true to prevent playing the sound repeatedly
+            }
             animator.SetBool("LowHealth", true); // Set the "LowHealth" parameter to true
-            soundmanger.playSFX(soundmanger.lowHPSound);
-            lowHPPlayed = true; // Set the flag to true to prevent playing the sound repeatedly
         }
-        else if (waterLevelNumber >= 0.6f && watersource.isCharging && !lowHPPlayed)
+        else if (waterLevelNumber >= 0.6f)
         {
+            if (!lowHPPlayed)
+            {
+                soundmanger.playSFX(soundmanger.lowHPSound);
+                lowHPPlayed = true; // Set the flag to true to prevent playing the sound repeatedly
+            }
             animator.SetBool("HighHealth", true); // Set the "HighHealth" parameter to true
-            soundmanger.playSFX(soundmanger.lowHPSound);
-            lowHPPlayed = true; // Set the flag to true to prevent playing the sound repeatedly
         }
         else
         {
