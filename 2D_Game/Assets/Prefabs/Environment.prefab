@@ -19623,7 +19623,7 @@ GameObject:
   - component: {fileID: 4031893754748446077}
   - component: {fileID: 4547739309568967709}
   - component: {fileID: 7246295241735790392}
-  m_Layer: 19
+  m_Layer: 6
   m_Name: Chair_S33
   m_TagString: movable
   m_Icon: {fileID: 0}

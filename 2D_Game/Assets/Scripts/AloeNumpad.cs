@@ -15,6 +15,7 @@ public class AloeNumpad : MonoBehaviour
     public Animator animator;
     private bool isAnimationPlaying = false;
 
+    private PlayerMovement playerMovement;
     Controls action;
     public InputActionReference numpadAction;
 
@@ -28,6 +29,7 @@ public class AloeNumpad : MonoBehaviour
         ps = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
         interactable = true;
         action.Default.Interact.performed += _ => DetermineNumpad();
+        playerMovement = GameObject.FindGameObjectWithTag("AloeVera").GetComponent<PlayerMovement>();
     }
 
     private void OnEnable()
@@ -91,10 +93,12 @@ public class AloeNumpad : MonoBehaviour
             if (canInteract)
             {
                 animator.SetBool("isInteracting", true);
+                playerMovement.enabled = false;
                 StartCoroutine(OpenNumpadAfterAnimation());
             }
             else
             {
+                playerMovement.enabled = true;
                 animator.SetBool("isInteracting", false); // Move this line here
             }
         }
@@ -103,7 +107,8 @@ public class AloeNumpad : MonoBehaviour
     private IEnumerator OpenNumpadAfterAnimation()
     {
         isAnimationPlaying = true;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
+        playerMovement.enabled = true;
 
         numpad.SetActive(true);
         interactable = false;

@@ -540,6 +540,7 @@ GameObject:
   - component: {fileID: 3062268977164153344}
   - component: {fileID: 3062268977164153407}
   - component: {fileID: 3062268977164153405}
+  - component: {fileID: 1091873026186694826}
   - component: {fileID: 3062268977164153406}
   - component: {fileID: 3062268977164153346}
   - component: {fileID: 8311608368231555346}
@@ -613,7 +614,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 590dd15c9ba5848458f9daefec0c27bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -646,7 +647,7 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &3062268977164153406
+--- !u!114 &1091873026186694826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -654,6 +655,21 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3062268977164153403}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530975789442242d290bb539c0fa25d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aloeRevived: 0
+  aloeDirector: {fileID: 0}
+  animator: {fileID: 8311608368231555346}
+--- !u!114 &3062268977164153406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3062268977164153403}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 429d0c10954ea4a72a6ede94474c7242, type: 3}
   m_Name: 

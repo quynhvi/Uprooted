@@ -8,6 +8,7 @@ public class ReviveAloe : MonoBehaviour
     public bool aloeRevived = false;
     private PlayerMovement aloeMovement;
     private PlayerSwap playerSwapScript;
+    private AloeZone aloeZone;
     //private SpriteRenderer spriteRenderer;
 
     [SerializeField] PlayableDirector aloeDirector;
@@ -23,8 +24,10 @@ public class ReviveAloe : MonoBehaviour
     {
         playerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
         aloeMovement = GetComponent<PlayerMovement>();
+        aloeZone = GetComponent<AloeZone>();
         //spriteRenderer = GetComponent<SpriteRenderer>();
         aloeMovement.enabled = false;
+        aloeZone.enabled = false;
         soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
 
@@ -51,7 +54,7 @@ public class ReviveAloe : MonoBehaviour
                 playerSwapScript.whichCharacter = 3;
                 aloeRevived = true;
                 aloeMovement.enabled = true;
-
+                aloeZone.enabled = true;
                 // Change the sprite to the revived sprite
                 //spriteRenderer.sprite = revivedSprite;
             }
