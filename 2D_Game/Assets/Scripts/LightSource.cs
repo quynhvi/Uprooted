@@ -48,15 +48,15 @@ public class LightSource : MonoBehaviour
 
             if (timeInLight >= delayBeforeSound)
             {
-                soundmanager.playSFX(soundmanager.lightCharge);
+               // soundmanager.playSFX(soundmanager.lightCharge);
             }
 
-            // Update the light level
-            if (ResourceManagement.lightLevelNumber < 1f)
-            {
-                ResourceManagement.lightLevelNumber += chargedLight;
-                ResourceManagement.lightBarFill.fillAmount += chargedLight;
-            }
+            //// Update the light level
+            //if (ResourceManagement.lightLevelNumber < 1f)
+            //{
+            //    ResourceManagement.lightLevelNumber += chargedLight;
+            //    ResourceManagement.lightBarFill.fillAmount += chargedLight;
+            //}
 
             // Update the water level
             if (ResourceManagement.waterLevelNumber > 0f)
