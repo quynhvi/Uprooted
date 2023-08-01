@@ -14066,6 +14066,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 587429933}
+    - target: {fileID: 3056827277268974079, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3125589246563906242, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
       propertyPath: interactButton
       value: 
@@ -14113,6 +14117,10 @@ PrefabInstance:
     - target: {fileID: 4851997789874554868, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283670568853445832, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5376579861772141266, guid: d85ad3d74a9e3406b8d42bdaa969210a, type: 3}
       propertyPath: m_LocalPosition.x
