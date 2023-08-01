@@ -19,6 +19,9 @@ public class MainMenu : MonoBehaviour
     //public Transform ButtonPosition3;
     //public Transform ButtonPosition4;
 
+    [SerializeField] private GameObject startFront;
+    [SerializeField] private GameObject quitFront;
+
     private void OnPlay()
     {
         if (SelectedButton == 1)
@@ -40,6 +43,8 @@ public class MainMenu : MonoBehaviour
         {
             SelectedButton -= 1;
         }
+        startFront.SetActive(true);
+        quitFront.SetActive(false);
         MoveThePointer();
         return;
     }
@@ -50,6 +55,8 @@ public class MainMenu : MonoBehaviour
         {
             SelectedButton += 1;
         }
+        quitFront.SetActive(true);
+        startFront.SetActive(false);
         MoveThePointer();
         return;
     }
