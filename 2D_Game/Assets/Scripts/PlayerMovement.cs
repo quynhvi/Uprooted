@@ -51,6 +51,12 @@ public class PlayerMovement : MonoBehaviour
     private void OnMovement(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
+        animator.SetFloat("Speed", Math.Abs(horizontal));
+        // Check if the player is not jumping and set the isJumping parameter to false
+        if (context.phase == InputActionPhase.Canceled)
+        {
+            animator.SetBool("isJumping", false);
+        }
     }
 
     private void OnJump(InputAction.CallbackContext context)
@@ -63,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            animator.SetBool("isJumping", false);
+            //animator.SetBool("isJumping", false);
         }
     }
 

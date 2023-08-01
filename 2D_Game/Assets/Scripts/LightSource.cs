@@ -41,22 +41,22 @@ public class LightSource : MonoBehaviour
         if (!isPlayerInside)
             return;
 
-        chargedLight = 0.0005f;
+        chargedLight = 0.0003f;
         if (collider.gameObject.CompareTag("Cactus"))
         {
             timeInLight += Time.deltaTime;
 
             if (timeInLight >= delayBeforeSound)
             {
-                soundmanager.playSFX(soundmanager.lightCharge);
+               // soundmanager.playSFX(soundmanager.lightCharge);
             }
 
-            // Update the light level
-            if (ResourceManagement.lightLevelNumber < 1f)
-            {
-                ResourceManagement.lightLevelNumber += chargedLight;
-                ResourceManagement.lightBarFill.fillAmount += chargedLight;
-            }
+            //// Update the light level
+            //if (ResourceManagement.lightLevelNumber < 1f)
+            //{
+            //    ResourceManagement.lightLevelNumber += chargedLight;
+            //    ResourceManagement.lightBarFill.fillAmount += chargedLight;
+            //}
 
             // Update the water level
             if (ResourceManagement.waterLevelNumber > 0f)

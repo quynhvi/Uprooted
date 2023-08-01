@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1a8fa6355d12a402d938207c187b65f0
+guid: b34d51742e82c4b078103d5284340775
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,154 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: aloe walk spritesheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1084
-        width: 325
-        height: 542
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d86ad9c8f3f949b0856cdd040d61c63
-      internalID: -659030493
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe walk spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 325
-        y: 1084
-        width: 325
-        height: 542
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec8e04e1180b74ac0be083cf77215575
-      internalID: 1881966472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe walk spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 650
-        y: 1084
-        width: 325
-        height: 542
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 747b593354e744a768d3e13747e9fd6f
-      internalID: 1254481460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe walk spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 975
-        y: 1084
-        width: 325
-        height: 542
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63c53ffd735d34c24a20f5b4b1b11a53
-      internalID: -1970621690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe walk spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 1300
-        y: 1084
-        width: 325
-        height: 542
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 549956d2fa0ae4d9c96d3b4f90bc3568
-      internalID: 371215051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe walk spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 1625
-        y: 1084
-        width: 325
-        height: 542
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c92e32afe3aaa420cbdb07f73ea6cc31
-      internalID: 638414845
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe walk spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 1950
-        y: 1084
-        width: 325
-        height: 542
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0f165c49e64c4dfab893785e21ba54f
-      internalID: 746602465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe walk spritesheet_7
+      name: Aloe_Walk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -266,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 933e1c549d9694db6b6866e474d411a6
-      internalID: 633821621
+      spriteID: 61c9fce40ddfc42e09b3ea6a27c61f9a
+      internalID: 1224032732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe walk spritesheet_8
+      name: Aloe_Walk_1
       rect:
         serializedVersion: 2
         x: 325
@@ -287,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 869bd052cf7f847e8bc7300af7b5bbb9
-      internalID: 1970184851
+      spriteID: 439380505328b45179fa5415e6b0aff7
+      internalID: -2129187412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe walk spritesheet_9
+      name: Aloe_Walk_2
       rect:
         serializedVersion: 2
         x: 650
@@ -308,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3ebd107edbbf4ba782fd37a0a867d40
-      internalID: 791710559
+      spriteID: 4dd4edafa52954388a161c4dd9795382
+      internalID: 1516884299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe walk spritesheet_10
+      name: Aloe_Walk_3
       rect:
         serializedVersion: 2
         x: 975
@@ -329,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b8e38399a64042759ddfada68e81070
-      internalID: -30235250
+      spriteID: dc14923cb59de49df83110a9f98a232b
+      internalID: -1391202594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe walk spritesheet_11
+      name: Aloe_Walk_4
       rect:
         serializedVersion: 2
         x: 1300
@@ -350,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abf74a7d2f66f4e11876fdab3c436c3f
-      internalID: -1053678258
+      spriteID: ff7367292e3604499b3b7edb7e6a0aa4
+      internalID: -1253575693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe walk spritesheet_12
+      name: Aloe_Walk_5
       rect:
         serializedVersion: 2
         x: 1625
@@ -371,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8edab36c5477d490ea2134a009caa0e7
-      internalID: 1860593995
+      spriteID: 7be1c2150513043c6a1d880b0ff9066f
+      internalID: -2099396395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe walk spritesheet_13
+      name: Aloe_Walk_6
       rect:
         serializedVersion: 2
         x: 1950
@@ -392,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 092309ff2bfe946bfb582136e44e3999
-      internalID: -858873137
+      spriteID: 7f70dbd15240142dab77245a5b69af53
+      internalID: -1180169911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe walk spritesheet_14
+      name: Aloe_Walk_7
       rect:
         serializedVersion: 2
         x: 0
@@ -413,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04cd39217e71e407e8201f0cbf571f40
-      internalID: -1881638774
+      spriteID: 860ae5754d25c4667972346a57f945ad
+      internalID: -1122083126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aloe walk spritesheet_15
+      name: Aloe_Walk_8
       rect:
         serializedVersion: 2
         x: 325
@@ -434,50 +287,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf7997ed1e2714968a72f1f425086d6a
-      internalID: -407862716
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe walk spritesheet_16
-      rect:
-        serializedVersion: 2
-        x: 650
-        y: 0
-        width: 325
-        height: 542
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0739b7af4bb714bc68126ef3975812b9
-      internalID: -225236621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aloe walk spritesheet_17
-      rect:
-        serializedVersion: 2
-        x: 975
-        y: 0
-        width: 325
-        height: 542
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d7c991727ed14565bfd5bf12838047b
-      internalID: 781851814
+      spriteID: 5b3063048b10a4ca591699e279048d6c
+      internalID: -1262977417
       vertices: []
       indices: 
       edges: []
@@ -493,24 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      aloe walk spritesheet_0: -659030493
-      aloe walk spritesheet_1: 1881966472
-      aloe walk spritesheet_10: -30235250
-      aloe walk spritesheet_11: -1053678258
-      aloe walk spritesheet_12: 1860593995
-      aloe walk spritesheet_13: -858873137
-      aloe walk spritesheet_14: -1881638774
-      aloe walk spritesheet_15: -407862716
-      aloe walk spritesheet_16: -225236621
-      aloe walk spritesheet_17: 781851814
-      aloe walk spritesheet_2: 1254481460
-      aloe walk spritesheet_3: -1970621690
-      aloe walk spritesheet_4: 371215051
-      aloe walk spritesheet_5: 638414845
-      aloe walk spritesheet_6: 746602465
-      aloe walk spritesheet_7: 633821621
-      aloe walk spritesheet_8: 1970184851
-      aloe walk spritesheet_9: 791710559
+      Aloe_Walk_0: 1224032732
+      Aloe_Walk_1: -2129187412
+      Aloe_Walk_2: 1516884299
+      Aloe_Walk_3: -1391202594
+      Aloe_Walk_4: -1253575693
+      Aloe_Walk_5: -2099396395
+      Aloe_Walk_6: -1180169911
+      Aloe_Walk_7: -1122083126
+      Aloe_Walk_8: -1262977417
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

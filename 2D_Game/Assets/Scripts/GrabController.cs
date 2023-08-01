@@ -20,6 +20,7 @@ public class GrabController : MonoBehaviour
     private PlayerSwap playerSwap; // Reference to the PlayerSwap script
 
     public Animator animator;
+    private PlayerMovement playermovement;
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class GrabController : MonoBehaviour
 
         gamepad = Gamepad.current;
         playerSwap = FindAnyObjectByType<PlayerSwap>().GetComponent<PlayerSwap>();
+        playermovement = GameObject.FindGameObjectWithTag("VFT").GetComponent<PlayerMovement>();
     }
 
     private void Update()
@@ -60,6 +62,7 @@ public class GrabController : MonoBehaviour
                 // Grab the object if it is interactable and the grab input is pressed, and the second character is the current one
                 if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && playerSwap.whichCharacter == 1)
                 {
+                    playermovement.enabled = false;
                     animator.SetBool("isInteracting", true);
                     // Start the coroutine to handle the grabbing process after the animation
                     StartCoroutine(GrabAfterAnimation(grabCheck.collider.gameObject));
@@ -72,8 +75,9 @@ public class GrabController : MonoBehaviour
     private IEnumerator GrabAfterAnimation(GameObject grabbedObject)
     {
         // Wait for the end of the animation (replace `0.5f` with the duration of your animation clip)
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
 
+        playermovement.enabled = true;
         animator.SetBool("isInteracting", false); // Reset the animation parameter
 
         // Continue with grabbing the object

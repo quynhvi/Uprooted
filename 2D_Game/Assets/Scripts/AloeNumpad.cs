@@ -12,6 +12,10 @@ public class AloeNumpad : MonoBehaviour
     private bool interactable;
     private bool isNumpadActive = false; // Flag to track if the numpad is active
 
+    public Animator animator;
+    private bool isAnimationPlaying = false;
+
+    private PlayerMovement playerMovement;
     Controls action;
     public InputActionReference numpadAction;
 
@@ -25,6 +29,7 @@ public class AloeNumpad : MonoBehaviour
         ps = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
         interactable = true;
         action.Default.Interact.performed += _ => DetermineNumpad();
+        playerMovement = GameObject.FindGameObjectWithTag("AloeVera").GetComponent<PlayerMovement>();
     }
 
     private void OnEnable()
@@ -75,18 +80,44 @@ public class AloeNumpad : MonoBehaviour
         if (interactable && !isNumpadActive) // Check if the numpad is not active
         {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f);
+            bool canInteract = false; // Flag to track if the interaction can happen
             foreach (Collider2D collider in colliders)
             {
                 if (collider.CompareTag("AloeArm") && ps.whichCharacter == 3 || ps.whichCharacter == 2 && gameObject.CompareTag("AloeArm")) // Aloe is colliding and currently being played!
                 {
-                    numpad.SetActive(true);
-                    interactable = false;
-                    isNumpadActive = true; // Set the numpad as active
-                    Time.timeScale = 0f;
+                    canInteract = true;
                     break;
                 }
             }
+
+            if (canInteract)
+            {
+                animator.SetBool("isInteracting", true);
+                playerMovement.enabled = false;
+                StartCoroutine(OpenNumpadAfterAnimation());
+            }
+            else
+            {
+                playerMovement.enabled = true;
+                animator.SetBool("isInteracting", false); // Move this line here
+            }
         }
+    }
+
+    private IEnumerator OpenNumpadAfterAnimation()
+    {
+        isAnimationPlaying = true;
+        yield return new WaitForSeconds(0.5f);
+        playerMovement.enabled = true;
+
+        numpad.SetActive(true);
+        interactable = false;
+        isNumpadActive = true; // Set the numpad as active
+        Time.timeScale = 0f;
+
+        animator.SetBool("isInteracting", false); // Move this line outside the coroutine to stop the animation
+
+        isAnimationPlaying = false;
     }
 
     // Call this method to close the numpad and re-enable player input.

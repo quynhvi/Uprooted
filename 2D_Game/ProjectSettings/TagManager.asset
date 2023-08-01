@@ -30,6 +30,8 @@ TagManager:
   - Sound
   - movable
   - Box3
+  - AloeDead
+  - wiggle
   layers:
   - Default
   - TransparentFX
