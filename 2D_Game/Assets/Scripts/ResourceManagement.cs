@@ -10,6 +10,9 @@ public class ResourceManagement : MonoBehaviour
     public float lightLevelNumber;
     public float waterLevelNumber;
     public LightSource lightSource;
+    public List<WaterSource> waterSources = new List<WaterSource>();
+
+    public bool IsChargingWater = false;
 
     Soundmanager soundmanger;
     private bool lowHPPlayed = false; // Flag to track if low HP sound has been played
@@ -23,8 +26,11 @@ public class ResourceManagement : MonoBehaviour
         lightLevelNumber = 0.4f;
         waterBarFill.fillAmount = 0.6f; // Water Level is set to 60% at the start of the game
         waterLevelNumber = 0.6f;
-
         soundmanger = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
+    }
+
+    private void Start()
+    {
     }
 
     // Update is called once per frame
@@ -43,6 +49,14 @@ public class ResourceManagement : MonoBehaviour
 
     private void LowHP()
     {
+        IsChargingWater = false;
+        foreach (WaterSource waterSource in waterSources)
+        {
+            if (waterSource.isCharging)
+            {
+                IsChargingWater = true;
+            }
+        }
         // If the water level is below 0.3 or above 0.7, and the sound has not been played yet
         if (waterLevelNumber <= 0.3f)
         {
@@ -53,7 +67,7 @@ public class ResourceManagement : MonoBehaviour
             }
             animator.SetBool("LowHealth", true); // Set the "LowHealth" parameter to true
         }
-        else if (waterLevelNumber >= 0.6f)
+        else if (waterLevelNumber >= 0.6f && IsChargingWater)
         {
             if (!lowHPPlayed)
             {

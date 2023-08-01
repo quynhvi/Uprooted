@@ -15,7 +15,15 @@ public class WaterSource : MonoBehaviour
         RessourceManagement = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
         soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
+    private void Start()
+    {
+        RessourceManagement.waterSources.Add(this);
+    }
 
+    private void OnDestroy()
+    {
+        RessourceManagement.waterSources.Remove(this);
+    }
     private void OnTriggerStay2D(Collider2D collider)
     {
         chargedWater = 0.002f;
