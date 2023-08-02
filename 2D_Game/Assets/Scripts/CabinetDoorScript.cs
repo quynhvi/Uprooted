@@ -21,6 +21,7 @@ public class CabinetDoorScript : MonoBehaviour
     private ResourceManagement rm;
     private LightSource ls;
     private PlayerSwap PlayerSwapScript;
+    private Soundmanager soundmanager;
 
     // Start is called before the first frame update
     void Awake()
@@ -28,6 +29,7 @@ public class CabinetDoorScript : MonoBehaviour
         rm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
         PlayerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
+        soundmanager = GameObject.FindObjectOfType<Soundmanager>();
 
         openDoor.SetActive(false);
         closedDoor.SetActive(true);
@@ -62,6 +64,7 @@ public class CabinetDoorScript : MonoBehaviour
             {
                 if (collider.CompareTag("VFT") && PlayerSwapScript.whichCharacter == 1) //VFT is colliding and currently being played!
                 {
+                    soundmanager.playSFX(soundmanager.closet);
                     ls.chargedLight = 0.03f;
 
                     // Decrease resource levels

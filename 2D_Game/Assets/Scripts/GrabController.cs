@@ -21,6 +21,7 @@ public class GrabController : MonoBehaviour
 
     public Animator animator;
     private PlayerMovement playermovement;
+    private Soundmanager soundmanager;
 
     private void Start()
     {
@@ -31,6 +32,7 @@ public class GrabController : MonoBehaviour
         gamepad = Gamepad.current;
         playerSwap = FindAnyObjectByType<PlayerSwap>().GetComponent<PlayerSwap>();
         playermovement = GameObject.FindGameObjectWithTag("VFT").GetComponent<PlayerMovement>();
+        soundmanager = GameObject.FindObjectOfType<Soundmanager>();
     }
 
     private void Update()
@@ -48,6 +50,7 @@ public class GrabController : MonoBehaviour
             // Release the object if it is held and the grab input is pressed
             if (Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame))
             {
+                soundmanager.playSFX(soundmanager.vftLetGo);
                 Debug.Log("Object Released");
                 heldObject.transform.parent = null;
                 heldObject.GetComponent<Rigidbody2D>().isKinematic = false;
@@ -62,6 +65,7 @@ public class GrabController : MonoBehaviour
                 // Grab the object if it is interactable and the grab input is pressed, and the second character is the current one
                 if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && playerSwap.whichCharacter == 1)
                 {
+                    soundmanager.playSFX(soundmanager.vftPickUp);
                     playermovement.enabled = false;
                     animator.SetBool("isInteracting", true);
                     // Start the coroutine to handle the grabbing process after the animation
