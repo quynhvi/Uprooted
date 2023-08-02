@@ -18,6 +18,7 @@ public class Key : MonoBehaviour
     private bool interactable;
 
     public InputActionReference collectKeyAction;
+    private Soundmanager soundmanager;
 
     private void OnEnable()
     {
@@ -31,6 +32,7 @@ public class Key : MonoBehaviour
         ls = FindObjectOfType<LightSource>();
         ps = FindObjectOfType<PlayerSwap>();
         door = FindObjectOfType<Door>();
+        soundmanager = GameObject.FindAnyObjectByType<Soundmanager>();
 
         interactable = true;
     }
@@ -52,6 +54,8 @@ public class Key : MonoBehaviour
             {
                 if (collider.CompareTag("VFT") && ps.whichCharacter == 1)
                 {
+                    soundmanager.playSFX(soundmanager.keyFound);
+
                     ls.chargedLight = 0.03f;
 
                     FollowPoint vft = FindAnyObjectByType<FollowPoint>();
