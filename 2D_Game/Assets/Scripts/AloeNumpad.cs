@@ -95,12 +95,14 @@ public class AloeNumpad : MonoBehaviour
 
             if (canInteract)
             {
+                soundmanager.playSFX(soundmanager.aloeInteract);
                 animator.SetBool("isInteracting", true);
                 playerMovement.enabled = false;
                 StartCoroutine(OpenNumpadAfterAnimation());
             }
             else
             {
+                soundmanager.playSFX(soundmanager.aloeInteract);
                 playerMovement.enabled = true;
                 animator.SetBool("isInteracting", false); // Move this line here
             }
