@@ -24,6 +24,9 @@ public class PlayerSwap : MonoBehaviour
     public InputActionReference switchCharacter3Action;
     public InputActionReference switchCharacter4Action;
 
+    private Soundmanager soundmanger;
+    private Animator currentAnimator;
+
     void Start()
     {
         if (possibleCharacters.Count > 0)
@@ -44,6 +47,8 @@ public class PlayerSwap : MonoBehaviour
             cam.Follow = character;
         }
         Swap();
+
+        soundmanger = GameObject.FindObjectOfType<Soundmanager>();
     }
 
     private void Update()
@@ -104,6 +109,8 @@ public class PlayerSwap : MonoBehaviour
             whichCharacter -= 1;
         }
         Swap();
+
+        PlaySound();
     }
 
     public void SwapRight()
@@ -112,6 +119,7 @@ public class PlayerSwap : MonoBehaviour
         {
             whichCharacter = (whichCharacter + 1) % possibleCharacters.Count;
             Swap();
+            PlaySound();
         }
     }
 
@@ -132,6 +140,7 @@ public class PlayerSwap : MonoBehaviour
 
             //cam.SetTarget(character); // Update the camera's target to the newly selected character
             cam.Follow = character;
+            PlaySound();
         }
     }
 
@@ -150,6 +159,9 @@ public class PlayerSwap : MonoBehaviour
 
                 m_ParticleSystem.transform.position = character.position;
                 m_ParticleSystem.Play();
+
+                // Get the Animator component of the current character
+                currentAnimator = character.GetComponent<Animator>();
 
                 //cam.SetTarget(character);
                 cam.Follow = character;
@@ -212,6 +224,17 @@ public class PlayerSwap : MonoBehaviour
         if (playerMovement != null)
         {
             playerMovement.enabled = false;
+        }
+    }
+
+    void PlaySound()
+    {
+        soundmanger.playSFX(soundmanger.switchCharacter);
+
+        // Check which character is currently active and play the corresponding animation
+        if (currentAnimator != null)
+        {
+            currentAnimator.SetTrigger("Walk");
         }
     }
 }

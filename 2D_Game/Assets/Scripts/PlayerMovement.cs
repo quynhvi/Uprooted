@@ -22,7 +22,13 @@ public class PlayerMovement : MonoBehaviour
     public InputActionReference jumpAction;
 
     public Animator animator;
+    public string walkAnimationParameter;
+    private Soundmanager soundmanager;
 
+    private void Start()
+    {
+        soundmanager = GameObject.FindObjectOfType<Soundmanager>();
+    }
 
     public void OnEnable()
     {
@@ -66,10 +72,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             isGrounded = false; // Set grounded flag to false after jumping
             animator.SetBool("isJumping", true);
-        }
-        else
-        {
-            //animator.SetBool("isJumping", false);
+            soundmanager.playSFX(soundmanager.jump);
         }
     }
 

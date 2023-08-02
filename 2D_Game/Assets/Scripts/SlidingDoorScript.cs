@@ -25,6 +25,7 @@ public class SlidingDoorScript : MonoBehaviour
     private ResourceManagement rm;
     private LightSource ls;
     public PlayerSwap PlayerSwapScript;
+    private Soundmanager soundmanager;
 
     // Start is called before the first frame update
     void Awake()
@@ -32,6 +33,7 @@ public class SlidingDoorScript : MonoBehaviour
         rm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
         PlayerSwapScript = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
+        soundmanager = GameObject.FindObjectOfType<Soundmanager>();
 
         _doorPosition = _rightPoint.transform.position;
 
@@ -73,6 +75,7 @@ public class SlidingDoorScript : MonoBehaviour
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f); //radius muss angepasst werden
             foreach (Collider2D collider in colliders)
             {
+                soundmanager.playSFX(soundmanager.closet);
                 if (collider.CompareTag("VFT") && PlayerSwapScript.whichCharacter == 1)
                 {
                     ls.chargedLight = 0.03f;

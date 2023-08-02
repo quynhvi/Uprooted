@@ -9,11 +9,23 @@ public class Jumppad : MonoBehaviour
     public float bounce = 0f;
     public PlatformEffector2D platformEffector;
 
+    private Soundmanager soundmanager;
+
+    private void Start()
+    {
+        soundmanager = GameObject.FindObjectOfType<Soundmanager>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Cactus") || collision.gameObject.CompareTag("VFT") || collision.gameObject.CompareTag("Ivy") || collision.gameObject.CompareTag("AloeVera"))
         {
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+            if (soundmanager != null)
+            {
+                soundmanager.playSFX(soundmanager.jumppad);
+            }
+
             if (rb != null)
             {
                 // Reset the vertical velocity to zero before applying the upward force

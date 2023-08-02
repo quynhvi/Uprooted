@@ -19,6 +19,8 @@ public class AloeNumpad : MonoBehaviour
     Controls action;
     public InputActionReference numpadAction;
 
+    private Soundmanager soundmanager;
+
     private void Awake()
     {
         action = new Controls();
@@ -30,6 +32,7 @@ public class AloeNumpad : MonoBehaviour
         interactable = true;
         action.Default.Interact.performed += _ => DetermineNumpad();
         playerMovement = GameObject.FindGameObjectWithTag("AloeVera").GetComponent<PlayerMovement>();
+        soundmanager = GameObject.FindObjectOfType<Soundmanager>();
     }
 
     private void OnEnable()
@@ -92,12 +95,14 @@ public class AloeNumpad : MonoBehaviour
 
             if (canInteract)
             {
+                soundmanager.playSFX(soundmanager.aloeInteract);
                 animator.SetBool("isInteracting", true);
                 playerMovement.enabled = false;
                 StartCoroutine(OpenNumpadAfterAnimation());
             }
             else
             {
+                soundmanager.playSFX(soundmanager.aloeInteract);
                 playerMovement.enabled = true;
                 animator.SetBool("isInteracting", false); // Move this line here
             }
