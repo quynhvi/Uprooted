@@ -197,6 +197,13 @@ MonoBehaviour:
   codeWrong: {fileID: 8300000, guid: e26abd127b65f4529af3e05bc0fc8e23, type: 3}
   drawer: {fileID: 8300000, guid: e4f70836b04f644078d76e0cb2924bb0, type: 3}
   jump: {fileID: 8300000, guid: 70845be69d4a04bbfb6106ededaf647b, type: 3}
+  jumppad: {fileID: 0}
+  aloeInteract: {fileID: 0}
+  keyFound: {fileID: 0}
+  closet: {fileID: 0}
+  switchCharacter: {fileID: 0}
+  vftLetGo: {fileID: 0}
+  vftPickUp: {fileID: 0}
 --- !u!82 &310661888
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13865,7 +13872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3062268977164153403, guid: 4bd8952c6497749f28c7889fbe78d602, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3809235127085280659, guid: 4bd8952c6497749f28c7889fbe78d602, type: 3}
       propertyPath: m_Camera
