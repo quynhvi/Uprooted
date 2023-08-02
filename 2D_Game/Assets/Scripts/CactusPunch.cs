@@ -29,6 +29,7 @@ public class CactusPunch : MonoBehaviour
     private Soundmanager soundmanager;
 
     public Animator animator;
+    private bool isPunching = false;
 
     // Start is called before the first frame update
     void Start()
@@ -60,7 +61,12 @@ public class CactusPunch : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && ps.whichCharacter == 0)
         {
-            cactusInteract();
+            if (!isPunching)
+            {
+                animator.SetBool("isInteracting", true);
+                StartCoroutine(ResetPunchingFlag());
+                cactusInteract();
+            }
         }
     }
 
@@ -123,6 +129,17 @@ public class CactusPunch : MonoBehaviour
                 break;
             }
         }
+    }
+
+    private IEnumerator ResetPunchingFlag()
+    {
+        yield return new WaitForSeconds(1f);
+
+        // Reset the IsPunching parameter in the animator
+        animator.SetBool("IsPunching", false);
+
+        // Reset the flag to allow future punches
+        isPunching = false;
     }
 
     private void Damageable()
