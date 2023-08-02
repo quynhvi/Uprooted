@@ -28,6 +28,8 @@ public class CactusPunch : MonoBehaviour
 
     private Soundmanager soundmanager;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {

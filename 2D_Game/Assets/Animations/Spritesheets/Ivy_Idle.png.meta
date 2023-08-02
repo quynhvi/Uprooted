@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ivy_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 403
+        width: 595.6
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061cae18e051f43ae96b219c2fed793e
+      internalID: -962427110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 403
+        width: 595.6
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda0ec57713d84332957a79e50d95164
+      internalID: 182808390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 403
+        width: 595.6
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50246e5bfdcdc4080a4929db563115b2
+      internalID: -1042586997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 403
+        width: 595.6
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7a8ffda9e9541d3af8d7f5ae060ff1
+      internalID: 355472241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 403
+        width: 595.6
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c43c6e164b64295904b23abdc08506
+      internalID: -1792109941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 595.6
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5333dd2e2312944aea164f08ea534771
+      internalID: -2112765093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 0
+        width: 595.6
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2851813257a3d4510a7d09cdb4cf6267
+      internalID: 1047968236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 0
+        width: 595.6
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43fa1e695a1ae47a8ac7c95d6d436b9e
+      internalID: 1501122743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 0
+        width: 595.6
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3fd1bcd23e944d78d70aaa99eef657
+      internalID: -1611639627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 0
+        width: 595.6
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8ddafdc976444db9aafe35793d9d6c
+      internalID: -6405083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +324,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ivy_Idle_0: -962427110
+      Ivy_Idle_1: 182808390
+      Ivy_Idle_2: -1042586997
+      Ivy_Idle_3: 355472241
+      Ivy_Idle_4: -1792109941
+      Ivy_Idle_5: -2112765093
+      Ivy_Idle_6: 1047968236
+      Ivy_Idle_7: 1501122743
+      Ivy_Idle_8: -1611639627
+      Ivy_Idle_9: -6405083
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

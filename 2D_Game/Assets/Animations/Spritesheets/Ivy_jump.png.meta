@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 75
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -103,7 +103,301 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ivy_jump_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 682.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561ca97d54d92458cace0612be98bddc
+      internalID: 674619955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_jump_1
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 682.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8244987844d1a436098928b46ca4a9f0
+      internalID: -2141520102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_jump_2
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 682.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8322dc06e684a4033a24615711a57cad
+      internalID: 1193662824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_jump_3
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 682.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de9eafd7d18a402383852093c9340ed
+      internalID: -1548993084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_jump_4
+      rect:
+        serializedVersion: 2
+        x: 2820
+        y: 682.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1a07185d3724669ba90a4aeaabb038
+      internalID: -513074200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_jump_5
+      rect:
+        serializedVersion: 2
+        x: 3525
+        y: 682.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72bcbb31ea9464125831c21447c10f64
+      internalID: -1690300496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_jump_6
+      rect:
+        serializedVersion: 2
+        x: 4230
+        y: 682.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7952e001a7c164971aaa1c9ea07cbd9b
+      internalID: 331018246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_jump_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb50d6e3bbdf4284b012f415f2d2712
+      internalID: -353765850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_jump_8
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 0.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbe30a896b27447ab452c7c7dee32b3
+      internalID: 124326723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_jump_9
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 0.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d033001b924d47efbc41a337d30545f
+      internalID: -666693710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_jump_10
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 0.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb39215321814836ba065b1e5f9e0f9
+      internalID: 1404575564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_jump_11
+      rect:
+        serializedVersion: 2
+        x: 2820
+        y: 0.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5418d113d52149eaa8696bc9f93266b
+      internalID: -1267463343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_jump_12
+      rect:
+        serializedVersion: 2
+        x: 3525
+        y: 0.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1381d01a39d4b3ba3319a0ed219bf6
+      internalID: 1454668035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_jump_13
+      rect:
+        serializedVersion: 2
+        x: 4230
+        y: 0.5
+        width: 705.1429
+        height: 682.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef9740ed2ec1402e95016b6f0943cc0
+      internalID: 968558256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +408,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ivy_jump_0: 674619955
+      Ivy_jump_1: -2141520102
+      Ivy_jump_10: 1404575564
+      Ivy_jump_11: -1267463343
+      Ivy_jump_12: 1454668035
+      Ivy_jump_13: 968558256
+      Ivy_jump_2: 1193662824
+      Ivy_jump_3: -1548993084
+      Ivy_jump_4: -513074200
+      Ivy_jump_5: -1690300496
+      Ivy_jump_6: 331018246
+      Ivy_jump_7: -353765850
+      Ivy_jump_8: 124326723
+      Ivy_jump_9: -666693710
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
