@@ -19,6 +19,10 @@ public class Vine : MonoBehaviour
 
     private Gamepad gamepad;
 
+    public Animator animator;
+    private bool isAnimationPlaying = false;
+    private PlayerMovement playerMovement;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +30,7 @@ public class Vine : MonoBehaviour
         ls = FindObjectOfType<LightSource>();
         ps = FindAnyObjectByType<PlayerSwap>();
         pm = GameObject.FindGameObjectWithTag("Ivy").GetComponent<PlayerMovement>();
+        playerMovement = GameObject.FindGameObjectWithTag("Ivy").GetComponent<PlayerMovement>();
 
         interactable = true;
 
@@ -41,11 +46,28 @@ public class Vine : MonoBehaviour
             {
                 CloseVine();
             }
-            else if (interactable)
+            else if (!vineOpen)
             {
-                VineInteract();
+                StartCoroutine(OpenVineAfterAnimation());
+                //VineInteract();
             }
         }
+    }
+
+    private IEnumerator OpenVineAfterAnimation()
+    {
+        isAnimationPlaying = true;
+        animator.SetBool("isInteracting", true);
+        playerMovement.enabled = false;
+        yield return new WaitForSeconds(3f);
+        playerMovement.enabled = true;
+
+        vine.SetActive(true);
+        vineOpen = true;
+        //Time.timeScale = 0f;
+
+        isAnimationPlaying = false;
+        animator.SetBool("isInteracting", false);
     }
 
     private void CloseVine()
@@ -58,18 +80,19 @@ public class Vine : MonoBehaviour
 
     private void VineInteract()
     {
-                ls.chargedLight = 0.03f;
+        animator.SetBool("isInteracting", true);
+        ls.chargedLight = 0.03f;
 
-                vine.SetActive(true);
-                vineOpen = true;
-                //pm.enabled = false;
+        vine.SetActive(true);
+        vineOpen = true;
+        //pm.enabled = false;
 
-                if (rm != null && ls != null)
-                {
-                    rm.lightLevelNumber -= ls.chargedLight;
-                    rm.lightBarFill.fillAmount -= ls.chargedLight;
-                    rm.waterLevelNumber -= ls.chargedLight;
-                    rm.waterBarFill.fillAmount -= ls.chargedLight;
-                }
+        if (rm != null && ls != null)
+        {
+            rm.lightLevelNumber -= ls.chargedLight;
+            rm.lightBarFill.fillAmount -= ls.chargedLight;
+            rm.waterLevelNumber -= ls.chargedLight;
+            rm.waterBarFill.fillAmount -= ls.chargedLight;
+        }
     }
 }
