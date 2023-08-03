@@ -71,7 +71,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             isGrounded = false; // Set grounded flag to false after jumping
-            animator.SetBool("isJumping", true);
             soundmanager.playSFX(soundmanager.jump);
         }
     }
@@ -84,6 +83,14 @@ public class PlayerMovement : MonoBehaviour
 
         // Perform the ground check
         isGrounded = IsGrounded() || IsGroundedOnPlatform() || IsOnCharacter() || IsOnObject();
+        if (isGrounded)
+        {
+            animator.SetBool("isJumping", false);
+        }
+        else
+        {
+            animator.SetBool("isJumping", true);
+        }
     }
 
     private bool IsGrounded()

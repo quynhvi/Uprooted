@@ -1,0 +1,563 @@
+fileFormatVersion: 2
+guid: 33f3709ae72d24d9ba813c75477db31d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 70
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ivy_Interact_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2114.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b798c77f3d52418ea624c36905b84a6
+      internalID: -48535931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_1
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 2114.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282939e3d485b4a5c979d08fe8351fbe
+      internalID: 563019141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_2
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 2114.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b3545c0372c452180f5dade8a25058
+      internalID: -2108784730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_3
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 2114.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66d9897f6a1fa4fe3a03e29090cc1887
+      internalID: -232019898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_4
+      rect:
+        serializedVersion: 2
+        x: 2820
+        y: 2114.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587db5471a1af477981122e5c190cc39
+      internalID: -980841911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1410.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f886c0cf52f743b59c766a59c70e859
+      internalID: -994901458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_6
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 1410.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4383cf836a25e4796b25a192f63cc357
+      internalID: -1729100077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_7
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1410.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c253e1c748684744a825f6510573aff
+      internalID: -1902627818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_8
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 1410.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a92aba56bc8b458a80d941e6ed1bf0c
+      internalID: 329934647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_9
+      rect:
+        serializedVersion: 2
+        x: 2820
+        y: 1410.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92d2f3d180154634a2523a138d6032a
+      internalID: -1900805174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 706.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2765bf872565484b931c63b937a7434
+      internalID: 1168310615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_11
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 706.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c499ce1c8f34ebf953cc2e80198f42
+      internalID: -789258949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_12
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 706.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e26cc3b628f464cb1b0f570ec21cf6
+      internalID: 853376436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_13
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 706.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db05725ddea2d48988e7a10121927cdb
+      internalID: -623546898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_14
+      rect:
+        serializedVersion: 2
+        x: 2820
+        y: 706.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d88871d9adf14f8582412bc1932847b
+      internalID: -1319971780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3953e656aad624fd8bcfa3afe4b83b9c
+      internalID: 434566723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_16
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 2.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f573d76f4f5410fa19e0ab2e9255ed
+      internalID: -620442370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_17
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 2.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d1f96c5160d4c02b6bd540f68a2f1a
+      internalID: 1631893933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_18
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 2.25
+        width: 705.2
+        height: 704.75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c4c735c73b04263b02457558bb9fb8
+      internalID: 492629823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivy_Interact_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3526
+        height: 2819
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129240b401f194702aa592cfc5bcb0f5
+      internalID: -1760978653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ivy_Interact_0: -48535931
+      Ivy_Interact_1: 563019141
+      Ivy_Interact_10: 1168310615
+      Ivy_Interact_11: -789258949
+      Ivy_Interact_12: 853376436
+      Ivy_Interact_13: -623546898
+      Ivy_Interact_14: -1319971780
+      Ivy_Interact_15: 434566723
+      Ivy_Interact_16: -620442370
+      Ivy_Interact_17: 1631893933
+      Ivy_Interact_18: 492629823
+      Ivy_Interact_19: -1760978653
+      Ivy_Interact_2: -2108784730
+      Ivy_Interact_3: -232019898
+      Ivy_Interact_4: -980841911
+      Ivy_Interact_5: -994901458
+      Ivy_Interact_6: -1729100077
+      Ivy_Interact_7: -1902627818
+      Ivy_Interact_8: 329934647
+      Ivy_Interact_9: -1900805174
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

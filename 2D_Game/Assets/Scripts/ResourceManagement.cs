@@ -22,8 +22,8 @@ public class ResourceManagement : MonoBehaviour
     void Awake()
     {
         lightSource = GameObject.FindGameObjectWithTag("light").GetComponent<LightSource>();
-        lightBarFill.fillAmount = 0.4f; // Light level is set to 40% at the start of the game
-        lightLevelNumber = 0.4f;
+        //lightBarFill.fillAmount = 0.4f; // Light level is set to 40% at the start of the game
+        //lightLevelNumber = 0.4f;
         waterBarFill.fillAmount = 0.6f; // Water Level is set to 60% at the start of the game
         waterLevelNumber = 0.6f;
         soundmanger = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
@@ -43,7 +43,7 @@ public class ResourceManagement : MonoBehaviour
 
     private void CheckForDeath()
     {
-        if (lightLevelNumber <= 0 || waterLevelNumber <= 0 || waterLevelNumber > 1)
+        if (waterLevelNumber <= 0 || waterLevelNumber > 1)
             this.gameObject.GetComponent<GMScript>().GameOver();
     }
 

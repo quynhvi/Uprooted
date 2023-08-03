@@ -15,6 +15,13 @@ public class Numpad : MonoBehaviour
     string alpha;
     public TMP_Text UIText = null;
 
+    private Soundmanager soundmanager;
+
+    private void Start()
+    {
+        soundmanager = GameObject.FindObjectOfType<Soundmanager>();
+    }
+
     public void CodeFunction(string numbers)
     {
         numberIndex++;
@@ -33,6 +40,7 @@ public class Numpad : MonoBehaviour
         }
         else
         {
+            soundmanager.playSFX(soundmanager.codeWrong);
             UIText.text = "Wrong Passcode";
         }
     }

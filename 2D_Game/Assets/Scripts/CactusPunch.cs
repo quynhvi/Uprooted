@@ -28,6 +28,9 @@ public class CactusPunch : MonoBehaviour
 
     private Soundmanager soundmanager;
 
+    public Animator animator;
+    private bool isPunching = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +61,12 @@ public class CactusPunch : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && ps.whichCharacter == 0)
         {
-            cactusInteract();
+            if (!isPunching)
+            {
+                animator.SetBool("isInteracting", true);
+                StartCoroutine(ResetPunchingFlag());
+                cactusInteract();
+            }
         }
     }
 
@@ -123,6 +131,17 @@ public class CactusPunch : MonoBehaviour
         }
     }
 
+    private IEnumerator ResetPunchingFlag()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        // Reset the IsPunching parameter in the animator
+        animator.SetBool("isInteracting", false);
+
+        // Reset the flag to allow future punches
+        isPunching = false;
+    }
+
     private void Damageable()
     {
         soundmanager.playSFX(soundmanager.cactusPunch);
@@ -177,8 +196,6 @@ public class CactusPunch : MonoBehaviour
 
         if (rm != null && ls != null)
         {
-            rm.lightLevelNumber -= ls.chargedLight;
-            rm.lightBarFill.fillAmount -= ls.chargedLight;
             rm.waterLevelNumber -= ls.chargedLight;
             rm.waterBarFill.fillAmount -= ls.chargedLight;
         }
@@ -197,8 +214,6 @@ public class CactusPunch : MonoBehaviour
 
         if (rm != null && ls != null)
         {
-            rm.lightLevelNumber -= ls.chargedLight;
-            rm.lightBarFill.fillAmount -= ls.chargedLight;
             rm.waterLevelNumber -= ls.chargedLight;
             rm.waterBarFill.fillAmount -= ls.chargedLight;
         }
@@ -217,8 +232,6 @@ public class CactusPunch : MonoBehaviour
 
         if (rm != null && ls != null)
         {
-            rm.lightLevelNumber -= ls.chargedLight;
-            rm.lightBarFill.fillAmount -= ls.chargedLight;
             rm.waterLevelNumber -= ls.chargedLight;
             rm.waterBarFill.fillAmount -= ls.chargedLight;
         }
@@ -237,8 +250,6 @@ public class CactusPunch : MonoBehaviour
 
         if (rm != null && ls != null)
         {
-            rm.lightLevelNumber -= ls.chargedLight;
-            rm.lightBarFill.fillAmount -= ls.chargedLight;
             rm.waterLevelNumber -= ls.chargedLight;
             rm.waterBarFill.fillAmount -= ls.chargedLight;
         }
@@ -257,8 +268,6 @@ public class CactusPunch : MonoBehaviour
 
         if (rm != null && ls != null)
         {
-            rm.lightLevelNumber -= ls.chargedLight;
-            rm.lightBarFill.fillAmount -= ls.chargedLight;
             rm.waterLevelNumber -= ls.chargedLight;
             rm.waterBarFill.fillAmount -= ls.chargedLight;
         }
@@ -277,8 +286,6 @@ public class CactusPunch : MonoBehaviour
 
         if (rm != null && ls != null)
         {
-            rm.lightLevelNumber -= ls.chargedLight;
-            rm.lightBarFill.fillAmount -= ls.chargedLight;
             rm.waterLevelNumber -= ls.chargedLight;
             rm.waterBarFill.fillAmount -= ls.chargedLight;
         }
@@ -297,8 +304,6 @@ public class CactusPunch : MonoBehaviour
 
         if (rm != null && ls != null)
         {
-            rm.lightLevelNumber -= ls.chargedLight;
-            rm.lightBarFill.fillAmount -= ls.chargedLight;
             rm.waterLevelNumber -= ls.chargedLight;
             rm.waterBarFill.fillAmount -= ls.chargedLight;
         }

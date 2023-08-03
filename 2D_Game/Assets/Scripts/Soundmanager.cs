@@ -6,14 +6,14 @@ public class Soundmanager : MonoBehaviour
 {
     public AudioSource musicSrc;
     public AudioSource sfxSrc;
-    public AudioClip lightCharge, waterCharge, lowHPSound, bookOpen, bookClose, revive, keyOpen,
+    public AudioClip backgroundMusic, lightCharge, waterCharge, lowHPSound, bookOpen, bookClose, revive, keyOpen,
         cactusPunch, fabricRip, codeWrong, drawer, jump, jumppad, aloeInteract, keyFound, closet,
-        switchCharacter, vftLetGo, vftPickUp; // backgroundMusic
+        switchCharacter, vftLetGo, vftPickUp;
 
     private void Start()
     {
-        //musicSrc.clip = backgroundMusic;
-        //musicSrc.Play();
+        musicSrc.clip = backgroundMusic;
+        musicSrc.Play();
     }
 
     public void playSFX(AudioClip clip)

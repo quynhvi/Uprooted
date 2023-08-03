@@ -17,7 +17,7 @@ public class GMScript : MonoBehaviour
     MenuInput action;
     private bool paused;
 
-    Soundmanager soundmanager;
+    private Soundmanager soundmanager;
 
     private void Awake()
     {

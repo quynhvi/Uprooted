@@ -75,9 +75,10 @@ public class SlidingDoorScript : MonoBehaviour
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f); //radius muss angepasst werden
             foreach (Collider2D collider in colliders)
             {
-                soundmanager.playSFX(soundmanager.closet);
+               
                 if (collider.CompareTag("VFT") && PlayerSwapScript.whichCharacter == 1)
                 {
+                    soundmanager.playSFX(soundmanager.closet);
                     ls.chargedLight = 0.03f;
 
                     // Decrease resource levels
