@@ -421,3 +421,9 @@ MonoBehaviour:
   switchCharacter: {fileID: 8300000, guid: 3db19830fd8ad430398e9f78335feb9d, type: 3}
   vftLetGo: {fileID: 8300000, guid: 6dcbf25f62d5d4b6b844a144c961830c, type: 3}
   vftPickUp: {fileID: 8300000, guid: 55cb95cd944454261afe93b0cf2fc728, type: 3}
+  cactusWalk: {fileID: 8300000, guid: ede5ac879cc8b4228aa513bb59b48ecd, type: 3}
+  vftWalk: {fileID: 8300000, guid: 878baf77428e941e7b4df7e0471b8b0f, type: 3}
+  ivyWalk: {fileID: 8300000, guid: bdaa5a7cd556b482d8ad4c7942eae27c, type: 3}
+  aloeWalk: {fileID: 8300000, guid: 4b271cda5dff440e0aacb5fd11ab3d96, type: 3}
+  ivyVine: {fileID: 8300000, guid: f558b6d3b57404e67a9436dbd14f71e9, type: 3}
+  land: {fileID: 8300000, guid: 5494c4c51c0134d108859150dfe9d1cb, type: 3}

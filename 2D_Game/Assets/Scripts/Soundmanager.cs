@@ -8,7 +8,7 @@ public class Soundmanager : MonoBehaviour
     public AudioSource sfxSrc;
     public AudioClip backgroundMusic, lightCharge, waterCharge, lowHPSound, bookOpen, bookClose, revive, keyOpen,
         cactusPunch, fabricRip, codeWrong, drawer, jump, jumppad, aloeInteract, keyFound, closet,
-        switchCharacter, vftLetGo, vftPickUp;
+        switchCharacter, vftLetGo, vftPickUp, cactusWalk, vftWalk, ivyWalk, aloeWalk, ivyVine, land;
 
     private void Start()
     {

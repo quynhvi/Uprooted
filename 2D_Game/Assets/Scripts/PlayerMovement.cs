@@ -24,10 +24,12 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public string walkAnimationParameter;
     private Soundmanager soundmanager;
+    private PlayerSwap ps;
 
     private void Start()
     {
         soundmanager = GameObject.FindObjectOfType<Soundmanager>();
+        ps = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
     }
 
     public void OnEnable()
@@ -90,6 +92,31 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animator.SetBool("isJumping", true);
+        }
+
+        playWalkSound(); 
+    }
+
+    public void playWalkSound()
+    {
+        if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 0)
+        {
+            soundmanager.playSFX(soundmanager.cactusWalk);
+        }
+
+        if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 1)
+        {
+            soundmanager.playSFX(soundmanager.vftWalk);
+        }
+
+        if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 2)
+        {
+            soundmanager.playSFX(soundmanager.ivyWalk);
+        }
+
+        if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 3)
+        {
+            soundmanager.playSFX(soundmanager.aloeWalk);
         }
     }
 

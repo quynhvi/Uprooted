@@ -23,6 +23,8 @@ public class Vine : MonoBehaviour
     private bool isAnimationPlaying = false;
     private PlayerMovement playerMovement;
 
+    private Soundmanager soundmanager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,7 @@ public class Vine : MonoBehaviour
         ps = FindAnyObjectByType<PlayerSwap>();
         pm = GameObject.FindGameObjectWithTag("Ivy").GetComponent<PlayerMovement>();
         playerMovement = GameObject.FindGameObjectWithTag("Ivy").GetComponent<PlayerMovement>();
+        soundmanager = GameObject.FindAnyObjectByType<Soundmanager>();
 
         interactable = true;
 
@@ -56,6 +59,7 @@ public class Vine : MonoBehaviour
 
     private IEnumerator OpenVineAfterAnimation()
     {
+        soundmanager.playSFX(soundmanager.ivyVine);
         isAnimationPlaying = true;
         animator.SetBool("isInteracting", true);
         playerMovement.enabled = false;

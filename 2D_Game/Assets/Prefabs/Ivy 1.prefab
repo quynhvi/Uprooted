@@ -223,8 +223,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2758915815173104964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7, y: 1.36, z: 0}
-  m_LocalScale: {x: 0.09525895, y: 0.09325396, z: 0.079265885}
+  m_LocalPosition: {x: 4.93, y: 1.29, z: -3.7558e-10}
+  m_LocalScale: {x: 0.2, y: 0.19, z: 0.16}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2758915816836921762}
@@ -334,6 +334,7 @@ MonoBehaviour:
   inputActions: {fileID: -944628639613478452, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
   jumpAction: {fileID: 8750983435663049869, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
   animator: {fileID: 0}
+  walkAnimationParameter: 
 --- !u!114 &2758915815173104830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vine: {fileID: 905410803976327391}
+  animator: {fileID: 0}
 --- !u!70 &9187858191428201349
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
