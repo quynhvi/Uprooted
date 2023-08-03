@@ -22,6 +22,13 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject replayFront;
     [SerializeField] private GameObject quitFront;
 
+    private Soundmanager soundmanager;
+
+    private void Start()
+    {
+        soundmanager = GameObject.FindAnyObjectByType<Soundmanager>();
+    }
+
     private void OnPlay()
     {
         if (SelectedButton == 1)
@@ -43,6 +50,7 @@ public class Menu : MonoBehaviour
         {
             SelectedButton -= 1;
         }
+        soundmanager.playSFX(soundmanager.jump);
         replayFront.SetActive(true);
         quitFront.SetActive(false);
         MoveThePointer();
@@ -55,6 +63,7 @@ public class Menu : MonoBehaviour
         {
             SelectedButton += 1;
         }
+        soundmanager.playSFX(soundmanager.jump);
         quitFront.SetActive(true);
         replayFront.SetActive(false);
         MoveThePointer();

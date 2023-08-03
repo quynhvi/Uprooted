@@ -18,6 +18,7 @@ public class Soundmanager : MonoBehaviour
 
     public void playSFX(AudioClip clip)
     {
-        sfxSrc.PlayOneShot(clip);
+        if (!sfxSrc.isPlaying)
+            sfxSrc.PlayOneShot(clip);
     }
 }
