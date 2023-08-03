@@ -3516,7 +3516,7 @@ GameObject:
   - component: {fileID: 7712026413090034161}
   m_Layer: 6
   m_Name: Box3_damaged
-  m_TagString: Box2
+  m_TagString: Box3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
