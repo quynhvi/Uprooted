@@ -413,7 +413,7 @@ MonoBehaviour:
   fabricRip: {fileID: 8300000, guid: abd5fc8daf33440cfae2379d1cf8b81a, type: 3}
   codeWrong: {fileID: 8300000, guid: e26abd127b65f4529af3e05bc0fc8e23, type: 3}
   drawer: {fileID: 8300000, guid: e4f70836b04f644078d76e0cb2924bb0, type: 3}
-  jump: {fileID: 8300000, guid: 70845be69d4a04bbfb6106ededaf647b, type: 3}
+  jump: {fileID: 8300000, guid: 387945d93b6194c41968fbf872ccc572, type: 3}
   jumppad: {fileID: 8300000, guid: b724f573dbd894fd7a72d687c0502b38, type: 3}
   aloeInteract: {fileID: 8300000, guid: d7a81e1af01f94ee192834d7fb4b08ba, type: 3}
   keyFound: {fileID: 8300000, guid: 8e2c3a5d9fe954481a4bbdbc5159987e, type: 3}
