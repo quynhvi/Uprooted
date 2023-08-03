@@ -62,8 +62,6 @@ public class Door : MonoBehaviour
     {
         if (rm != null && ls != null)
         {
-            rm.lightLevelNumber -= ls.chargedLight;
-            rm.lightBarFill.fillAmount -= ls.chargedLight;
             rm.waterLevelNumber -= ls.chargedLight;
             rm.waterBarFill.fillAmount -= ls.chargedLight;
         }
