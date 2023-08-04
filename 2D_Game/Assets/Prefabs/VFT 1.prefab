@@ -169,7 +169,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 30
   m_TargetDisplay: 0
 --- !u!114 &8298508790507825428
 MonoBehaviour:
@@ -856,6 +856,7 @@ MonoBehaviour:
   inputActions: {fileID: -944628639613478452, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
   jumpAction: {fileID: 8750983435663049869, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
   animator: {fileID: 0}
+  walkAnimationParameter: 
 --- !u!114 &1270605836944744364
 MonoBehaviour:
   m_ObjectHideFlags: 0

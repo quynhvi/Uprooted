@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 6575476778213099903}
   - component: {fileID: 2775404995737911423}
   - component: {fileID: 887992398707589862}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Yoga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19481,7 +19481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2910254543913518262}
   - component: {fileID: 3180725333643938543}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19580,7 +19580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9205738790342932657}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.05608, y: -1.6960001, z: 0}
+  m_LocalPosition: {x: 8.05608, y: -1.72, z: 0}
   m_LocalScale: {x: 0.314954, y: 0.314954, z: 0.314954}
   m_ConstrainProportionsScale: 0
   m_Children: []

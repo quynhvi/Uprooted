@@ -560,7 +560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3062268977164153403}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.98, y: -0.91293, z: -1.2775}
+  m_LocalPosition: {x: 16.98, y: -1, z: -1.2775}
   m_LocalScale: {x: 0.25562134, y: 0.25562134, z: 0.25562134}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -689,6 +689,7 @@ MonoBehaviour:
   inputActions: {fileID: -944628639613478452, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
   jumpAction: {fileID: 8750983435663049869, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
   animator: {fileID: 8311608368231555346}
+  walkAnimationParameter: 
 --- !u!114 &3062268977164153346
 MonoBehaviour:
   m_ObjectHideFlags: 0

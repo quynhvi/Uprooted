@@ -63,6 +63,7 @@ public class CactusPunch : MonoBehaviour
         {
             if (!isPunching)
             {
+                soundmanager.playSFX(soundmanager.cactusPunch);
                 animator.SetBool("isInteracting", true);
                 StartCoroutine(ResetPunchingFlag());
                 cactusInteract();

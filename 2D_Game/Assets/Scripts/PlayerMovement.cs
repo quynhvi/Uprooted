@@ -99,24 +99,27 @@ public class PlayerMovement : MonoBehaviour
 
     public void playWalkSound()
     {
-        if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 0)
+        if (isGrounded)
         {
-            soundmanager.playSFX(soundmanager.cactusWalk);
-        }
+            //if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 0)
+            //{
+            //    soundmanager.playSFX(soundmanager.cactusWalk);
+            //}
 
-        if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 1)
-        {
-            soundmanager.playSFX(soundmanager.vftWalk);
-        }
+            if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 1)
+            {
+                soundmanager.playSFX(soundmanager.vftWalk);
+            }
 
-        if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 2)
-        {
-            soundmanager.playSFX(soundmanager.ivyWalk);
-        }
+            if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 2)
+            {
+                soundmanager.playSFX(soundmanager.ivyWalk);
+            }
 
-        if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 3)
-        {
-            soundmanager.playSFX(soundmanager.aloeWalk);
+            if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 3)
+            {
+                soundmanager.playSFX(soundmanager.aloeWalk);
+            }
         }
     }
 
