@@ -25,12 +25,14 @@ public class SwingingObject : MonoBehaviour
     public float waitTimer = 0f;
 
     private Gamepad gamepad;
+    private Soundmanager soundmanager;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         gamepad = Gamepad.current;
+        soundmanager = FindObjectOfType<Soundmanager>();
     }
 
     // Update is called once per frame
@@ -64,6 +66,10 @@ public class SwingingObject : MonoBehaviour
             isPlayerOn = false;
             waitTimer = 0f;
         }
+
+        if (isMoving)
+            soundmanager.playSFX(soundmanager.swing, 0.7f, 150);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
