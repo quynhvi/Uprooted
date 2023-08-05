@@ -414,16 +414,16 @@ MonoBehaviour:
   codeWrong: {fileID: 8300000, guid: e26abd127b65f4529af3e05bc0fc8e23, type: 3}
   drawer: {fileID: 8300000, guid: e4f70836b04f644078d76e0cb2924bb0, type: 3}
   jump: {fileID: 8300000, guid: 387945d93b6194c41968fbf872ccc572, type: 3}
-  jumppad: {fileID: 8300000, guid: b724f573dbd894fd7a72d687c0502b38, type: 3}
+  jumppad: {fileID: 8300000, guid: 7f2d51395dd95404ebe683c71babecb4, type: 3}
   aloeInteract: {fileID: 8300000, guid: d7a81e1af01f94ee192834d7fb4b08ba, type: 3}
   keyFound: {fileID: 8300000, guid: 8e2c3a5d9fe954481a4bbdbc5159987e, type: 3}
   closet: {fileID: 8300000, guid: 141eb37ab65234597b2d86c741593769, type: 3}
   switchCharacter: {fileID: 8300000, guid: 3db19830fd8ad430398e9f78335feb9d, type: 3}
   vftLetGo: {fileID: 8300000, guid: 6dcbf25f62d5d4b6b844a144c961830c, type: 3}
   vftPickUp: {fileID: 8300000, guid: 55cb95cd944454261afe93b0cf2fc728, type: 3}
-  cactusWalk: {fileID: 8300000, guid: ede5ac879cc8b4228aa513bb59b48ecd, type: 3}
-  vftWalk: {fileID: 8300000, guid: 878baf77428e941e7b4df7e0471b8b0f, type: 3}
+  cactusWalk: {fileID: 8300000, guid: 486af067e151a4e84ab6076fd738cd94, type: 3}
+  vftWalk: {fileID: 8300000, guid: d5752f070e3f44fae945521ebf74b6d9, type: 3}
   ivyWalk: {fileID: 8300000, guid: bdaa5a7cd556b482d8ad4c7942eae27c, type: 3}
-  aloeWalk: {fileID: 8300000, guid: 4b271cda5dff440e0aacb5fd11ab3d96, type: 3}
+  aloeWalk: {fileID: 8300000, guid: 8456f0dc9d373400eab13e106cea4d4f, type: 3}
   ivyVine: {fileID: 8300000, guid: f558b6d3b57404e67a9436dbd14f71e9, type: 3}
   land: {fileID: 8300000, guid: 5494c4c51c0134d108859150dfe9d1cb, type: 3}

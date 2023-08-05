@@ -33,6 +33,7 @@ public class Menu : MonoBehaviour
     {
         if (SelectedButton == 1)
         {
+            soundmanager.playSFX(soundmanager.UIButton);
             Debug.Log("retry");
             SceneManager.LoadScene(1);
 
@@ -40,6 +41,7 @@ public class Menu : MonoBehaviour
         else if (SelectedButton == 2)
         {
             // When the button with the pointer is clicked, this piece of script is activated
+            soundmanager.playSFX(soundmanager.UIButton);
             Application.Quit();
         }
     }

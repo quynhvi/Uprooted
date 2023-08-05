@@ -33,12 +33,14 @@ public class MainMenu : MonoBehaviour
     {
         if (SelectedButton == 1)
         {
+            soundmanager.playSFX(soundmanager.UIButton);
             Debug.Log("retry");
             LoadNextLevel();
             
         }
         else if (SelectedButton == 2)
         {
+            soundmanager.playSFX(soundmanager.UIButton);
             // When the button with the pointer is clicked, this piece of script is activated
             Application.Quit();
         }
