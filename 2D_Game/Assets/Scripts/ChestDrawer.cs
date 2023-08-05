@@ -13,8 +13,10 @@ public class ChestDrawer : MonoBehaviour
 
     public GameObject interactButton;
     private bool interactable;
+    private bool drawerOpened = false;
 
     public InputActionReference openDrawerAction;
+    private Soundmanager soundmanager;
 
     private void OnEnable()
     {
@@ -32,6 +34,7 @@ public class ChestDrawer : MonoBehaviour
     {
         rm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
+        soundmanager = FindObjectOfType<Soundmanager>();
         interactable = true;
     }
 
@@ -42,8 +45,9 @@ public class ChestDrawer : MonoBehaviour
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
             foreach (Collider2D collider in colliders)
             {
-                if (collider.CompareTag("VFT"))
+                if (collider.CompareTag("VFT") && !drawerOpened)
                 {
+                    soundmanager.playSFX(soundmanager.drawer, 0.7f);
                     ls.chargedLight = 0.03f;
 
                     drawerOpen.SetActive(true);
@@ -55,7 +59,7 @@ public class ChestDrawer : MonoBehaviour
                         rm.waterLevelNumber -= ls.chargedLight;
                         rm.waterBarFill.fillAmount -= ls.chargedLight;
                     }
-
+                    drawerOpened = true;
                     interactable = false;
                     break; // Exit the loop after finding the first VFT
 

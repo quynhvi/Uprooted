@@ -64,7 +64,7 @@ public class CabinetDoorScript : MonoBehaviour
             {
                 if (collider.CompareTag("VFT") && PlayerSwapScript.whichCharacter == 1) //VFT is colliding and currently being played!
                 {
-                    soundmanager.playSFX(soundmanager.closet);
+                    soundmanager.playSFX(soundmanager.closet, 1f);
                     ls.chargedLight = 0.03f;
 
                     // Decrease resource levels

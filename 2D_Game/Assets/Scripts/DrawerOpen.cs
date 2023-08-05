@@ -12,10 +12,12 @@ public class DrawerOpen : MonoBehaviour
 
     public GameObject interactButton;
     private bool interactable;
+    private bool drawerOpened = false;
 
     public InputActionReference openDrawerAction;
 
     private Soundmanager soundmanager;
+    private PlayerSwap ps;
 
     private void OnEnable()
     {
@@ -33,6 +35,7 @@ public class DrawerOpen : MonoBehaviour
     {
         rm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<ResourceManagement>();
         ls = FindObjectOfType<LightSource>();
+        ps = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<PlayerSwap>();
         interactable = true;
         soundmanager = GameObject.FindGameObjectWithTag("Sound").GetComponent<Soundmanager>();
     }
@@ -45,7 +48,7 @@ public class DrawerOpen : MonoBehaviour
             foreach (Collider2D collider in colliders)
             {
                 
-                if (collider.CompareTag("VFT"))
+                if (collider.CompareTag("VFT") && !drawerOpened)
                 {
                     soundmanager.playSFX(soundmanager.drawer);
                     ls.chargedLight = 0.03f;
@@ -60,6 +63,7 @@ public class DrawerOpen : MonoBehaviour
                     }
 
                     interactable = false;
+                    drawerOpened = true;
                     break; // Exit the loop after finding the first VFT
 
                 }
@@ -69,7 +73,7 @@ public class DrawerOpen : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (interactable && collision.CompareTag("VFT"))
+        if (interactable && collision.CompareTag("VFT") && ps.whichCharacter == 1)
         {
             interactButton.SetActive(true);
         }

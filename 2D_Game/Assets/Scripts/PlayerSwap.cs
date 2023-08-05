@@ -24,7 +24,7 @@ public class PlayerSwap : MonoBehaviour
     public InputActionReference switchCharacter3Action;
     public InputActionReference switchCharacter4Action;
 
-    private Soundmanager soundmanger;
+    private Soundmanager soundmanager;
     private Animator currentAnimator;
 
     void Start()
@@ -48,7 +48,7 @@ public class PlayerSwap : MonoBehaviour
         }
         Swap();
 
-        soundmanger = GameObject.FindObjectOfType<Soundmanager>();
+        soundmanager = GameObject.FindObjectOfType<Soundmanager>();
     }
 
     private void Update()
@@ -137,6 +137,9 @@ public class PlayerSwap : MonoBehaviour
 
             m_ParticleSystem.transform.position = character.position;
             m_ParticleSystem.Play();
+
+            // Get the Animator component of the current character
+            currentAnimator = character.GetComponent<Animator>();
 
             //cam.SetTarget(character); // Update the camera's target to the newly selected character
             cam.Follow = character;
@@ -229,7 +232,7 @@ public class PlayerSwap : MonoBehaviour
 
     void PlaySound()
     {
-        soundmanger.playSFX(soundmanger.switchCharacter);
+        soundmanager.playSFX(soundmanager.switchCharacter);
 
         // Check which character is currently active and play the corresponding animation
         if (currentAnimator != null)

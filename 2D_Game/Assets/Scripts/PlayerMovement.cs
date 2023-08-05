@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask platformLayer;
+    [SerializeField] private GameObject deactivateUI;
 
     public InputActionReference movementAction;
     public InputActionAsset inputActions;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public string walkAnimationParameter;
     private Soundmanager soundmanager;
     private PlayerSwap ps;
+    private bool isMovingOrJumping = false;
 
     private void Start()
     {
@@ -93,8 +95,8 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isJumping", true);
         }
+        playWalkSound();
 
-        playWalkSound(); 
     }
 
     public void playWalkSound()
@@ -108,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 1)
             {
-                soundmanager.playSFX(soundmanager.vftWalk);
+                soundmanager.playSFX(soundmanager.vftWalk, 0.6f);
             }
 
             if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 2)

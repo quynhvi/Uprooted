@@ -78,7 +78,7 @@ public class SlidingDoorScript : MonoBehaviour
                
                 if (collider.CompareTag("VFT") && PlayerSwapScript.whichCharacter == 1)
                 {
-                    soundmanager.playSFX(soundmanager.closet);
+                    soundmanager.playSFX(soundmanager.closet, 1f);
                     ls.chargedLight = 0.03f;
 
                     // Decrease resource levels

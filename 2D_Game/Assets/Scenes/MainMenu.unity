@@ -630,7 +630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8967652571296788633, guid: 23f333a3c6d6940499d818ab81354156, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8967652571296788634, guid: 23f333a3c6d6940499d818ab81354156, type: 3}
       propertyPath: m_Color.b
@@ -688,3 +688,4 @@ MonoBehaviour:
   winScreen: {fileID: 0}
   journalAction: {fileID: 0}
   restartAction: {fileID: 0}
+  animator: {fileID: 0}

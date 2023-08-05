@@ -13,6 +13,7 @@ public class Drawer : MonoBehaviour
 
     public GameObject interactButton;
     private bool interactable;
+    private bool drawerOpened = false;
 
     public InputActionReference openDrawerAction;
 
@@ -45,9 +46,9 @@ public class Drawer : MonoBehaviour
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
             foreach (Collider2D collider in colliders)
             {
-                if (collider.CompareTag("VFT"))
+                if (collider.CompareTag("VFT") && !drawerOpened)
                 {
-                    soundmanager.playSFX(soundmanager.drawer);
+                    soundmanager.playSFX(soundmanager.drawer, 0.6f);
                     ls.chargedLight = 0.03f;
 
                     drawer.SetActive(true);
@@ -56,12 +57,10 @@ public class Drawer : MonoBehaviour
                         // Decrease resource levels
                         if (rm != null && ls != null)
                         {
-                            rm.lightLevelNumber -= ls.chargedLight;
-                            rm.lightBarFill.fillAmount -= ls.chargedLight;
                             rm.waterLevelNumber -= ls.chargedLight;
                             rm.waterBarFill.fillAmount -= ls.chargedLight;
                         }
-
+                        drawerOpened = true;
                         interactable = false;
                         break; // Exit the loop after finding the first VFT
                     

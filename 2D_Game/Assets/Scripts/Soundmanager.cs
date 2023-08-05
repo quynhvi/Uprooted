@@ -17,9 +17,13 @@ public class Soundmanager : MonoBehaviour
         musicSrc.Play();
     }
 
-    public void playSFX(AudioClip clip)
+    public void playSFX(AudioClip clip, float volume = 1f, int priority = 128)
     {
         if (!sfxSrc.isPlaying)
+        {
+            sfxSrc.volume = volume;
+            sfxSrc.priority = priority;
             sfxSrc.PlayOneShot(clip);
+        }
     }
 }

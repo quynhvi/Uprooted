@@ -52,7 +52,7 @@ public class Door : MonoBehaviour
     {
         if (vft != null && vft.followingKey != null && vft.followingKey.gameObject.CompareTag("Key") && interactable && ps.whichCharacter == 1 && isPlayerInRange)
         {
-            soundmanager.playSFX(soundmanager.keyOpen);
+            soundmanager.playSFX(soundmanager.keyOpen, 1f, 150);
             interactable = false;
             OpenDoor();
         }

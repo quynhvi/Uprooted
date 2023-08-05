@@ -29,7 +29,7 @@ public class WaterSource : MonoBehaviour
         chargedWater = 0.002f;
         if (RessourceManagement.waterLevelNumber < 1f && collider.gameObject.CompareTag("Cactus"))
         {
-            soundmanager.playSFX(soundmanager.waterCharge);
+            soundmanager.playSFX(soundmanager.waterCharge, 0.6f);
             isCharging = true;
 
             if (RessourceManagement.waterLevelNumber > 1f)

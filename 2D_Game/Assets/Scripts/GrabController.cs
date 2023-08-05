@@ -65,7 +65,7 @@ public class GrabController : MonoBehaviour
                 // Grab the object if it is interactable and the grab input is pressed, and the second character is the current one
                 if ((Input.GetKeyDown(KeyCode.I) || (gamepad != null && gamepad.buttonWest.wasPressedThisFrame)) && playerSwap.whichCharacter == 1)
                 {
-                    soundmanager.playSFX(soundmanager.vftPickUp);
+                    soundmanager.playSFX(soundmanager.vftPickUp, 1f);
                     playermovement.enabled = false;
                     animator.SetBool("isInteracting", true);
                     // Start the coroutine to handle the grabbing process after the animation

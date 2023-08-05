@@ -1916,8 +1916,7 @@ GameObject:
   - component: {fileID: 6502720745244830766}
   - component: {fileID: 471502317329205138}
   - component: {fileID: 3407192649979436722}
-  - component: {fileID: 7019731354641023249}
-  - component: {fileID: 9011748718290310568}
+  - component: {fileID: 4294455525892395473}
   m_Layer: 19
   m_Name: Lamp far left
   m_TagString: movable
@@ -2059,8 +2058,8 @@ MonoBehaviour:
   playerJoint: {fileID: 0}
   jumpForce: 5
   waitTimer: 0
---- !u!70 &7019731354641023249
-CapsuleCollider2D:
+--- !u!61 &4294455525892395473
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2072,25 +2071,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.042353157, y: -3.5748994}
-  m_Size: {x: 1.8358463, y: 0.9280251}
-  m_Direction: 1
---- !u!114 &9011748718290310568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5175320936292532665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86568efd1e857974f8235aa8fd9192cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brokenLamp: {fileID: 0}
-  halfBrokenLamp: {fileID: 0}
-  lamp: {fileID: 0}
-  colliderLamp: {fileID: 0}
+  m_Offset: {x: 0, y: -3.670556}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.24, y: 8.16}
+    newSize: {x: 3.48, y: 4.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.24, y: 0.8188877}
+  m_EdgeRadius: 0
 --- !u!1 &5241609115738177153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3843,10 +3836,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6564557433234714138}
     m_Modifications:
-    - target: {fileID: 6039453346084976555, guid: 0226605c5335f4e098ae0168b62c3680, type: 3}
-      propertyPath: m_SortingOrder
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 6039453346084976558, guid: 0226605c5335f4e098ae0168b62c3680, type: 3}
       propertyPath: m_RootOrder
       value: 0

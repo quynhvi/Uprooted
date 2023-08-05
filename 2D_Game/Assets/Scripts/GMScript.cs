@@ -18,6 +18,7 @@ public class GMScript : MonoBehaviour
     private bool paused;
 
     private Soundmanager soundmanager;
+    public Animator animator;
 
     private void Awake()
     {
@@ -38,7 +39,7 @@ public class GMScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            SceneManager.LoadScene(0);
             Debug.Log("quit");
         }
     }

@@ -23,7 +23,7 @@ public class Jumppad : MonoBehaviour
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
             if (soundmanager != null)
             {
-                soundmanager.playSFX(soundmanager.jumppad);
+                soundmanager.playSFX(soundmanager.jumppad, 1f);
             }
 
             if (rb != null)

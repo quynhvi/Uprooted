@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ResourceManagement : MonoBehaviour
 {
-    public Image lightBarFill;
+    //public Image lightBarFill;
     public Image waterBarFill;
     public float lightLevelNumber;
     public float waterLevelNumber;
@@ -62,16 +62,16 @@ public class ResourceManagement : MonoBehaviour
         {
             if (!lowHPPlayed)
             {
-                soundmanger.playSFX(soundmanger.lowHPSound);
+                soundmanger.playSFX(soundmanger.lowHPSound, 1f, 160);
                 lowHPPlayed = true; // Set the flag to true to prevent playing the sound repeatedly
             }
             animator.SetBool("LowHealth", true); // Set the "LowHealth" parameter to true
         }
-        else if (waterLevelNumber >= 0.6f && IsChargingWater)
+        else if (waterLevelNumber >= 0.7f && IsChargingWater)
         {
             if (!lowHPPlayed)
             {
-                soundmanger.playSFX(soundmanger.lowHPSound);
+                soundmanger.playSFX(soundmanger.lowHPSound, 1f, 160);
                 lowHPPlayed = true; // Set the flag to true to prevent playing the sound repeatedly
             }
             animator.SetBool("HighHealth", true); // Set the "HighHealth" parameter to true
