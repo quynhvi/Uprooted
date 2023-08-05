@@ -103,10 +103,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded)
         {
-            //if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 0)
-            //{
-            //    soundmanager.playSFX(soundmanager.cactusWalk);
-            //}
+            if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 0)
+            {
+                soundmanager.playSFX(soundmanager.cactusWalk);
+            }
 
             if (Mathf.Abs(horizontal) > 0.01f && ps.whichCharacter == 1)
             {
