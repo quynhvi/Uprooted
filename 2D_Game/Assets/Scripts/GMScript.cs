@@ -31,13 +31,13 @@ public class GMScript : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
-        //gamepad = Gamepad.current;
+        gamepad = Gamepad.current;
         action.Menu.Journal.performed += _ => DeterminePause();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || gamepad != null && gamepad.buttonEast.wasPressedThisFrame)
         {
             SceneManager.LoadScene(0);
             Debug.Log("quit");

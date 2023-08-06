@@ -1589,7 +1589,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ba6697a19cb24439c861191fa506ef7d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1a5abe3dde7d4ba9879b0c6be36088a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1611,8 +1611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa82b31f0c0b45889733d7302d9a7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ivyRevivedSprite: {fileID: 21300000, guid: bb4343f674f014ae798125cd0245cba7, type: 3}
-  aloeRevivedSprite: {fileID: 21300000, guid: 64ab232668f85413899ac7259ed1b619, type: 3}
+  ivyRevivedSprite: {fileID: 21300000, guid: acd4b5bf8e05f4ccf84b234f5c66c5c4, type: 3}
+  aloeRevivedSprite: {fileID: 21300000, guid: 009c66c99b960496ba332cc405810446, type: 3}
 --- !u!1 &5996568120843711598
 GameObject:
   m_ObjectHideFlags: 0
@@ -5035,7 +5035,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ef3c59a3fb21b448387903fc972ce19e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9e428e410887a498a9229233bb7e6ed6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6632,8 +6632,11 @@ MonoBehaviour:
   transitionAnim: {fileID: 8104870917269409812}
   ButtonPosition1: {fileID: 0}
   ButtonPosition2: {fileID: 0}
+  ButtonPosition3: {fileID: 0}
   startFront: {fileID: 0}
   quitFront: {fileID: 0}
+  creditsFront: {fileID: 0}
+  credits: {fileID: 0}
 --- !u!1 &8104870917391219294
 GameObject:
   m_ObjectHideFlags: 0

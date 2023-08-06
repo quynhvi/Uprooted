@@ -36,7 +36,7 @@ public class Numpad : MonoBehaviour
             Time.timeScale = 1f;
             UIText.text = "Correct";
             
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
         }
         else
         {
