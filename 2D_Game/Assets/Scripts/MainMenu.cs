@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
@@ -16,17 +17,20 @@ public class MainMenu : MonoBehaviour
 
     public Transform ButtonPosition1;
     public Transform ButtonPosition2;
-    //public Transform ButtonPosition3;
-    //public Transform ButtonPosition4;
+    public Transform ButtonPosition3;
 
     [SerializeField] private GameObject startFront;
     [SerializeField] private GameObject quitFront;
+    [SerializeField] private GameObject creditsFront;
+    [SerializeField] private GameObject credits;
 
+    private bool creditsOpen = false;
     private Soundmanager soundmanager;
 
     private void Start()
     {
         soundmanager = GameObject.FindObjectOfType<Soundmanager>();
+        UpdateButtonHighlights();
     }
 
     private void OnPlay()
@@ -36,7 +40,6 @@ public class MainMenu : MonoBehaviour
             soundmanager.playSFX(soundmanager.UIButton);
             Debug.Log("retry");
             LoadNextLevel();
-            
         }
         else if (SelectedButton == 2)
         {
@@ -44,36 +47,55 @@ public class MainMenu : MonoBehaviour
             // When the button with the pointer is clicked, this piece of script is activated
             Application.Quit();
         }
+        else if (SelectedButton == 3)
+        {
+            soundmanager.playSFX(soundmanager.UIButton);
+            // When the button with the pointer is clicked, this piece of script is activated
+            if (creditsOpen)
+            {
+                credits.SetActive(false);
+                Time.timeScale = 1f;
+                creditsOpen = false;
+            }
+            else
+            {
+                credits.SetActive(true);
+                Time.timeScale = 0f;
+                creditsOpen = true;
+            }
+            Debug.Log("Credits");
+        }
     }
+
     private void OnButtonUp()
     {
-        // Checks if the pointer needs to move down or up, in this case the poiter moves up one button
-        if (SelectedButton > 1)
+        if (!creditsOpen && SelectedButton > 1)
         {
             SelectedButton -= 1;
+            soundmanager.playSFX(soundmanager.jump);
+            UpdateButtonHighlights();
         }
-        soundmanager.playSFX(soundmanager.jump);
-        startFront.SetActive(true);
-        quitFront.SetActive(false);
-        MoveThePointer();
-        return;
     }
+
     private void OnButtonDown()
     {
-        // Checks if the pointer needs to move down or up, in this case the poiter moves down one button
-        if (SelectedButton < NumberOfButtons)
+        if (!creditsOpen && SelectedButton < NumberOfButtons)
         {
             SelectedButton += 1;
+            soundmanager.playSFX(soundmanager.jump);
+            UpdateButtonHighlights();
         }
-        soundmanager.playSFX(soundmanager.jump);
-        quitFront.SetActive(true);
-        startFront.SetActive(false);
-        MoveThePointer();
-        return;
     }
+
+    private void UpdateButtonHighlights()
+    {
+        startFront.SetActive(SelectedButton == 1);
+        quitFront.SetActive(SelectedButton == 2);
+        creditsFront.SetActive(SelectedButton == 3);
+    }
+
     private void MoveThePointer()
     {
-        // Moves the pointer
         if (SelectedButton == 1)
         {
             Point.transform.position = ButtonPosition1.position;
@@ -82,22 +104,16 @@ public class MainMenu : MonoBehaviour
         {
             Point.transform.position = ButtonPosition2.position;
         }
-
-        //else if (SelectedButton == 3)
-        //{
-        //    Point.transform.position = ButtonPosition3.position;
-        //}
-        //else if (SelectedButton == 4)
-        //{
-        //    Point.transform.position = ButtonPosition4.position;
-        //}
+        else if (SelectedButton == 3)
+        {
+            Point.transform.position = ButtonPosition3.position;
+        }
     }
 
     public void LoadNextLevel()
     {
         // When the button with the pointer is clicked, this piece of script is activated
         Time.timeScale = 1f;
-
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
         Debug.Log(SceneManager.GetActiveScene().buildIndex);
     }
@@ -106,8 +122,6 @@ public class MainMenu : MonoBehaviour
     {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
-
         SceneManager.LoadScene(levelIndex);
     }
-
 }
