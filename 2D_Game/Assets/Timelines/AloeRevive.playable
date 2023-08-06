@@ -24,8 +24,8 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 0.48333333333333334
     m_ClipIn: 0
-    m_Asset: {fileID: -2343149159206120052}
-    m_Duration: 12.921816954451304
+    m_Asset: {fileID: -8007610686101167606}
+    m_Duration: 9.5
     m_TimeScale: 1
     m_ParentTrack: {fileID: -9006032890363326396}
     m_EaseInDuration: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: 'Voice '
+    m_DisplayName: Aloe-Talking2
   m_Markers:
     m_Objects: []
   m_TrackProperties:
@@ -112,6 +112,23 @@ MonoBehaviour:
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: ee5b8ea00e51a48778b426121a7b75e4, type: 2}
+--- !u!114 &-8007610686101167606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
+  m_Name: AudioPlayableAsset
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 8300000, guid: ba0c4364d4fc246549252be0371b5b6f, type: 3}
+  m_Loop: 0
+  m_bufferingTime: 0.1
+  m_ClipProperties:
+    volume: 1
 --- !u!114 &-6869758253340600877
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -499,23 +516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde0d25a170598d46a0b9dc16b4527a5, type: 3}
   m_Name: ActivationPlayableAsset
   m_EditorClassIdentifier: 
---- !u!114 &-2343149159206120052
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
-  m_Name: AudioPlayableAsset
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: b57471b21c7084909b4db1d439b49c3d, type: 3}
-  m_Loop: 0
-  m_bufferingTime: 0.1
-  m_ClipProperties:
-    volume: 1
 --- !u!114 &-2132051573645823968
 MonoBehaviour:
   m_ObjectHideFlags: 1

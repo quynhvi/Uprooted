@@ -323,10 +323,6 @@ PrefabInstance:
       propertyPath: musicSrc
       value: 
       objectReference: {fileID: 1173518188}
-    - target: {fileID: 1150640126527768459, guid: 395399eb8fc50437299d1d4b24104083, type: 3}
-      propertyPath: cactusWalk
-      value: 
-      objectReference: {fileID: 8300000, guid: a4a6a50e8f8b24b50b6a1c322bd82d7f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 395399eb8fc50437299d1d4b24104083, type: 3}
 --- !u!82 &1173518188 stripped

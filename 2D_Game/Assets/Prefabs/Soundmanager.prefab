@@ -421,9 +421,11 @@ MonoBehaviour:
   switchCharacter: {fileID: 8300000, guid: 3db19830fd8ad430398e9f78335feb9d, type: 3}
   vftLetGo: {fileID: 8300000, guid: 6dcbf25f62d5d4b6b844a144c961830c, type: 3}
   vftPickUp: {fileID: 8300000, guid: 55cb95cd944454261afe93b0cf2fc728, type: 3}
-  cactusWalk: {fileID: 8300000, guid: 486af067e151a4e84ab6076fd738cd94, type: 3}
+  cactusWalk: {fileID: 8300000, guid: b79e68c25dafb46d290d9519aa151580, type: 3}
   vftWalk: {fileID: 8300000, guid: d5752f070e3f44fae945521ebf74b6d9, type: 3}
   ivyWalk: {fileID: 8300000, guid: bdaa5a7cd556b482d8ad4c7942eae27c, type: 3}
   aloeWalk: {fileID: 8300000, guid: 8456f0dc9d373400eab13e106cea4d4f, type: 3}
   ivyVine: {fileID: 8300000, guid: f558b6d3b57404e67a9436dbd14f71e9, type: 3}
   land: {fileID: 8300000, guid: 5494c4c51c0134d108859150dfe9d1cb, type: 3}
+  swing: {fileID: 0}
+  UIButton: {fileID: 0}

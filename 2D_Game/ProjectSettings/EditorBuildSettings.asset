@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: 0dd72e1e8e51746e6818ade17ed40f9a
   - enabled: 1
     path: Assets/Scenes/Bedroom_Replay.unity
-    guid: 77f458df6e0bc4722b0e74838a3e3e68
+    guid: ad0f6de35f1a54221bca0208d735ed06
   - enabled: 1
     path: Assets/Scenes/Endscene.unity
     guid: 32046137512ca4c47ad21a99f907e4d6
