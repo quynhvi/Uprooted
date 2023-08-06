@@ -32,6 +32,7 @@ TagManager:
   - Box3
   - AloeDead
   - wiggle
+  - Lamp
   layers:
   - Default
   - TransparentFX

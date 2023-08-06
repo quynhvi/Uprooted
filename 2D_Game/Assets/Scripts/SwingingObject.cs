@@ -67,7 +67,7 @@ public class SwingingObject : MonoBehaviour
             waitTimer = 0f;
         }
 
-        if (isMoving)
+        if (isMoving && gameObject.CompareTag("Lamp"))
             soundmanager.playSFX(soundmanager.swing, 0.7f, 150);
 
     }
