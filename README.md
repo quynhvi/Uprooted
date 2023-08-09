@@ -3,7 +3,7 @@
 Uprooted is a cozy 2D puzzle platformer that let ́s you step into the pot of a little cactus, who finds itself abandoned in a dusty attic with a newfound mission to make a pot-tastic escape with other neglected houseplants.
 Set in a vibrant and cozy Mid-Century family home, you ́ll encounter brain-teasing puzzles that will challenge your leafy intellect.
 Uncover new abilities as you rescue other plants, use their botanical powers to overcome obstacles as you make your way through the house.
-Beware: Plants need water and sunlight to survive!
+Beware: Plants need water to survive!
 Manage your plants’ abilities wisely as you navigate through each room, every interaction requires a certain amount of energy.
 ## Meet the Gang:
 Venus Flytrap, the Sticky-Fingered Sidekick who will always lend you a hand ... or a mouth?
