@@ -280,7 +280,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 15.47, y: 10.01}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -330,6 +330,7 @@ MonoBehaviour:
   platformLayer:
     serializedVersion: 2
     m_Bits: 4096
+  deactivateUI: {fileID: 0}
   movementAction: {fileID: 3418993102252175132, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
   inputActions: {fileID: -944628639613478452, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
   jumpAction: {fileID: 8750983435663049869, guid: 9a63e5b4cefc04f5b8b14bfff4c48577, type: 3}
@@ -655,7 +656,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 11.92, y: 20.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
