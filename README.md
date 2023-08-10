@@ -3,7 +3,7 @@
 ![TitlePicture](2D_Game/Assets/Sprites/ReadmeAssets/StartScreen-Final.png)
 
 *A Student's semester project as part of [Game Design](https://gamedesign.htw-berlin.de)
-at [HTW Berlin](https://www.htw-berlin.de/) made in Unity.*
+at [HTW Berlin](https://www.htw-berlin.de/) made in Unity. Play the game [here](https://kimiyae.itch.io/uprooted)*
 
 ## Embark on a botanical adventure!
 Uprooted is a cozy 2D puzzle platformer that let ́s you step into the pot of a little cactus, who finds itself abandoned in a dusty attic with a newfound mission to make a pot-tastic escape with other neglected houseplants.
