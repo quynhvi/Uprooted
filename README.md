@@ -26,5 +26,5 @@ Unity Technologies: Universal RP
 Unity Technologies: InputSystem
 Unity Technologies: TMP
 
-# Other Music & Sound contents
+## Background Music
 Julius H - Cool Jazz Loops (https://pixabay.com/de/music/traditioneller-jazz-cool-jazz-loops-2641/)
