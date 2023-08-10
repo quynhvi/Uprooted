@@ -18,3 +18,13 @@ Ivy, the vine-sational helper for reaching great heights.
 
 Are you ready to team up with this botanical bunch for a rootin', shootin' and lootin' adventure of epic proportions?
 Get ready to laugh, strategize, and have fun destroying as much of the house as you can and embrace the wild side of houseplants during your spikey escape!
+
+# Resources
+## Asset Store and Packages contents
+Unity Technologies: Cinemachine
+Unity Technologies: Universal RP
+Unity Technologies: InputSystem
+Unity Technologies: TMP
+
+# Other Music & Sound contents
+Julius H - Cool Jazz Loops (https://pixabay.com/de/music/traditioneller-jazz-cool-jazz-loops-2641/)
