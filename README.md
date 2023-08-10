@@ -3,7 +3,7 @@
 
 *A Student's semester project as part of [Game Design](https://gamedesign.htw-berlin.de)
 at [HTW Berlin](https://www.htw-berlin.de/).*
-A 2D game made in Unity using primarily C# for a semester project at HTW Berlin, Germany. 
+
 ## Embark on a botanical adventure!
 Uprooted is a cozy 2D puzzle platformer that let ́s you step into the pot of a little cactus, who finds itself abandoned in a dusty attic with a newfound mission to make a pot-tastic escape with other neglected houseplants.
 Set in a vibrant and cozy Mid-Century family home, you ́ll encounter brain-teasing puzzles that will challenge your leafy intellect.
