@@ -20,6 +20,8 @@ Aloe Vera, the leafy companion with extending leaves!
 
 Ivy, the vine-sational helper for reaching great heights.
 
+<img alt="Controls" src="2D_Game/Assets/Sprites/ReadmeAssets/PlayerWalk.gif" width="100%"/>
+
 Are you ready to team up with this botanical bunch for a rootin', shootin' and lootin' adventure of epic proportions?
 Get ready to laugh, strategize, and have fun destroying as much of the house as you can and embrace the wild side of houseplants during your spikey escape!
 
