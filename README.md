@@ -21,7 +21,7 @@ Get ready to laugh, strategize, and have fun destroying as much of the house as 
 
 # Team
 
-# Resources
+## Resources
 ### Asset Store and Packages contents
 Unity Technologies: Cinemachine
 Unity Technologies: Universal RP
