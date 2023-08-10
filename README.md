@@ -19,14 +19,27 @@ Ivy, the vine-sational helper for reaching great heights.
 Are you ready to team up with this botanical bunch for a rootin', shootin' and lootin' adventure of epic proportions?
 Get ready to laugh, strategize, and have fun destroying as much of the house as you can and embrace the wild side of houseplants during your spikey escape!
 
+<hr/>
+
 # Team
+![Team_Picture](2D_Game/Assets/Sprites/ReadmeAssets/Team_MAANQUKI.png)
+* [Marlen Schröder](https://github.com/atlass07)
+* [Angelina Nguyen](https://github.com/Angel111na)
+* [Quynh Vi Trinh](https://github.com/quynhvi)
+* [Kimiya Hossainpour](https://instagram.com/aendromeda)
+
+<hr/>
 
 ## Resources
-### Asset Store and Packages contents
-Unity Technologies: Cinemachine
-Unity Technologies: Universal RP
-Unity Technologies: InputSystem
-Unity Technologies: TMP
+#### Asset Store and Packages contents
 
-### Background Music
+Unity Technologies: [Cinemachine](https://unity.com/unity/features/editor/art-and-design/cinemachine)
+
+Unity Technologies: [Universal RP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@11.0/manual/)
+
+Unity Technologies: [InputSystem](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/Interactions.html#default-interaction)
+
+Unity Technologies: [TMP](https://docs.unity3d.com/Manual/com.unity.textmeshpro.html)
+
+#### Background Music
 Julius H - Cool Jazz Loops (https://pixabay.com/de/music/traditioneller-jazz-cool-jazz-loops-2641/)
