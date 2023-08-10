@@ -1,3 +1,4 @@
+![Unity: 2021.3.23f1](https://img.shields.io/badge/unity-2021.3.23f1-689146)
 # UPROOTED - Leaf no one behind
 ![TitlePicture](2D_Game/Assets/Sprites/ReadmeAssets/StartScreen-Final.png)
 
@@ -21,6 +22,11 @@ Ivy, the vine-sational helper for reaching great heights.
 
 Are you ready to team up with this botanical bunch for a rootin', shootin' and lootin' adventure of epic proportions?
 Get ready to laugh, strategize, and have fun destroying as much of the house as you can and embrace the wild side of houseplants during your spikey escape!
+
+<hr/>
+
+## How to Play
+<img alt="Controls" src="2D_Game/Assets/Sprites/ReadmeAssets/Controls_RM.png" width="50%"/>
 
 <hr/>
 
