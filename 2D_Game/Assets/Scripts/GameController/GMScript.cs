@@ -37,7 +37,7 @@ public class GMScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || gamepad != null && gamepad.buttonEast.wasPressedThisFrame)
+        if (Input.GetKeyDown(KeyCode.M) || gamepad != null && gamepad.buttonEast.wasPressedThisFrame)
         {
             SceneManager.LoadScene(0);
             Debug.Log("quit");
