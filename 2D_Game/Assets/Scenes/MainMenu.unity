@@ -265,7 +265,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1150640125715801564, guid: 395399eb8fc50437299d1d4b24104083, type: 3}
       propertyPath: m_Volume
-      value: 0.06
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 1150640126527768181, guid: 395399eb8fc50437299d1d4b24104083, type: 3}
       propertyPath: m_RootOrder
@@ -323,17 +323,8 @@ PrefabInstance:
       propertyPath: UIButton
       value: 
       objectReference: {fileID: 8300000, guid: 22f1f966a4d444f219321b479c254e94, type: 3}
-    - target: {fileID: 1150640126527768459, guid: 395399eb8fc50437299d1d4b24104083, type: 3}
-      propertyPath: musicSrc
-      value: 
-      objectReference: {fileID: 1173518188}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 395399eb8fc50437299d1d4b24104083, type: 3}
---- !u!82 &1173518188 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1150640126090060591, guid: 395399eb8fc50437299d1d4b24104083, type: 3}
-  m_PrefabInstance: {fileID: 1173518187}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1487082872
 GameObject:
   m_ObjectHideFlags: 0
